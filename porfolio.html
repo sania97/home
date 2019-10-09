@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+<head>
+<script src="code.jquery.com/jquery-1.10.1.min.js"></script>
+<head>
 <title>Sania Syed</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,10 +21,19 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 }
 header {
   background-image: url("https://github.com/sania97/sania97.github.io/blob/master/bkgrimg.jpg?raw=true");
-  background-size: 100% 100%;
+  background-size: 100% 100%;}
+  
 
+
+#slider:hover {
+ border:4px solid purple; 
 
 }
+#slider {
+margin: 0 auto;
+text-align:center;
+}
+
 #myBtn {
   display: none;
   position: fixed;
@@ -41,11 +53,34 @@ header {
 #myBtn:hover {
   background-color: #555;
 }
-</style>
-<style>
+
 .mySlides {display:none}
 .w3-left, .w3-right, .w3-badge {cursor:pointer}
 .w3-badge {height:13px;width:13px;padding:0}
+
+
+.collapsible {
+  background-color: #dedcdc;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #ababab;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
 </style>
 
 <body>
@@ -66,13 +101,13 @@ header {
 </nav>
 <header class="w3-container w3-center"
 style="padding:70px" id="home">
-    <h1 class="w3-jumbo" style="color:white;"><b>My Work</b></h1>
+    <h1 class="w3-jumbo" style="color:white;"><b>Projects</b></h1>
   </header>
 <!-- Page Content -->
 <div class="w3-main w3-padding-large" style="margin-left:40px">
 
   <!-- Menu icon to open sidebar -->
-  <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
+  <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0; background:rgba(255,255,255,0.7)" onclick="openNav()"><i class="fa fa-bars"></i></span>
 	<br>
 	<br>
 	<br>
@@ -82,24 +117,25 @@ style="padding:70px" id="home">
 <div class="w3-content w3-display-container">
 
 
+
 <div class="w3-display-container mySlides">
   <a href="#project1"><img src="https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2018/05/Gradient-Overview-Blog-Image.jpg?w=1024&h=500" style="width:100%">
-  <div style="background:rgba(255,255,255,0.7)" class="w3-display-topright w3-large w3-container w3-padding-16">
-    Project 1
+  <div id="slider" style="background:rgba(255,255,255,0.7)" class="w3-display-middle w3-xxxlarge w3-container w3-padding-16">
+    TASKR
   </div></a>
 </div>
 
+
 <div class="w3-display-container mySlides" >
   <a href="#project2"><img src="https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2018/05/Gradient-Overview-Blog-Image.jpg?w=1024&h=500" style="width:100%">
-  <div style="background:rgba(255,255,255,0.7)" class="w3-display-topleft w3-large w3-container w3-padding-16">
-	Project 2
+  <div id="slider" style="background:rgba(255,255,255,0.7)" class="w3-display-middle w3-xxxlarge w3-container w3-padding-16">RETHINKING INSTAGRAM
   </div></a>
 </div>
 
 <div class="w3-display-container mySlides" >
   <a href="#project3"><img src="https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2018/05/Gradient-Overview-Blog-Image.jpg?w=1024&h=500" style="width:100%">
-  <div style="background:rgba(255,255,255,0.7)" class="w3-display-topright w3-large w3-container w3-padding-16">
-    Project 3
+  <div id="slider" style="background:rgba(255,255,255,0.7)" class="w3-display-middle w3-xxxlarge w3-container w3-padding-16">
+    UNTITLED
   </div></a>
 </div>
 
@@ -107,8 +143,8 @@ style="padding:70px" id="home">
 
 
   <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
-    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
-    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+    <div  class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+    <div  class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
     <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
     <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
     <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
@@ -116,19 +152,48 @@ style="padding:70px" id="home">
 </div>
 
 <div class="w3-padding-32 w3-content" id="project1">
-    <h2 class="w3-text-grey">Project 1</h2>
+    <h1 class="w3-text-grey">TASKR</h1>
+	
+	<h2>Short Version</h2>
+	<p>Hello</p>
+	<button type="button" class="collapsible">Detailed Case Study</button>
+<div class="content">
+<h2>UX Process </h2>
+This is probably the most important section to MUST have. If your project followed a UX process, I suggest you to explain it thoroughly but in a condensed form. The viewer should be able to follow through your footsteps by taking a look at:
+<ul><h4>Research</h4>paper reviews, competitive analysis, interviews, contextual inquiries, surveys etc</ul>
+<ul><h4>Ideation</h4>brainstorming, diverging and converging on ideas, customer journey, persona etc</ul>
+<ul><h4>Wireframe</h4>ideas, sketches, brainstorming, what worked and what didn’t, testing results, iterations</ul>
+<ul><h4>Design</h4>fleshed out design, test/feedback, iterations, final design</ul>
+<ul><h4>Prototype</h4>user testing, iteration, towards development (if you did)</ul>
+Extra things to include (if you wish)
+<h2>Working prototype demo </h2>
+<h2>Conclusion </h2> <h4><ul>what you learned </ul><ul> what you will be doing next</ul></h4>
+Additional tips
+Include big enough images with good resolutions (compressed images)
+Describe transitions from one stage to another
+Include constraints/obstacles during the project (or have it down somewhere in your notes) — useful when doing interviews. What went well, what didn’t and how you overcame those situations as a team/individual
+Avoid too much text — you will get a chance to explain later
+Sometimes, people have two versions: 1) Short, picture-focused version, 2) Case study — this is also a good way to show your work
+Try to find inspirations — find UX professionals’ portfolio websites that you think are fantastic and learn from those by comparing it to your own. 
     <hr class="w3-opacity">
 </div>
+	
+	
+	</div>
+	
+
+	
 
 <div class="w3-padding-32 w3-content" id="project2">
-    <h2 class="w3-text-grey">Project 2</h2>
+    <h1 class="w3-text-grey">Rethinking Instagram</h1>
     <hr class="w3-opacity">
 </div>
 
 <div class="w3-padding-32 w3-content" id="project3">
-    <h2 class="w3-text-grey">Project 3</h2>
+    <h1 class="w3-text-grey">Untitled</h1>
     <hr class="w3-opacity">
 </div>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 
 <script>
@@ -158,12 +223,10 @@ function showDivs(n) {
   x[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " w3-white";
 }
-</script>
 
 
 
 
-<script>
 // Open and close sidebar
 function openNav() {
   document.getElementById("mySidebar").style.width = "30%";
@@ -172,12 +235,9 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidebar").style.display = "none";
 }
-</script>
-
-<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 
-<script>
+
 //Get the button
 var mybutton = document.getElementById("myBtn");
 
@@ -185,7 +245,7 @@ var mybutton = document.getElementById("myBtn");
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 25 || document.documentElement.scrollTop > 25) {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     mybutton.style.display = "block";
   } else {
     mybutton.style.display = "none";
@@ -196,6 +256,23 @@ function scrollFunction() {
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
+}
+var myIndex = 0;
+
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
 }
 </script>
 
