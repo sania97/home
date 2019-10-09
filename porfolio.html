@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
-<head>
-<script src="code.jquery.com/jquery-1.10.1.min.js"></script>
-<head>
-<title>Sania Syed</title>
+
+<title>Sania Syed | Projects</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -24,9 +22,16 @@ header {
   background-size: 100% 100%;}
   
 
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+    padding: 16px 16px;
+
+}
 
 #slider:hover {
- border:4px solid purple; 
+ border:8px solid purple; 
 
 }
 #slider {
@@ -60,27 +65,28 @@ text-align:center;
 
 
 .collapsible {
-  background-color: #dedcdc;
+  background-color: purple;
   color: white;
   cursor: pointer;
   padding: 18px;
-  width: 100%;
-  border: none;
+  width: 40%;
+  border: 10px;
   text-align: left;
   outline: none;
   font-size: 15px;
 }
 
 .active, .collapsible:hover {
-  background-color: #ababab;
+  background-color: #555;
 }
 
 .content {
-  padding: 0 18px;
+  padding: 18px;
   display: none;
   overflow: hidden;
   background-color: #f1f1f1;
 }
+
 </style>
 
 <body>
@@ -117,7 +123,6 @@ style="padding:70px" id="home">
 <div class="w3-content w3-display-container">
 
 
-
 <div class="w3-display-container mySlides">
   <a href="#project1"><img src="https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2018/05/Gradient-Overview-Blog-Image.jpg?w=1024&h=500" style="width:100%">
   <div id="slider" style="background:rgba(255,255,255,0.7)" class="w3-display-middle w3-xxxlarge w3-container w3-padding-16">
@@ -132,13 +137,14 @@ style="padding:70px" id="home">
   </div></a>
 </div>
 
+
+
 <div class="w3-display-container mySlides" >
   <a href="#project3"><img src="https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2018/05/Gradient-Overview-Blog-Image.jpg?w=1024&h=500" style="width:100%">
   <div id="slider" style="background:rgba(255,255,255,0.7)" class="w3-display-middle w3-xxxlarge w3-container w3-padding-16">
     UNTITLED
   </div></a>
 </div>
-
 
 
 
@@ -152,11 +158,14 @@ style="padding:70px" id="home">
 </div>
 
 <div class="w3-padding-32 w3-content" id="project1">
+<div class = "card">
+
     <h1 class="w3-text-grey">TASKR</h1>
 	
-	<h2>Short Version</h2>
+	<h3>Short Version</h3>
 	<p>Hello</p>
-	<button type="button" class="collapsible">Detailed Case Study</button>
+		<button  type="button" class="collapsible">Detailed Case Study</button>
+</div>
 <div class="content">
 <h2>UX Process </h2>
 This is probably the most important section to MUST have. If your project followed a UX process, I suggest you to explain it thoroughly but in a condensed form. The viewer should be able to follow through your footsteps by taking a look at:
@@ -177,26 +186,34 @@ Sometimes, people have two versions: 1) Short, picture-focused version, 2) Case 
 Try to find inspirations — find UX professionals’ portfolio websites that you think are fantastic and learn from those by comparing it to your own. 
     <hr class="w3-opacity">
 </div>
-	
+	</div>
 	
 	</div>
 	
-
 	
 
 <div class="w3-padding-32 w3-content" id="project2">
+<div class = "card">
+
     <h1 class="w3-text-grey">Rethinking Instagram</h1>
     <hr class="w3-opacity">
 </div>
+</div>
 
 <div class="w3-padding-32 w3-content" id="project3">
+<div class = "card">
+
     <h1 class="w3-text-grey">Untitled</h1>
     <hr class="w3-opacity">
 </div>
+</div>
+
+
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 
 <script>
+
 var slideIndex = 1;
 showDivs(slideIndex);
 
