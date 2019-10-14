@@ -20,33 +20,8 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 header {
   background-image: url("https://github.com/sania97/sania97.github.io/blob/master/bkgrimg.jpg?raw=true");
   background-size: 100% 100%;}
-  
-#small {
-	font-size: 15px;
-	text-align: right;
-	padding: 15px;
-}
 
-.presentationimg {
-	border-radius:10px;
-}
 
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  border-radius: 5px;
-    padding: 16px 16px;
-
-}
-
-#slider:hover {
- border:8px solid purple; 
-}
-
-#slider {
-margin: 0 auto;
-text-align:center;
-}
 
 #myBtn {
   display: none;
@@ -68,29 +43,6 @@ text-align:center;
   background-color: #555;
 }
 
-.mySlides {display:none}
-.w3-left, .w3-right, .w3-badge {cursor:pointer}
-.w3-badge {height:13px;width:13px;padding:0}
-
-
-.collapsible {
-  background-color: rgba(80,130,89,0.4);
-  color: black;
-  cursor: pointer;
-  padding: 18px;
-  width: 30%;
-  border: 10px;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  border-radius: 4px;
-
-}
-
-.active, .collapsible:hover {
-  background-color: #555;
-  color: white;
-}
 
 .content {
   padding: 18px;
@@ -99,10 +51,54 @@ text-align:center;
   background-color: #f1f1f1;
 }
 
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .3s ease;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+img{
+border-radius:10px;
+}
 </style>
 
 <body>
 
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 <!-- Hidden Sidebar (reveals when clicked on menu icon)-->
 <nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
@@ -122,178 +118,62 @@ text-align:center;
 		<h1 class="w3-jumbo" style="color:white;"><b>Projects</b></h1>
 	</header>
 	
-	
-	
 <!-- Page Content -->
 <div class="w3-main w3-padding-large" style="margin-left:40px">
 
   <!-- Menu icon to open sidebar -->
-  <span class="w3-button w3-top w3-xxlarge w3-text-white w3-hover-black" style="width:auto;right:0; background:rgba(255,255,255,0.1);" onclick="openNav()"><i class="fa fa-bars"></i></span>
+  <span class="w3-button w3-top w3-xxlarge w3-text-white w3-hover-black" style="width:auto;right:0; background:rgba(255,255,200,0.1);" onclick="openNav()"><i class="fa fa-bars"></i></span>
 	<br>
 	<br>
 	<br>
 	<br>
   <!-- Header -->
   
+  
+	
 	<div class="w3-content w3-display-container">
-
-
-	<div class="w3-display-container mySlides">
-	  <a href="#project1"><img src="https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2018/05/Gradient-Overview-Blog-Image.jpg?w=1024&h=500" style="width:100%" class = "presentationimg">
-	  <div id="slider" style="background:rgba(255,255,255,0.7)" class="w3-display-bottomright w3-xxxlarge w3-container w3-padding-16">
-	  TASKR 
-	  </div></a>
+    <div class="w3-modal-content w3-animate-bottom w3-center w3-transparent w3-padding-64">
+    
+	<a href="taskr.html">
+	<div class="container">
+		<img src="https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2018/05/Gradient-Overview-Blog-Image.jpg?w=1024&h=500" class="image" style="width:100%">
+			<div class="overlay" style="background:rgba(255,255,255,0.7)" class="w3-display-bottomright w3-xxxlarge w3-container w3-padding-16">
+				<div class="text">TASKR</div>
+			</div>
 	</div>
+	</a>
+	
+	<hr class="w3-opacity">
 
-
-	<div class="w3-display-container mySlides" >
-	  <a href="#project2"><img src="https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2018/05/Gradient-Overview-Blog-Image.jpg?w=1024&h=500" style="width:100%" class = "presentationimg">
-	  <div id="slider" style="background:rgba(255,255,255,0.7)" class="w3-display-bottomright w3-xxxlarge w3-container w3-padding-16">
-	  RETHINKING INSTAGRAM
-	  </div></a>
+	<div class="container">
+		<a href="taskr.html">
+		<img src="https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2018/05/Gradient-Overview-Blog-Image.jpg?w=1024&h=500" class="image" style="width:100%" ></a>
+			<div class="overlay" style="background:rgba(255,255,255,0.7)" class="w3-display-bottomright w3-xxxlarge w3-container w3-padding-16">
+				<div class="text">RETHINKING INSTAGRAM</div>
+			</div>
 	</div>
-
-
-	<div class="w3-display-container mySlides" >
-	  <a href="#project3"><img src="https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2018/05/Gradient-Overview-Blog-Image.jpg?w=1024&h=500" style="width:100%" class = "presentationimg">
-	  <div id="slider" style="background:rgba(255,255,255,0.7)" class="w3-display-bottomright w3-xxxlarge w3-container w3-padding-16">
-		UNTITLED
-	  </div></a>
+	
+	<hr class="w3-opacity">
+	
+	
+	
+	<div class="container">
+		<a href="taskr.html">
+		<img src="https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2018/05/Gradient-Overview-Blog-Image.jpg?w=1024&h=500" class="image" style="width:100%" ></a>
+			<div class="overlay" style="background:rgba(255,255,255,0.7)" class="w3-display-bottomright w3-xxxlarge w3-container w3-padding-16">
+				<div class="text">RETHINKING INSTAGRAM</div>
+			</div>
 	</div>
+	
+	<hr class="w3-opacity">
 
-	<div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-middle" style="width:100%">
-		<div  class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
-		<div  class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
-	</div>
-	<div class="w3-container w3-section w3-large w3-text-white w3-display-topleft" style="width:100%">
-		<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
-		<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
-		<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
-	</div>
-	<div id = "small">
+   </div>
+   </div>
+   </div>
 
-	 Click on the picture <br> or the title to view 
-	</div>
-	</div>
-
-	<div class="w3-padding-32 w3-content" id="project1">
-	<div class = "card">
-		<div class="w3-center w3-container w3-large w3-text-white" style="background-color:#1d6330;padding:0px;border-radius: 5px;">
-		<h1>TASKR</h1>
-		</div>
-		<h3>Short Version</h3>
-		<button  type="button" class="collapsible">Detailed Case Study</button>
-			
-		<div class="content">
-			<h2>Introduction </h2>
-				<ul><h4>Understanding the Problem</h4>
-				</ul>
-				<ul><h4>The User</h4>
-				brainstorming, diverging and converging on ideas, customer journey, persona etc</ul>
-				
-			<h2>UX Process </h2>
-				This is probably the most important section to MUST have. If your project followed a UX process, I suggest you to explain it thoroughly but in a condensed form. The viewer should be able to follow through your footsteps by taking a look at:
-				<ul><h4>Research</h4>paper reviews, competitive analysis, interviews, contextual inquiries, surveys etc</ul>
-				<ul><h4>Ideation</h4>brainstorming, diverging and converging on ideas, customer journey, persona etc</ul>
-				<ul><h4>Wireframe</h4>ideas, sketches, brainstorming, what worked and what didn’t, testing results, iterations</ul>
-				<ul><h4>Design</h4>fleshed out design, test/feedback, iterations, final design</ul>
-				<ul><h4>Prototype</h4>user testing, iteration, towards development (if you did)</ul>
-			<h2>Working prototype demo </h2>
-			<h2>Conclusion </h2> <h4><ul>what you learned </ul><ul> what you will be doing next</ul></h4>
-				<ul><h4>Describe transitions from one stage to another </ul> </h4>
-				<ul><h4>Include constraints/obstacles during the project (or have it down somewhere in your notes) — useful when doing interviews. What went well, what didn’t and how you overcame those situations as a team/individual </ul></h4>
-		<hr class="w3-opacity">
-		</div>
-		</div>
-	</div>
-	<div class="w3-padding-32 w3-content" id="project2">
-		<div class = "card">
-
-		<h1 class="w3-text-grey">Instagram</h1>
-		
-		<h3>Short Version</h3>
-		<button  type="button" class="collapsible">Detailed Case Study</button>
-			
-		<div class="content">
-			<h2>UX Process </h2>
-				<ul><h4>Research</h4>paper reviews, competitive analysis, interviews, contextual inquiries, surveys etc</ul>
-				<ul><h4>Ideation</h4>brainstorming, diverging and converging on ideas, customer journey, persona etc</ul>
-				<ul><h4>Wireframe</h4>ideas, sketches, brainstorming, what worked and what didn’t, testing results, iterations</ul>
-				<ul><h4>Design</h4>fleshed out design, test/feedback, iterations, final design</ul>
-				<ul><h4>Prototype</h4>user testing, iteration, towards development (if you did)</ul>
-			<h2>Working prototype demo </h2>
-			<h2>Conclusion </h2> <h4><ul>what you learned </ul><ul> what you will be doing next</ul></h4>
-				<ul><h4>Describe transitions from one stage to another </ul> </h4>
-				<ul><h4>Include constraints/obstacles during the project (or have it down somewhere in your notes) — useful when doing interviews. What went well, what didn’t and how you overcame those situations as a team/individual </ul></h4>
-		<hr class="w3-opacity">
-		</div>
-		</div>
-	</div>
-	<div class="w3-padding-32 w3-content" id="project3">
-		<div class = "card">
-
-		<h1 class="w3-text-grey">UNTITLED</h1>
-		
-		<h3>Short Version</h3>
-		<button  type="button" class="collapsible">Detailed Case Study</button>
-			
-		<div class="content">
-			<h2>UX Process </h2>
-				This is probably the most important section to MUST have. If your project followed a UX process, I suggest you to explain it thoroughly but in a condensed form. The viewer should be able to follow through your footsteps by taking a look at:
-				<ul><h4>Research</h4>paper reviews, competitive analysis, interviews, contextual inquiries, surveys etc</ul>
-				<ul><h4>Ideation</h4>brainstorming, diverging and converging on ideas, customer journey, persona etc</ul>
-				<ul><h4>Wireframe</h4>ideas, sketches, brainstorming, what worked and what didn’t, testing results, iterations</ul>
-				<ul><h4>Design</h4>fleshed out design, test/feedback, iterations, final design</ul>
-				<ul><h4>Prototype</h4>user testing, iteration, towards development (if you did)</ul>
-			<h2>Working prototype demo </h2>
-			<h2>Conclusion </h2> <h4><ul>what you learned </ul><ul> what you will be doing next</ul></h4>
-				<ul><h4>Describe transitions from one stage to another </ul> </h4>
-				<ul><h4>Include constraints/obstacles during the project (or have it down somewhere in your notes) — useful when doing interviews. What went well, what didn’t and how you overcame those situations as a team/individual </ul></h4>
-		<hr class="w3-opacity">
-		</div>
-		</div>
-	</div>
-
-
-
-
-</div>
-
-<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 
 <script>
-
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function currentDiv(n) {
-  showDivs(slideIndex = n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" w3-white", "");
-  }
-  x[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " w3-white";
-}
-
-
-
-
 // Open and close sidebar
 function openNav() {
   document.getElementById("mySidebar").style.width = "30%";
@@ -302,6 +182,7 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidebar").style.display = "none";
 }
+
 
 
 
@@ -324,23 +205,7 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
-var myIndex = 0;
 
-
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
-  });
-}
 </script>
 
 </body>
