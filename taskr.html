@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+
+<title>Sania Syed | Projects</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+body {
+background-color:white;
+}
+.w3-row-padding img {margin-bottom: 12px}
+.bgimg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('http://hdqwalls.com/wallpapers/abstract-green-gradient-bs.jpg');
+  min-height: 100%;
+}
+header {
+  background-image: url("http://hdqwalls.com/wallpapers/abstract-green-gradient-bs.jpg");
+  background-size: 100% 100%;}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 16px;
+  border: 4px;
+  outline: none;
+  background-color: purple;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+#grayback {
+background-color: #d3d3d3;
+}
+
+#whiteback {
+background-color: #ffffff;
+}
+#lightgrayback {
+background-color: #e8e8e8;
+}
+
+.content {
+  padding: 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+display: block;
+height: auto;
+
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .3s ease;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+img{
+border-radius:10px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+tr, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+.w3-animate-bottom{
+position:relative;animation:animatebottom 0.8s
+}@keyframes 
+animatebottom{
+from{bottom:-300px;opacity:0} to{bottom:0;opacity:1}}
+
+h1 {
+color:#2a8542;
+}
+#users {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+#users:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.innercontainer {
+  padding: 2px 16px;
+}
+
+.wrapper { 
+  overflow:hidden;
+  margin:100px;
+}
+
+.wrapper div {
+   min-height: 200px;
+   padding: 10px;
+}
+#one {
+  background-color: white;
+  float:left; 
+  width:300px;
+  
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin: auto;
+}
+#two { 
+  background-color: white;
+  overflow:hidden;
+  margin:1px;
+  min-height:170px;
+}
+
+@media screen and (max-width: 400px) {
+   #one { 
+    float: none;
+    margin-right:0;
+    width:auto;
+    border:0;
+    border-bottom:2px solid #000;    
+  }
+}
+
+.fullimage {
+	background-image: url("https://66.media.tumblr.com/432f12617b0cdf98e61afe3d58841e02/tumblr_pzge13GMkd1sheg4ho1_1280.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+</style>
+
+<body class="w3-animate-bottom">
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<!-- Hidden Sidebar (reveals when clicked on menu icon)-->
+<nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    <a href="index.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
+    <a href="resume.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Resume</a>
+    <a href="portfolio.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Portfolio</a>
+    <a href="about.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">About</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Contact</a>
+  </div>
+</nav>
+	<header class="w3-container w3-center"
+		style="padding:70px" id="home">
+		<h1 class="w3-jumbo" style="color:white;"><b>TASKR</b></h1>
+	</header>
+	
+<!-- Page Content -->
+
+  <!-- Menu icon to open sidebar -->
+  <span class="w3-button w3-top w3-xxlarge w3-text-white w3-hover-black" style="width:auto;right:0; background:rgba(255,255,200,0.1);" onclick="openNav()"><i class="fa fa-bars"></i></span>
+  <!-- Header -->
+  
+  
+
+
+
+
+<div id ="lightgrayback">
+    <div class="w3-center w3-container w3-large w3-text-gray" style="padding:0px" >
+	<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <div class="w3-animate-bottom w3-text-gray">
+	<h1 class="w3-wide">INTRODUCTION</h1>
+	    <p class="w3-opacity"><i> Introductory statement this is a statement about the app statement this is a statement
+		</i></p>
+	<img src="https://66.media.tumblr.com/35e8b48125c297c3b62632581bebb5db/tumblr_pzgcqty4nD1sheg4ho1_1280.jpg"
+	class="image" style="width:100%">
+	</div>
+	</div>
+	</div>
+	</div>
+	
+<div id ="grayback">
+    <div class="w3-center w3-container w3-large w3-text-gray" style="padding:0px" >
+	<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <div class="w3-animate-bottom w3-text-gray">	
+	<h2 class="w3-wide">UNDERSTANDING THE PROBLEM</h2>
+    <p class="w3-justify">With any co living situation, there is bound to be conflict. One of main sources of conflict is related to shared tasks, 
+	such as housework. Often times, certain members of a group will feel like they are doing the brunt of the work in a shared space, while others 
+	mean well but just need to be reminded. This app was designed to bridge that gap by facilitating communication. 
+	Other problems relating to communication include the lack of actual time to communicate. Vastly different schedules reinforce that problem. 
+	An app that members of a group can access can aid in those specific issues.  </p>
+	
+	<h2 class="w3-wide">THE USER</h2>
+    <p class="w3-opacity"><i>My first stage of brainstorming was to understand the user. I asked myself the 5Ws (Who What When Where Why) to better 
+	empathize with the user and outline my goals of the app.</i></p>
+	
+
+					<table id ="uxprocess" border="0" class="w3-justify">
+					<tbody>
+					<tr>
+					<td><b>Who</b></td>
+					<td>At first I thought of my own life where this type of app would be useful. So the users I designed for were roommate groups, and family residences. 
+				Later I realized the app would also be useful in office settings, or even for a single person with ADHD/ADD, who needs their tasks written out </td>
+					</tr>
+					<tr>
+					<td><b>What</b></td>					
+					<td>Shared tasks are created in the app and then distributed equally</td>
+					</tr>
+					<tr>
+					<td><b>Where</b></td>
+					<td>the shared space, as the goal is to keep that space as conflict free as possible</td>
+					</tr>
+					<tr>
+					<td><b>When</b></td>
+					<td>App can be used whenever, however the effects will be produced whenever in that shared space</td>					
+					</tr>
+					<tr>
+					<td><b>Why</b></td>
+					<td>The goals are to create an avenue for communication and alleviate conflict</td>
+					</tr>
+					
+					</tbody>
+				</table>
+    </div>
+	</div>
+	</div>
+	</div>
+	
+		
+
+
+<div id="whiteback">	
+	<div class="w3-center w3-container w3-large w3-text-gray" style="padding:0px" >
+	<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">		
+	<div class="w3-animate-bottom w3-text-gray">		
+		<h1 class="w3-wide w3-jumbo">UX PROCESS</h1>
+		
+			</div>
+			</div>
+			</div>
+			</div>
+			
+    <div class="wrapper">
+		<div id="one"><h3 class="w3-center">RESEARCH</h3></div>
+		<div id="two">
+		<h4 class="w3-left">Competitive Analysis</h4>
+				<br>
+				<br>
+				<p class="w3-justify">
+			
+				I searched for chore apps and found that many were family based, 
+				and had lots of features that made them feel juvenile. I decided my design 
+				would appeal to as many people as possible, with a more modern look. 
+				That would also mean that users should be able to pick their specifics. 
+				Also, none had a opportunity to conduct an equitable assignment of tasks,
+				a feature that I think helps make my product extremely useful.
+				</p>
+				<h4 class="w3-left">Interviews</h4>
+				<br>
+				<br>
+				<p class="w3-justify">I conducted 10 in person, short interviews with potential users of my product.
+				I asked them about their feelings toward chores, and how chores were kept track of in their house. 
+				I used these to create user personas. 
+				</p></div>
+  </div>
+  
+  <div class="wrapper">
+		<div id="one"><h3 class="w3-center">IDEATION</h3></div>
+		<div id="two">
+		<h4 class="w3-left">User Personas</h4>
+				<br>
+				<br>
+				<p class="w3-justify">
+			
+					I used my interviews from the Research phase of the project to create four User Personas. Referring to these aided me in my design. Each user was a manifestation of a potential user of TASKR, and what their goals and frustrations were. 
+				</p>
+				<br><br>
+				<img id ="users" src="https://66.media.tumblr.com/7e29dc61b2554c1cb8a17b6778e284de/tumblr_pzgd7sDjdI1sheg4ho1_1280.jpg"
+					class="image" style="width:80%"><br><br>
+				<img id ="users" src="https://66.media.tumblr.com/5b18c25cc7a12546316ed16e6a4cca2f/tumblr_pzgd7sDjdI1sheg4ho2_1280.jpg"
+					class="image" style="width:80%"><br><br>
+				<img id ="users" src="https://66.media.tumblr.com/1b9b4b50fb80e84438ad998c7b025680/tumblr_pzgd7sDjdI1sheg4ho3_1280.jpg"
+					class="image" style="width:80%"><br><br>
+				<img id ="users" src="https://66.media.tumblr.com/4f643b024f20a87498c3b35d375eb183/tumblr_pzgd7sDjdI1sheg4ho4_1280.jpg"
+					class="image" style="width:80%"><br><br>
+		</div>
+  </div>
+  
+  
+  <div class="wrapper">
+		<div id="one"><h3 class="w3-center">WIREFRAME</h3></div>
+		<div id="two">
+		<h4 class="w3-left">Sketches</h4>
+				<br>
+				<br>
+				<p class="w3-justify">
+			
+
+				I used pen and paper to sketch out the many frames I would make. 
+				
+				ideas, sketches, brainstorming, what worked and what didn’t, testing results, iterations
+				
+				</p>
+				<img src="http://via.placeholder.com/640x360"
+					class="image" style="width:100%"><br><br>
+					
+				<p class="w3-justify"> 
+				During this process, I figured out that two features would need to be the focal point: making a group, and making an activity. 
+				Those features would ultimately lead to the Group page, which would feature a calendar for reference. 
+				</p>
+				</div>
+  </div>
+  
+
+  <div class="wrapper">
+		<div id="one"><h3 class="w3-center">DESIGN & PROTOTYPE</h3></div>
+		<div id="two">
+		<h4 class="w3-left">Design, test/feedback, iterations, final design</h4>
+				<br>
+				<br>
+				<p class="w3-justify">
+				I referred to my wireframes and FIGMA to create hi-fidelity designs. 
+
+				</p>
+		<h4 class="w3-left">Testing and Feedback</h4>
+				<br>
+				<br>
+				<p class="w3-justify">
+				I asked four acquaintances, who matched the user persona profiles as closely as possible, to try out the prototype. 
+				From this I was able to fix some features that needed refining, such as font colors and button sizes. 
+				
+				</p>
+				<p class="w3-justify">
+				I also chose to use houseplants as a design inspiration, promote a feeling of home life and accomplishment. So the main color of the app is green. 
+				One of my favorite features in the app is the garden, which I decided will grow based on if members of the group finish their tasks. This is another feature that promotes a sense of accomplishment. 
+				
+				
+				Shown below is the final design. 
+
+				</p>
+				</div>
+  </div>
+
+<img src="https://66.media.tumblr.com/432f12617b0cdf98e61afe3d58841e02/tumblr_pzge13GMkd1sheg4ho1_1280.jpg"
+					class="center" style="width:80%">
+      
+  <br>
+  <br>
+  <br>
+  
+<div id = "lightgrayback">
+		<div class="w3-center w3-container w3-large w3-text-gray" style="padding:0px" >
+		<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+		<div class="w3-animate-bottom w3-text-black">
+		<h1 class="w3-jumbo">DESIGN FEATURES</h1>
+		<br>
+		<br>
+			 		<h2 class="w3-wide">Landing Page</h2>
+					<p> Sign In & Sign Up are standard format. </p>
+					<h2 class="w3-wide">User dashboard</h2>
+					<p> Here are two forms of the user dashboard. One is for a new user, and one is for a returning user. </p>
+					<h2 class="w3-wide">Group Features</h2>
+					<p> Here are two forms of the user dashboard. One is for a new user, and one is for a returning user. </p>
+					<h2 class="w3-wide">Customization Options</h2>
+					<p> Here are two forms of the user dashboard. One is for a new user, and one is for a returning user. </p>
+					<h2 class="w3-wide">Family Calendar</h2>
+					<p> Here are two forms of the user dashboard. One is for a new user, and one is for a returning user. </p>
+			
+		</div>
+		</div>
+		</div>
+		</div>
+<div id = "grayback">
+		<div class="w3-center w3-container w3-large w3-text-gray" style="padding:0px" >
+		<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+		<div class="w3-animate-bottom w3-text-gray">
+		<h1 class="w3-wide">CONCLUSION</h1>
+		<br>
+		<br>
+			This was my first, fully designed app. In the future, I would love to work with a developer to code it and put it out on the market, as I feel like it would be very useful for many people in the world, including me! 
+			In this particular project, I learned that user testing is so very important, as it helped me single out design features that could be improved. 
+			For my next project, I think I will wireframe a bit more thoroughly. I will start with pen and paper at first, but then add a stage for lo fidelity mockups. 
+			
+		</div>
+		
+		
+</div>   <p style="w3-right">Next Project &rarr;</p>
+
+</div>
+</div>
+<script>
+// Open and close sidebar
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}function openNav() {
+  document.getElementById("mySidebar").style.width = "30%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+function closeNav() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+</script>
+
+</body>
+</html>
+
+	
+	
+	
+	
+	
