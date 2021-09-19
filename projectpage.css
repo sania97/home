@@ -416,9 +416,7 @@ a.buttontocasestudy:hover {
   text-shadow: 0 0 5px rgba(100, 168, 233, .8), 0 0 10px rgba(100, 168, 233, .5), 0 0 30px rgba(100, 168, 233, .3)
 }
 
-.roundy path {
-  fill: #fff
-}
+
 
 .roundy {
   height: 30px;
