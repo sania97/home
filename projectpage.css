@@ -388,7 +388,7 @@ a.buttontocasestudy:after {
   color: rgba(49, 68, 107, .65);
   content: ']';
   display: block;
-  font-size: 2em;
+  font-size: 2em;km
   right: 0;
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
@@ -422,6 +422,9 @@ a.buttontocasestudy:hover {
   height: 30px;
   width: 30px;
   display: inline-block
+}
+.roundy .path {
+  fill: #293858
 }
 
 .roundy .contento {
@@ -503,9 +506,7 @@ a.buttontocasestudy:hover {
   height: 130%
 }
 
-.roundy .path {
-  fill: #293858
-}
+
 
 .icon-bg:before {
   opacity: .4;
@@ -538,11 +539,6 @@ a.buttontocasestudy:hover {
   z-index: 99999999;
   width: 100vw;
   height: 100%
-}
-
-.opa {
-  opacity: .9;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
 }
 
 #loading {
