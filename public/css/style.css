@@ -1634,7 +1634,7 @@ body {
     @media (max-width: 544px) {
       .nav__groups {
         flex-direction: column;
-        align-items: center; } }
+         } }
   .nav__group {
     z-index: 1000;
     display: flex;
