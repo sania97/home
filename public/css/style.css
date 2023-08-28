@@ -159,7 +159,7 @@ input[type="search"] {
       padding: 0rem 1rem; }
 
 .circles {
-  background-image: url("/images/star-bg.jpg");
+  background-image: url("/public/images/star-bg.jpg");
   opacity: .4;
   position: relative;
   width: 100vw;
