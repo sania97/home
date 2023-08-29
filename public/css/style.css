@@ -199,7 +199,7 @@ input[type="search"] {
 }
 
 .circles {
-  background-image: url("/images/star-bg.jpg");
+  background-image: url("/public/images/star-bg.jpg");
   opacity: .4;
   position: relative;
   width: 100vw;
@@ -212,7 +212,7 @@ input[type="search"] {
 }
 
 .circles.mb {
-  background-image: url("/images/star-bg-mb.png");
+  background-image: url("/public/images/star-bg-mb.png");
   background-size: cover;
   background-position: center;
 }
