@@ -4,7 +4,16 @@ $(document).ready(function() {
     var text = $(this).text();
     $(this).attr('data-text', text);
   });
-
+  $('.nav__group a').on('click', function(event) {
+    event.preventDefault(); // Prevent default behavior
+    const targetId = $(this).attr('href'); // Get the href attribute
+    const targetElement = $(targetId); // Find the corresponding element by id
+    if (targetElement.length) {
+      $('html, body').animate({
+        scrollTop: targetElement.offset().top
+      }, 1000); // Smoothly scroll to the element
+    }
+  });
   // Scroll-based class addition and navigation bar switching
   $(document).scroll(function() {
     var y = $(this).scrollTop();
@@ -65,5 +74,6 @@ $(document).ready(function() {
         $body.addClass('color-' + $(this).data('color'));
       }
     });
+
   });    
 });
