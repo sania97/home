@@ -1,6 +1,15 @@
 $(document).ready(function() {
   // Hide the second navigation bar initially
-
+  $('.nav-toc__group a').on('click', function(event) {
+    event.preventDefault(); // Prevent default behavior
+    const targetId = $(this).attr('href'); // Get the href attribute
+    const targetElement = $(targetId); // Find the corresponding element by id
+    if (targetElement.length) {
+      $('html, body').animate({
+        scrollTop: targetElement.offset().top
+      }, 1000); // Smoothly scroll to the element
+    }
+  });
   // Scroll-based class addition and navigation bar switching
   $(document).scroll(function() {
     var y = $(this).scrollTop();

@@ -13,24 +13,6 @@
 </head>
 
 <body>
-  <script id="__bs_script__">//<![CDATA[
-    (function () {
-      try {
-        var script = document.createElement('script');
-        if ('async') {
-          script.async = true;
-        }
-        script.src = '/browser-sync/browser-sync-client.js?v=2.29.3'.replace("HOST", location.hostname);
-        if (document.body) {
-          document.body.appendChild(script);
-        } else if (document.head) {
-          document.head.appendChild(script);
-        }
-      } catch (e) {
-        console.error("Browsersync: could not append script tag", e);
-      }
-    })()
-//]]></script>
   <div class="sectionn headerr mobile">
     <div class="container mobile">
       <section class="page-section">
@@ -48,7 +30,7 @@
       </section>
     </div>
   </div>
-  <div class="sectionn headerr notmobile">
+  <div class="sectionn headerr notmobile" id="1">
     <div class="container notmobile top">
       <section class="page-section">
         <div class="row">
@@ -61,9 +43,9 @@
           <div class="col-xs-12 col-sm-12 col-md-8 col-lg">
             <nav class="nav-reg">
               <ul class="nav-reg__groups">
-                <li class="nav-reg__group"><a class="btn tab dark" href="#work">work</a></li>
-                <li class="nav-reg__group"><a class="btn tab dark" href="#about">about me</a></li>
-                <li class="nav-reg__group"><a class="btn tab dark" href="#contact">contact</a></li>
+                <li class="nav-reg__group"><a class="btn tab dark" href="/#work" target="_blank">work</a></li>
+                <li class="nav-reg__group"><a class="btn tab dark" href="/#about" target="_blank">about me</a></li>
+                <li class="nav-reg__group"><a class="btn tab dark" href="/#contact" target="_blank">contact</a></li>
               </ul>
             </nav>
           </div>
@@ -97,16 +79,16 @@
                   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5">
                     <div class="slide-left">
                       <div class="slideText projectheadline"><a class="btn chip">Case Study</a>
-                        <h5>LED Company</h5>
-                        <h4 class="titlefont block">Elevating LED Website with Copywriting and Functional Design System
-                        </h4>
+                        <h5>LED Lighting Solutions</h5>
+                        <h4 class="titlefont block">Elevating Website Design with Copywriting and Functional Design
+                          System</h4>
                       </div>
                     </div>
                   </div>
                   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-7">
                     <div class="slide-right">
                       <div class="slideImgcont"><img class="slideImg" src="/public/images/led/title-card.png"
-                          alt="LED Company"></div>
+                          alt="LED Lighting Solutions"></div>
                     </div>
                   </div>
                 </div>
@@ -141,11 +123,13 @@
                     <div class="slide-right">
                       <div class="slideText">
                         <p class="body upper graytxt">Background</p>
-                        <p class="body">A provider of LED lighting solutions needed to finalize some of their website
+                        <p class="body">A LED lighting solutions provider needed to finalize some of their website
                           content before the launch of their website. They needed a website that not only showcased
                           their innovative LED lights but also effectively communicated their value proposition. My role
                           primarily involved enhancing their copywriting and translating subpar designs into a
                           functional design system.</p>
+                        <p class="body">Due to proprietary concerns, client has requested their name removed until
+                          website is launched.</p>
                       </div>
                     </div>
                   </div>
@@ -169,7 +153,8 @@
                             <p class="body">The direction of the brand was already mostly defined, but I directed some
                               exercises to determine that mission of the company and how the stakeholders wanted that to
                               be communicated. I also gathered details about how the typical customer would interact
-                              with the website.</p>
+                              with the website, concluding that product features would need to be highlighted the most,
+                              as they were the biggest contributing factor in sales.</p>
                           </div>
                         </div>
                       </div>
@@ -186,14 +171,15 @@
                         <div class="slideText">
                           <p class="body upper graytxt">Methods</p>
                           <p class="body">In order to better understand the potential needs of the new website, I
-                            conducted a Competitive analysis of typical LED manufacturers, as well as other sustainably
+                            conducted a Competitive analysis of similar LED manufacturers, as well as other sustainably
                             minded products.</p>
                         </div>
                         <div class="slideText">
                           <p class="body upper graytxt">Insights</p>
-                          <p class="body">User needs analysis revealed that clear and concise information about the LED
-                            lights, along with a straightforward way to compare products were of the utmost importance.
-                          </p>
+                          <p class="body">This analysis revealed that clear and concise information about the specific
+                            product features, along with a straightforward way to compare products were of the utmost
+                            importance. I noted that many websites prominently featured their company values as a
+                            selling point; usually these were commitment to efficiency and reliability.</p>
                         </div>
                       </div>
                     </div>
@@ -266,10 +252,19 @@
                         <div class="slideText sol">
                           <p class="body">Leveraging the insights gained during the exploration phase, I set out to
                             complete the copywriting content for all the pages. The website's main purpose was to sell
-                            and to inform. I began by first focusing on identifying where to place the Calls to Action
-                            (CTA). Once I had that mapped out, I took all information I had about the company and
-                            products' unique features and advantages, and filled it in the relevant areas. </p><img
-                            class="solslidegray" src="/public/images/led/sol1.png" alt="">
+                            and to inform so I began by first focusing on identifying where to place the Calls to Action
+                            (CTAs). Once I had that mapped out, I took all the information I had about the company and
+                            products' unique features and advantages, and filled it in the relevant areas. </p>
+                        </div>
+                      </div>
+                      <div class="solContent">
+                        <div class="slideTitle less">
+                          <p class="body upper graytxt"></p>
+                        </div>
+                        <div class="slideText sol">
+                          <p class="body">The copy aimed to connect with users on both functional and emotional levels,
+                            highlighting energy savings, durability, and aesthetic appeal.</p><img class="solslidegray"
+                            src="/public/images/led/sol1.png" alt="">
                         </div>
                       </div>
                       <div class="solContent">
@@ -285,10 +280,7 @@
                           <p class="body upper graytxt"></p>
                         </div>
                         <div class="slideText sol">
-                          <p class="body"></p><img class="solslidegray" src="/public/images/led/sol3.png"
-                            alt="The copy aimed to connect with users on both functional and emotional levels, highlighting energy savings, durability, and aesthetic appeal.">
-                          <p class="body">The copy aimed to connect with users on both functional and emotional levels,
-                            highlighting energy savings, durability, and aesthetic appeal.</p>
+                          <p class="body"></p><img class="solslidegray" src="/public/images/led/sol3.png" alt="">
                         </div>
                       </div>
                     </div>
@@ -330,9 +322,9 @@
                         </div>
                         <div class="slideText sol">
                           <p class="body"></p><img class="solslidegray" src="/public/images/led/sol4.png"
-                            alt="Responsive design system to adapt seamlessly to various devices and screen sizes. ">
-                          <p class="body">Responsive design system to adapt seamlessly to various devices and screen
-                            sizes. </p>
+                            alt="I delivered a responsive design system to adapt seamlessly to various devices and screen sizes. ">
+                          <p class="body">I delivered a responsive design system to adapt seamlessly to various devices
+                            and screen sizes. </p>
                         </div>
                       </div>
                     </div>
@@ -362,18 +354,13 @@
                     <div class="slideContent solutions">
                       <div class="solContent">
                         <div class="slideTitle">
-                          <p class="body upper">Home Page</p>
-                        </div><img class="solslide" src="/public/images/led/m1.png" alt="LED Company">
+                          <p class="body upper">About Page</p>
+                        </div><img class="solslidegray" src="/public/images/led/m1.png" alt="LED Lighting Solutions">
                       </div>
                       <div class="solContent">
                         <div class="slideTitle">
-                          <p class="body upper">Home Page</p>
-                        </div><img class="solslide" src="/public/images/led/m1.png" alt="LED Company">
-                      </div>
-                      <div class="solContent">
-                        <div class="slideTitle">
-                          <p class="body upper">Home Page</p>
-                        </div><img class="solslide" src="/public/images/led/m1.png" alt="LED Company">
+                          <p class="body upper">Product Page</p>
+                        </div><img class="solslidegray" src="/public/images/led/m2.png" alt="LED Lighting Solutions">
                       </div>
                     </div>
                   </div>
@@ -428,7 +415,7 @@
                           <div class="slideText">
                             <p class="body upper graytxt">Results</p>
                             <p class="body">The collaboration between stakeholders, user research, and iterative design
-                              processes resulted in a successful project that aligns with Luminex's vision, enhances
+                              processes resulted in a successful result that aligns with the company’s vision, enhances
                               their online presence, and increases the potential of future content creation. </p>
                           </div>
                           <div class="slideText">
@@ -479,7 +466,7 @@
                           <div class="slide-left">
                             <div class="slideText projectheadline">
                               <h5 class="titlefont">ERP</h5>
-                              <p class="body">Creating a customized Enterprise Resource Planning Platform</p>
+                              <p class="body">Designing a customized Enterprise Resource Planning Platform</p>
                             </div>
                             <div class="buttontocasestudy"><a class="btn topage" href="/work/erp">Read more</a></div>
                           </div>
@@ -498,7 +485,7 @@
                           <div class="slide-left">
                             <div class="slideText projectheadline">
                               <h5 class="titlefont">Blake Pro Gear</h5>
-                              <p class="body">Brand and website design for an outdoor gear company</p>
+                              <p class="body">Brand and website design overhaul for an outdoor gear company</p>
                             </div>
                             <div class="buttontocasestudy"><a class="btn topage" href="/work/bpg">Read more</a></div>
                           </div>
@@ -536,7 +523,7 @@
                   <p class="body">Questions? Feedback? Hiring? <br>Let's get in touch!</p>
                 </div>
               </a><a class="btn giant green wicon doc"
-                href="https://drive.google.com/file/d/1cAMw7CaQ_chuVkDyJaAfrQbtYzTKjgPs/view?usp=drive_link"
+                href="https://drive.google.com/file/d/1kuYYUBSUaB44xocU2yG6yzQgojeW5AB8/view?usp=drive_link"
                 target="_blank">
                 <div class="textblock">
                   <h6 class="titlefont block">Get my resume</h6>
