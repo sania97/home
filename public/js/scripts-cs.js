@@ -1,6 +1,6 @@
-$(document).ready(function() {
+$(document).ready(function () {
   // Hide the second navigation bar initially
-  $('.nav-toc__group a').on('click', function(event) {
+  $('.nav-toc__group a').on('click', function (event) {
     event.preventDefault(); // Prevent default behavior
     const targetId = $(this).attr('href'); // Get the href attribute
     const targetElement = $(targetId); // Find the corresponding element by id
@@ -10,11 +10,30 @@ $(document).ready(function() {
       }, 1000); // Smoothly scroll to the element
     }
   });
-  // Scroll-based class addition and navigation bar switching
-  $(document).scroll(function() {
+  var $window = $(window);
+
+  // Initial check when the page loads
+  function checkScrollClasses() {
     var y = $(this).scrollTop();
 
-    // ... (existing scroll logic)
+    const windowHeight = $(window).height();
+
+    $(".slide").each(function () {
+      var parentElement = $(this).closest(".slide-containerr");
+      var scrolledActivation = windowHeight / 1.8;
+      var t = parentElement.offset().top - scrolledActivation;
+
+      if (y > t) {
+        parentElement.addClass("scrolled");
+      } 
+    });
+
+  }
+  checkScrollClasses();
+  // Scroll-based class addition and navigation bar switching
+  $(document).scroll(function () {
+    checkScrollClasses();
+    var y = $(this).scrollTop();
 
     // Toggle navigation bars based on scroll position
     var triggerPosition = $('#nav-trigger').offset().top - 500;
