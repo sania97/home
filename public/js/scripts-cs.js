@@ -20,7 +20,7 @@ $(document).ready(function () {
 
     $(".slide").each(function () {
       var parentElement = $(this).closest(".slide-containerr");
-      var scrolledActivation = windowHeight / 1.8;
+      var scrolledActivation = windowHeight / 2.2;
       var t = parentElement.offset().top - scrolledActivation;
 
       if (y > t) {
