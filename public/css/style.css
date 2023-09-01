@@ -2012,7 +2012,7 @@ body {
   overflow-wrap: break-word; }
   .slides.slidescol {
     width: auto;
-    gap: 4rem;
+    gap: 1rem;
     max-width: 100%; }
   @media (max-width: 768px) {
     .slides {
