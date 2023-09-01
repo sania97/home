@@ -14,9 +14,43 @@ $(document).ready(function() {
       }, 1000); // Smoothly scroll to the element
     }
   });
-  // Scroll-based class addition and navigation bar switching
-  $(document).scroll(function() {
-    var y = $(this).scrollTop();
+
+
+  
+
+  function checkScrollClasses() {
+    var $window = $(window),
+    $body = $('body'),
+    $section = $('.sectionn');
+
+    var y = $(window).scrollTop();
+
+    // Add lightup and brighten classes for .profImgcont element
+    var profImgcont = $(".profImgcont");
+    var aboutmeElement = profImgcont.closest(".aboutme");
+    var aboutmePts = $(".features-list");
+    $(".features-list li").each(function(index) {
+      $(this).delay(400 * index).animate(
+        {
+          opacity: 1,
+          top: 0,
+        },
+        800
+      );
+    });
+    var x = profImgcont.offset().top - 600;
+
+    if (y > x) {
+      profImgcont.addClass("lightup");
+      aboutmeElement.addClass("brighten");
+      aboutmePts.addClass("float");
+
+    } else {
+      profImgcont.removeClass("lightup");
+      aboutmeElement.removeClass("brighten");
+      aboutmePts.removeClass("float");
+
+    }
 
     // Scroll-based class addition for .buttontocasestudy elements
     $(".buttontocasestudy").each(function() {
@@ -32,27 +66,6 @@ $(document).ready(function() {
         cardElement.removeClass("brighten");
       }
     });
-
-    // Adding lightup and brighten classes for .profImgcont element
-    var profImgcont = $(".profImgcont");
-    var aboutmeElement = profImgcont.closest(".aboutme");
-    var x = profImgcont.offset().top - $(window).height() + 200;
-
-    if (y > x) {
-      profImgcont.addClass("lightup");
-      aboutmeElement.addClass("brighten");
-    } else {
-      profImgcont.removeClass("lightup");
-      aboutmeElement.removeClass("brighten");
-    }
-
-    // Toggle navigation bars based on scroll position
-
-    // Adding double layered text effect
-    // selectors
-    var $window = $(window),
-      $body = $('body'),
-      $section = $('.sectionn');
 
     // Change 33% earlier than scroll position so colour is there when you arrive.
     var scroll = y + ($window.height() / 3);
@@ -74,6 +87,12 @@ $(document).ready(function() {
         $body.addClass('color-' + $(this).data('color'));
       }
     });
+  }
+  checkScrollClasses();
+  $(document).scroll(function() {
+    checkScrollClasses();
+
+    
 
   });    
 });
