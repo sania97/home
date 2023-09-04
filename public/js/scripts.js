@@ -16,39 +16,62 @@ $(document).ready(function() {
   });
 
 
-  
-
   function checkScrollClasses() {
     var $window = $(window),
-    $body = $('body'),
-    $section = $('.sectionn');
+    $body = $('body');
 
-    var y = $(window).scrollTop();
+    var y = $window.scrollTop();
 
+
+    var offset=$window.height() / 2;
+    var $sections = $('[data-color]'); // Select all sections with data-color attribute
+    $sections.each(function () {
+      var $this = $(this);
+      var sectionTop = $this.offset().top-offset;
+      var sectionBottom = sectionTop + $this.outerHeight();
+
+      var sectionColor = $this.data('color');
+
+      // Check if the section is on screen
+      if (y >= sectionTop && y <= sectionBottom) {
+        $body.removeClass(function(index, classNames) {
+          // Remove any existing color classes from the body
+          return (classNames.match(/color-\S+/g) || []).join(' ');
+        });
+        $body.addClass('color-' + sectionColor);
+        return false; // Exit the loop once a matching section is found
+      }
+    });
+
+    
     // Add lightup and brighten classes for .profImgcont element
     var profImgcont = $(".profImgcont");
     var aboutmeElement = profImgcont.closest(".aboutme");
-    var aboutmePts = $(".features-list");
-    $(".features-list li").each(function(index) {
-      $(this).delay(400 * index).animate(
-        {
-          opacity: 1,
-          top: 0,
-        },
-        800
-      );
-    });
+    var aboutmePts = $(".features-list li");
+
     var x = profImgcont.offset().top - 600;
 
     if (y > x) {
       profImgcont.addClass("lightup");
       aboutmeElement.addClass("brighten");
-      aboutmePts.addClass("float");
+      //aboutmePts.addClass("float");
+      function addFloatClass(index) {
+        if (index < aboutmePts.length) {
+          aboutmePts.eq(index).addClass("float");
+          setTimeout(function () {
+            addFloatClass(index + 1);
+          }, 400); // 2000 milliseconds (2 seconds) delay
+        }
+      }
+    
+      // Start adding the 'float' class with the first li
+      addFloatClass(0);
+
 
     } else {
       profImgcont.removeClass("lightup");
       aboutmeElement.removeClass("brighten");
-      aboutmePts.removeClass("float");
+      //aboutmePts.removeClass("float");
 
     }
 
@@ -68,29 +91,16 @@ $(document).ready(function() {
     });
 
     // Change 33% earlier than scroll position so colour is there when you arrive.
-    var scroll = y + ($window.height() / 3);
+    //var scroll = y + ($window.height() / 3);
 
-    $section.each(function () {
-      var $this = $(this);
-
-      // if position is within range of this panel.
-      // So position of (position of top of div <= scroll position) && (position of bottom of div > scroll position).
-      // Remember we set the scroll to 33% earlier in scroll var.
-      if ($this.position().top <= scroll && $this.position().top + $this.height() > scroll) {
-            
-        // Remove all classes on body with color-
-        $body.removeClass(function (index, css) {
-          return (css.match (/(^|\s)color-\S+/g) || []).join(' ');
-        });
-       
-        // Add class of currently active div
-        $body.addClass('color-' + $(this).data('color'));
-      }
-    });
+    
+    
+    
   }
   checkScrollClasses();
   $(document).scroll(function() {
     checkScrollClasses();
+    
 
     
 
