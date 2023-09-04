@@ -1658,8 +1658,8 @@ body {
   .container.top.herocont {
     padding: 2rem;
     top: 25vw;
-    height: 100%; }
-    @media (max-width: 768px) {
+      }
+      @media (max-width: 768px) {
       .container.top.herocont {
         top: 40vw; } }
 
