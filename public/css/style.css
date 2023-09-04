@@ -171,7 +171,7 @@ input[type="search"] {
       padding: 0rem 1rem; }
 
 .circles {
-  background-image: url("/images/star-bg.jpg");
+  background-image: url("/public/images/star-bg.jpg");
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -182,7 +182,7 @@ input[type="search"] {
   overflow: hidden;
   opacity: .4; }
   .circles.mb {
-    background-image: url("/images/star-bg-mb.png");
+    background-image: url("/public/images/star-bg-mb.png");
     background-size: cover;
     background-position: center; }
 
