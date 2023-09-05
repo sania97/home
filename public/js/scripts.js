@@ -1,8 +1,12 @@
 $(document).ready(function() {
   // Hide the second navigation bar initially
+  
   $('.double-layered-text').each(function() {
     var text = $(this).text();
     $(this).attr('data-text', text);
+    var parentdiv = $(this).closest(".intromessage");
+    parentdiv.addClass('loaded');
+
   });
   $('.nav__group a').on('click', function(event) {
     event.preventDefault(); // Prevent default behavior
@@ -14,8 +18,46 @@ $(document).ready(function() {
       }, 1000); // Smoothly scroll to the element
     }
   });
+  $('#selected').on('click', function(event) {
+    event.preventDefault(); // Prevent default behavior
+    const targetId = $(this).attr('href'); // Get the href attribute
+    const targetElement = $(targetId); // Find the corresponding element by id
+    if (targetElement.length) {
+      $('html, body').animate({
+        scrollTop: targetElement.offset().top
+      }, 1000); // Smoothly scroll to the element
+    }
+  });
+  function shapeDimensions() {
+    var initialWidth = $('.container').css('width');
+    var initialHeight = $('.shapee:first').css('height');
 
+    $('.shapee').each(function(index) {
+        // Set the first element to 50vw x 50vh
+        if (index === 0) {
+            $(this).css({
+                'width': initialWidth,
+                'height': initialWidth,
 
+            });
+        } else {
+
+          var groupNumber = index % 3 + 1; // Group numbers will be 1, 2, or 3
+
+                      // Set animation time based on group number
+          var animationTime = groupNumber === 1 ? 24 : (groupNumber === 2 ? 30 : 36);
+
+            // Scale each subsequent element
+            var scale = 1.0 + index * 0.1;
+            $(this).css({
+              'width': 'calc(' + initialWidth + ' * ' + scale + ')',
+              'height': 'calc(' + initialWidth + ' * ' + scale + ')',
+              'animation-duration': animationTime + 's'
+
+            });
+        }
+    });
+  }
   function checkScrollClasses() {
     var $window = $(window),
     $body = $('body');
@@ -98,11 +140,16 @@ $(document).ready(function() {
     
   }
   checkScrollClasses();
+  shapeDimensions();
   $(document).scroll(function() {
     checkScrollClasses();
-    
+   
 
     
 
-  });    
+  });
+  $(window).resize(function() {
+    // Update shape dimensions when the window is resized
+    shapeDimensions();
+});    
 });
