@@ -757,7 +757,7 @@ pre {
   width: 100%; }
 
 .circles {
-  background-image: url("/public/images/star-bg.png");
+  background-image: url("/public/images/star-bg.jpg");
   position: relative;
   width: 100vw;
   height: 100vh;
