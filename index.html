@@ -10,8 +10,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript" src="/public/js/scripts.js"></script>
   <title>Home | Sania Syed </title>
-  <script data-goatcounter="https://saniadesign.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
 </head>
 
 <body>
@@ -43,168 +41,141 @@
           <div class="double-layered-text" data-text=""> Hello, <!--span.emoji &#x1F44B;&#x1F3FC;-->my name is Sania.
           </div>
           <div class="double-layered-text" data-text=""> I am a digital product designer based in Los Angeles, CA.</div>
-          <a class="btn link dark-bg wicon scrolldown right" href="#work">Selected Projects</a>
+          <a class="btn link dark-bg wicon scrolldown right" id="selected" href="#work">Some of my recent work</a>
         </div>
       </section>
     </div>
-    <div class="container circlesCont mobile">
-      <div class="circles mb"></div>
-    </div>
-    <div class="container circlesCont mobile">
-      <div class="circles mb"></div>
-    </div>
-    <div class="container circlesCont notmobile">
+    <div class="container circlesCont">
       <div class="circles">
         <div class="circle" id="first">
-          <div class="shape"><svg id="circ" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%"
-              viewbox="-10 -10 220 220">
+          <div class="shapee"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%"
+              viewbox="-10 -10 220 220" preserveAspectRatio="none">
               <defs>
-                <lineargradient id="redyel" gradientunits="objectBoundingBox" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stop-color="#e91e6d"></stop>
-                  <stop offset="100%" stop-color="#b8e12a"></stop>
+                <radialgradient id="red1" gradientunits="objectBoundingBox" x1="0" y1="1" x2="1" y2="0">
+                  <stop offset="0" stop-color="#D05FDD" stop-opacity="1"></stop>
+                  <stop offset="0.5" stop-color="#D05FDD" stop-opacity="0"></stop>
+                </radialgradient>
+                <lineargradient id="red2" gradientunits="objectBoundingBox" x1="0" y1="1" x2="1" y2="0">
+                  <stop stop-color="#D05FDD" stop-opacity="1"></stop>
+                  <stop offset="1" stop-color="#C88259" stop-opacity="1"></stop>
                 </lineargradient>
-                <lineargradient id="yelgre" gradientunits="objectBoundingBox" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="#b8e12a"></stop>
-                  <stop offset="100%" stop-color="#26C797"></stop>
+                <radialgradient id="or1" gradientunits="objectBoundingBox" x1="0" y1="1" x2="1" y2="0">
+                  <stop offset="0" stop-color="#C88259" stop-opacity="1"></stop>
+                  <stop offset="0.5" stop-color="#C88259" stop-opacity="0"></stop>
+                </radialgradient>
+                <lineargradient id="or2" gradientunits="objectBoundingBox" x1="0" y1="1" x2="1" y2="0">
+                  <stop stop-color="#C88259" stop-opacity="1"></stop>
+                  <stop offset="1" stop-color="#AFC54F" stop-opacity="1"></stop>
                 </lineargradient>
-                <lineargradient id="grecya" gradientunits="objectBoundingBox" x1="1" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="#26C797"></stop>
-                  <stop offset="100%" stop-color="#3F889C"></stop>
+                <radialgradient id="yel1" gradientunits="objectBoundingBox" x1="0" y1="1" x2="1" y2="0">
+                  <stop offset="0" stop-color="#AFC54F" stop-opacity="1"></stop>
+                  <stop offset="0.5" stop-color="#AFC54F" stop-opacity="0"></stop>
+                </radialgradient>
+                <lineargradient id="yel2" gradientunits="objectBoundingBox" x1="0" y1="1" x2="1" y2="0">
+                  <stop stop-color="#AFC54F" stop-opacity="1"></stop>
+                  <stop offset="1" stop-color="#4BC7BF" stop-opacity="1"></stop>
                 </lineargradient>
-                <lineargradient id="cyablu" gradientunits="objectBoundingBox" x1="1" y1="1" x2="0" y2="0">
-                  <stop offset="0%" stop-color="#3F889C"></stop>
-                  <stop offset="100%" stop-color="#5C40A1"></stop>
+                <radialgradient id="gre1" gradientunits="objectBoundingBox" x1="0" y1="1" x2="1" y2="0">
+                  <stop offset="0" stop-color="#4BC7BF" stop-opacity="1"></stop>
+                  <stop offset="0.5" stop-color="#4BC7BF" stop-opacity="0"></stop>
+                </radialgradient>
+                <lineargradient id="gre2" gradientunits="objectBoundingBox" x1="0" y1="1" x2="1" y2="0">
+                  <stop stop-color="#4BC7BF" stop-opacity="1"></stop>
+                  <stop offset="1" stop-color="#4799FD" stop-opacity="1"></stop>
                 </lineargradient>
-                <lineargradient id="blumag" gradientunits="objectBoundingBox" x1="0" y1="1" x2="0" y2="0">
-                  <stop offset="0%" stop-color="#5C40A1"></stop>
-                  <stop offset="100%" stop-color="#7600A6"></stop>
-                </lineargradient>
-                <lineargradient id="magred" gradientunits="objectBoundingBox" x1="0" y1="1" x2="1" y2="0">
-                  <stop offset="0%" stop-color="#7600A6"></stop>
-                  <stop offset="100%" stop-color="#e91e6d"></stop>
-                </lineargradient>
-                <lineargradient id="redyel2" gradientunits="objectBoundingBox" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stop-color="#3F889C"></stop>
-                  <stop offset="100%" stop-color="#5C40A1"></stop>
-                </lineargradient>
-                <lineargradient id="yelgre2" gradientunits="objectBoundingBox" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="#5C40A1"></stop>
-                  <stop offset="100%" stop-color="#7600A6"></stop>
-                </lineargradient>
-                <lineargradient id="grecya2" gradientunits="objectBoundingBox" x1="1" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="#7600A6"></stop>
-                  <stop offset="100%" stop-color="#e91e6d"></stop>
-                </lineargradient>
-                <lineargradient id="cyablu2" gradientunits="objectBoundingBox" x1="1" y1="1" x2="0" y2="0">
-                  <stop offset="0%" stop-color="#e91e6d"></stop>
-                  <stop offset="100%" stop-color="#b8e12a"></stop>
-                </lineargradient>
-                <lineargradient id="blumag2" gradientunits="objectBoundingBox" x1="0" y1="1" x2="0" y2="0">
-                  <stop offset="0%" stop-color="#b8e12a"></stop>
-                  <stop offset="100%" stop-color="#26C797"></stop>
-                </lineargradient>
-                <lineargradient id="magred2" gradientunits="objectBoundingBox" x1="0" y1="1" x2="1" y2="0">
-                  <stop offset="0%" stop-color="#26C797"></stop>
-                  <stop offset="100%" stop-color="#3F889C"></stop>
+                <radialgradient id="bl1" gradientunits="objectBoundingBox" x1="0" y1="1" x2="1" y2="0">
+                  <stop offset="0" stop-color="#4799FD" stop-opacity="1"></stop>
+                  <stop offset="0.5" stop-color="#4799FD" stop-opacity="0"></stop>
+                </radialgradient>
+                <lineargradient id="bl2" gradientunits="objectBoundingBox" x1="0" y1="1" x2="1" y2="0">
+                  <stop stop-color="#4799FD" stop-opacity="1"></stop>
+                  <stop offset="1" stop-color="#D05FDD" stop-opacity="1"></stop>
                 </lineargradient>
               </defs>
-              <g fill="none" stroke-linecap="round" stroke-width="2" stroke-dasharray="" transform="translate(100,100)">
-                <path d="M 0,-100 A 100,100 0 0,1 86.6,-50" stroke="url(#redyel)"></path>
-                <path d="M 86.6,-50 A 100,100 0 0,1 86.6,50" stroke="url(#yelgre)"></path>
-                <path d="M 86.6,50 A 100,100 0 0,1 0,100" stroke="url(#grecya)"></path>
-                <path d="M 0,100 A 100,100 0 0,1 -86.6,50" stroke="url(#cyablu)"></path>
-                <path d="M -86.6,50 A 100,100 0 0,1 -86.6,-50" stroke="url(#blumag)"></path>
+              <g fill="none" stroke-width="2" stroke-dasharray="">
+                <path d="M 4 100 A 96 96 0 0 1 196 100" stroke="url(#gre1)"></path>
+                <path d="M 196 100 A 96 96 0 0 1 4 100" stroke="url(#gre2)" stroke-linecap="round"></path>
               </g>
             </svg></div>
         </div>
         <div class="circle" id="second">
-          <div class="shape"><svg id="circ" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%"
-              viewbox="-10 -10 220 220">
-              <g id="secondR" fill="none" stroke-linecap="round" stroke-width="2" stroke-dasharray=""
-                transform="translate(100,100)">
-                <path d="M 86.6,-50 A 100,100 0 0,1 86.6,50" stroke="url(#yelgre2)"></path>
-                <path d="M 86.6,50 A 100,100 0 0,1 0,100" stroke="url(#grecya2)"></path>
-                <path d="M 0,100 A 100,100 0 0,1 -86.6,50" stroke="url(#cyablu2)"></path>
-                <path d="M -86.6,50 A 100,100 0 0,1 -86.6,-50" stroke="url(#blumag2)"></path>
-                <path d="M -86.6,-50 A 100,100 0 0,1 0,-100" stroke="url(#magred2)"></path>
+          <div class="shapee"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%"
+              viewbox="-10 -10 220 220" transform="rotate(90 0 0)">
+              <g fill="none" stroke-width="3" stroke-dasharray="">
+                <path d="M 4 100 A 96 96 0 0 1 196 100" stroke="url(#yel1)"></path>
+                <path d="M 196 100 A 96 96 0 0 1 4 100" stroke="url(#yel2)" stroke-linecap="round"></path>
               </g>
             </svg></div>
         </div>
         <div class="circle" id="third">
-          <div class="shape"><svg id="circ" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%"
-              viewbox="-10 -10 220 220">
-              <g fill="none" stroke-linecap="round" stroke-width="2" stroke-dasharray="36"
-                transform="translate(100,100)">
-                <path d="M 0,-100 A 100,100 0 0,1 86.6,-50" stroke="url(#redyel)"></path>
-                <path d="M 86.6,-50 A 100,100 0 0,1 86.6,50" stroke="url(#yelgre)"></path>
-                <path d="M 86.6,50 A 100,100 0 0,1 0,100" stroke="url(#grecya)"></path>
-                <path d="M 0,100 A 100,100 0 0,1 -86.6,50" stroke="url(#cyablu)"></path>
-                <path d="M -86.6,50 A 100,100 0 0,1 -86.6,-50" stroke="url(#blumag)"></path>
-                <path d="M -86.6,-50 A 100,100 0 0,1 0,-100" stroke="url(#magred)"></path>
+          <div class="shapee"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%"
+              viewbox="-10 -10 220 220" transform="rotate(-90 0 0)">
+              <g fill="none" stroke-width="2" stroke-dasharray="">
+                <path d="M 4 100 A 96 96 0 0 1 196 100" stroke="url(#red1)"></path>
+                <path d="M 196 100 A 96 96 0 0 1 4 100" stroke="url(#red2)" stroke-linecap="round"></path>
               </g>
             </svg></div>
         </div>
         <div class="circle" id="fourth">
-          <div class="shape"><svg id="circ" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%"
-              viewbox="-10 -10 220 220">
-              <g fill="none" stroke-linecap="round" stroke-width="2" transform="translate(100,100)">
-                <path d="M 0,-100 A 100,100 0 0,1 86.6,-50" stroke="url(#redyel2)"></path>
-                <path d="M 86.6,-50 A 100,100 0 0,1 86.6,50" stroke="url(#yelgre2)"></path>
-                <path d="M 86.6,50 A 100,100 0 0,1 0,100" stroke="url(#grecya2)"></path>
-                <path d="M 0,100 A 100,100 0 0,1 -86.6,50" stroke="url(#cyablu2)"></path>
-                <path d="M -86.6,50 A 100,100 0 0,1 -86.6,-50" stroke="url(#blumag2)"></path>
-                <path d="M -86.6,-50 A 100,100 0 0,1 0,-100" stroke="url(#magred2)"></path>
+          <div class="shapee"><svg id="circ" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%"
+              viewbox="-10 -10 220 220" transform="rotate(270 0 0)">
+              <g fill="none" stroke-width="2" stroke-dasharray="">
+                <path d="M 4 100 A 96 96 0 0 1 196 100" stroke="url(#bl1)"></path>
+                <path d="M 196 100 A 96 96 0 0 1 4 100" stroke="url(#bl2)" stroke-linecap="round"></path>
               </g>
             </svg></div>
         </div>
         <div class="circle" id="fifth">
-          <div class="shape"><svg id="circ" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%"
+          <div class="shapee"><svg id="circ" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%"
               viewbox="-10 -10 220 220">
-              <g fill="none" stroke-linecap="round" stroke-width="2" transform="translate(100,100)">
-                <path d="M 86.6,-50 A 100,100 0 0,1 86.6,50" stroke="url(#yelgre)"></path>
-                <path d="M 86.6,50 A 100,100 0 0,1 0,100" stroke="url(#grecya)"></path>
-                <path d="M 0,100 A 100,100 0 0,1 -86.6,50" stroke="url(#cyablu)"></path>
-                <path d="M -86.6,50 A 100,100 0 0,1 -86.6,-50" stroke="url(#blumag)"></path>
-                <path d="M -86.6,-50 A 100,100 0 0,1 0,-100" stroke="url(#magred)"></path>
+              <g fill="none" stroke-width="2" stroke-dasharray="">
+                <path d="M 4 100 A 96 96 0 0 1 196 100" stroke="url(#or1)"></path>
+                <path d="M 196 100 A 96 96 0 0 1 4 100" stroke="url(#or2)" stroke-linecap="round"></path>
               </g>
             </svg></div>
         </div>
         <div class="circle" id="sixth">
-          <div class="shape"><svg id="circ" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%"
-              viewbox="-10 -10 220 220">
-              <g fill="none" stroke-linecap="round" stroke-width="2" stroke-dasharray="50"
-                transform="translate(100,100)">
-                <path d="M 0,-100 A 100,100 0 0,1 86.6,-50" stroke="url(#redyel2)"></path>
-                <path d="M 86.6,-50 A 100,100 0 0,1 86.6,50" stroke="url(#yelgre2)"></path>
-                <path d="M 86.6,50 A 100,100 0 0,1 0,100" stroke="url(#grecya2)"></path>
-                <path d="M 0,100 A 100,100 0 0,1 -86.6,50" stroke="url(#cyablu2)"></path>
-                <path d="M -86.6,50 A 100,100 0 0,1 -86.6,-50" stroke="url(#blumag2)"></path>
+          <div class="shapee"><svg id="circ" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%"
+              viewbox="-10 -10 220 220" transform="rotate(90 0 0)">
+              <g fill="none" stroke-width="2" stroke-dasharray="">
+                <path d="M 4 100 A 96 96 0 0 1 196 100" stroke="url(#gre1)"></path>
+                <path d="M 196 100 A 96 96 0 0 1 4 100" stroke="url(#gre2)" stroke-linecap="round"></path>
               </g>
             </svg></div>
         </div>
         <div class="circle" id="seventh">
-          <div class="shape"><svg id="circ" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%"
-              viewbox="-10 -10 220 220">
-              <g fill="none" stroke-linecap="round" stroke-width="2" stroke-dasharray="" transform="translate(100,100)">
-                <path d="M 0,-100 A 100,100 0 0,1 86.6,-50" stroke="url(#redyel)"></path>
-                <path d="M 86.6,-50 A 100,100 0 0,1 86.6,50" stroke="url(#yelgre)"></path>
-                <path d="M 86.6,50 A 100,100 0 0,1 0,100" stroke="url(#grecya)"></path>
-                <path d="M 0,100 A 100,100 0 0,1 -86.6,50" stroke="url(#cyablu)"></path>
-                <path d="M -86.6,50 A 100,100 0 0,1 -86.6,-50" stroke="url(#blumag)"></path>
-                <path d="M -86.6,-50 A 100,100 0 0,1 0,-100" stroke="url(#magred)"></path>
+          <div class="shapee"><svg id="circ" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%"
+              viewbox="-10 -10 220 220" transform="rotate(-90 0 0)">
+              <g fill="none" stroke-width="2" stroke-dasharray="">
+                <path d="M 4 100 A 96 96 0 0 1 196 100" stroke="url(#red1)"></path>
+                <path d="M 196 100 A 96 96 0 0 1 4 100" stroke="url(#red2)" stroke-linecap="round"></path>
               </g>
             </svg></div>
         </div>
         <div class="circle" id="eighth">
-          <div class="shape"><svg id="circ" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%"
+          <div class="shapee"><svg id="circ" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%"
+              viewbox="-10 -10 220 220" transform="rotate(270 0 0)">
+              <g fill="none" stroke-width="1" stroke-dasharray="">
+                <path d="M 4 100 A 96 96 0 0 1 196 100" stroke="url(#or1)"></path>
+                <path d="M 196 100 A 96 96 0 0 1 4 100" stroke="url(#or2)" stroke-linecap="round"></path>
+              </g>
+            </svg></div>
+        </div>
+        <div class="circle" id="ninth">
+          <div class="shapee"><svg id="circ" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%"
               viewbox="-10 -10 220 220">
-              <g fill="none" stroke-linecap="round" stroke-width="2" stroke-dasharray="50" transform="translate(100,100)">
-                <path d="M 0,-100 A 100,100 0 0,1 86.6,-50" stroke="url(#redyel2)"></path>
-                <path d="M 86.6,-50 A 100,100 0 0,1 86.6,50" stroke="url(#yelgre2)"></path>
-                <path d="M 86.6,50 A 100,100 0 0,1 0,100" stroke="url(#grecya2)"></path>
-                <path d="M 0,100 A 100,100 0 0,1 -86.6,50" stroke="url(#cyablu2)"></path>
-                <path d="M -86.6,50 A 100,100 0 0,1 -86.6,-50" stroke="url(#blumag2)"></path>
-                <path d="M -86.6,-50 A 100,100 0 0,1 0,-100" stroke="url(#magred2)"></path>
+              <g fill="none" stroke-width="2" stroke-dasharray="">
+                <path d="M 4 100 A 96 96 0 0 1 196 100" stroke="url(#yel1)"></path>
+                <path d="M 196 100 A 96 96 0 0 1 4 100" stroke="url(#yel2)" stroke-linecap="round"></path>
+              </g>
+            </svg></div>
+        </div>
+        <div class="circle" id="tenth">
+          <div class="shapee"><svg id="circ" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%"
+              viewbox="-10 -10 220 220" transform="rotate(90 0 0)">
+              <g fill="none" stroke-width="1" stroke-dasharray="40">
+                <path d="M 4 100 A 96 96 0 0 1 196 100" stroke="url(#bl1)"></path>
+                <path d="M 196 100 A 96 96 0 0 1 4 100" stroke="url(#bl2)" stroke-linecap="round"></path>
               </g>
             </svg></div>
         </div>
@@ -222,7 +193,7 @@
                   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5">
                     <div class="card-left">
                       <div class="cardText">
-                        <h5 class="titlefont block inlineh">Streamlining Manufacturing</h5>
+                        <h4 class="titlefont block inlineh">Streamlining Manufacturing</h4>
                         <h6 class="titlefont inlineh">Designing a customized Enterprise Resource Planning Platform</h6>
                         <p class="body">Hardware Fabrication Company</p>
                         <div class="label-row"><a class="btn chip label">Product Design</a></div>
@@ -247,7 +218,7 @@
                   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5">
                     <div class="card-left">
                       <div class="cardText">
-                        <h5 class="titlefont block inlineh">Elevating Design</h5>
+                        <h4 class="titlefont block inlineh">Elevating Design</h4>
                         <h6 class="titlefont inlineh">Updated Messaging Strategy and Functional Design System</h6>
                         <p class="body">LED Lighting Producer</p>
                         <div class="label-row"><a class="btn chip label">Content Writing</a><a
@@ -273,7 +244,7 @@
                   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5">
                     <div class="card-left">
                       <div class="cardText">
-                        <h5 class="titlefont block inlineh">Revamping Design Strategy</h5>
+                        <h4 class="titlefont block inlineh">Revamping Design Strategy</h4>
                         <h6 class="titlefont inlineh">Brand and Website Design Overhaul for an Outdoor Gear Retailer
                         </h6>
                         <p class="body">Blake Pro Gear</p>
