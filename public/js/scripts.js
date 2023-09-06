@@ -1,6 +1,6 @@
 $(document).ready(function() {
   // Hide the second navigation bar initially
-  
+
   $('.double-layered-text').each(function() {
     var text = $(this).text();
     $(this).attr('data-text', text);
@@ -28,40 +28,18 @@ $(document).ready(function() {
       }, 1000); // Smoothly scroll to the element
     }
   });
-  function shapeDimensions() {
-    var initialWidth = $('.container').css('width');
-    var initialHeight = $('.shapee:first').css('height');
-
-    $('.shapee').each(function(index) {
-        // Set the first element to 50vw x 50vh
-        if (index === 0) {
-            $(this).css({
-                'width': initialWidth,
-                'height': initialWidth,
-
-            });
-        } else {
-
-          var groupNumber = index % 3 + 1; // Group numbers will be 1, 2, or 3
-
-                      // Set animation time based on group number
-          var animationTime = groupNumber === 1 ? 24 : (groupNumber === 2 ? 30 : 36);
-
-            // Scale each subsequent element
-            var scale = 1.0 + index * 0.1;
-            $(this).css({
-              'width': 'calc(' + initialWidth + ' * ' + scale + ')',
-              'height': 'calc(' + initialWidth + ' * ' + scale + ')',
-              'animation-duration': animationTime + 's'
-
-            });
-        }
-    });
+  function setIntroMaxHeight() {
+    const herocontHeight = $('.herocont').outerHeight(); // Get the height of .herocont
+    if (herocontHeight>1000) {
+    const maxHeight = herocontHeight + 600; // Calculate max height
+    $('.sectionn.intro').css('min-height', maxHeight + 'px'); // Set max height of .sectionn.intro
+    }
   }
+
   function checkScrollClasses() {
+    
     var $window = $(window),
     $body = $('body');
-
     var y = $window.scrollTop();
 
 
@@ -139,8 +117,10 @@ $(document).ready(function() {
     
     
   }
+  setIntroMaxHeight();
+
   checkScrollClasses();
-  shapeDimensions();
+  $(window).resize(setIntroMaxHeight);
   $(document).scroll(function() {
     checkScrollClasses();
    
@@ -148,8 +128,5 @@ $(document).ready(function() {
     
 
   });
-  $(window).resize(function() {
-    // Update shape dimensions when the window is resized
-    shapeDimensions();
-});    
+  
 });

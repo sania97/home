@@ -763,6 +763,10 @@ pre {
 .special {
   width: 100%; }
 
+:root {
+  --base-width: 100rem;
+  --base-height: 100rem; }
+
 .circles {
   background-image: url("/public/images/star-bg.jpg");
   position: relative;
@@ -783,7 +787,8 @@ pre {
 
 .circle {
   position: absolute;
-  z-index: 1; }
+  z-index: 1;
+  filter: blur(2px); }
 
 .rect {
   position: absolute;
@@ -795,60 +800,102 @@ pre {
   margin: 3rem;
   border-radius: 50%;
   border-radius: 50%;
-  filter: blur(0.5rem) drop-shadow(0px 0px 2rem #fff);
-  animation: circ-anim 18s linear infinite; }
+  opacity: 0.8;
+  width: calc(var(--base-width) * var(--this-scale));
+  height: calc(var(--base-height) * var(--this-scale)); }
   @media (max-width: 544px) {
     .circle div {
-      filter: blur(0.25rem) drop-shadow(0px 0px 1rem rgba(228, 240, 255, 0.5)); } }
+      width: calc(var(--base-width) * var(--this-scale-half));
+      height: calc(var(--base-height) * var(--this-scale-half)); } }
 
-.gl {
-  animation: circ-anim 30s linear infinite; }
+.g4 {
+  animation: circ-anim 24s linear infinite; }
 
 .g2 {
-  animation: circ-anim 36s linear infinite; }
+  animation: circ-anim 18s linear infinite; }
 
 .g3 {
-  animation: circ-anim 33s linear infinite; }
+  animation: circ-anim 21s linear infinite; }
 
 #first div {
-  width: 100rem;
-  height: 100rem; }
+  --this-scale: 1.0;
+  /* Define a custom variable for #second */ }
+  @media (max-width: 544px) {
+    #first div {
+      --this-scale-half: calc(var(--this-scale)/2);
+      /* Adjust the custom variable for smaller screens */ } }
 
 #second div {
-  width: 110rem;
-  height: 110rem; }
+  --this-scale: 1.1;
+  /* Define a custom variable for #second */ }
+  @media (max-width: 544px) {
+    #second div {
+      --this-scale-half: calc(var(--this-scale)/2);
+      /* Adjust the custom variable for smaller screens */ } }
 
 #third div {
-  width: 122rem;
-  height: 122rem; }
+  --this-scale: 1.22;
+  /* Define a custom variable for #second */ }
+  @media (max-width: 544px) {
+    #third div {
+      --this-scale-half: calc(var(--this-scale)/2);
+      /* Adjust the custom variable for smaller screens */ } }
 
 #fourth div {
-  width: 136rem;
-  height: 136rem; }
+  --this-scale: 1.36;
+  /* Define a custom variable for #second */ }
+  @media (max-width: 544px) {
+    #fourth div {
+      --this-scale-half: calc(var(--this-scale)/2);
+      /* Adjust the custom variable for smaller screens */ } }
 
 #fifth div {
-  width: 152rem;
-  height: 152rem; }
+  --this-scale: 1.52;
+  /* Define a custom variable for #second */ }
+  @media (max-width: 544px) {
+    #fifth div {
+      --this-scale-half: calc(var(--this-scale)/2);
+      /* Adjust the custom variable for smaller screens */ } }
 
 #sixth div {
-  width: 170rem;
-  height: 170rem; }
+  --this-scale: 1.70;
+  /* Define a custom variable for #second */ }
+  @media (max-width: 544px) {
+    #sixth div {
+      --this-scale-half: calc(var(--this-scale)/2);
+      /* Adjust the custom variable for smaller screens */ } }
 
 #seventh div {
-  width: 190rem;
-  height: 190rem; }
+  --this-scale: 1.90;
+  /* Define a custom variable for #second */ }
+  @media (max-width: 544px) {
+    #seventh div {
+      --this-scale-half: calc(var(--this-scale)/2);
+      /* Adjust the custom variable for smaller screens */ } }
 
 #eighth div {
-  width: 202rem;
-  height: 202rem; }
+  --this-scale: 2.02;
+  /* Define a custom variable for #second */ }
+  @media (max-width: 544px) {
+    #eighth div {
+      --this-scale-half: calc(var(--this-scale)/2);
+      /* Adjust the custom variable for smaller screens */ } }
 
 #ninth div {
-  width: 226rem;
-  height: 226rem; }
+  --this-scale: 2.26;
+  /* Define a custom variable for #second */ }
+  @media (max-width: 544px) {
+    #ninth div {
+      --this-scale-half: calc(var(--this-scale)/2);
+      /* Adjust the custom variable for smaller screens */ } }
 
 #tenth div {
-  width: 252rem;
-  height: 252rem; }
+  --this-scale: 2.52;
+  /* Define a custom variable for #second */ }
+  @media (max-width: 544px) {
+    #tenth div {
+      --this-scale-half: calc(var(--this-scale)/2);
+      /* Adjust the custom variable for smaller screens */ } }
 
 @keyframes circ-anim {
   0% {
@@ -2303,9 +2350,6 @@ body {
     /* Adjust as needed */
     pointer-events: none;
     /* Allows clicks to go through the pseudo-element */ }
-  @media (max-width: 544px) {
-    .container.circlesCont::before {
-      top: -20%; } }
 
 .mobile {
   display: none; }
@@ -2398,7 +2442,8 @@ body {
   max-width: 80%;
   gap: 40rem;
   margin: auto;
-  padding-left: 2rem; }
+  padding-left: 2rem;
+  padding-top: 10rem; }
   @media (max-width: 768px) {
     .cards {
       padding-left: 0rem;
