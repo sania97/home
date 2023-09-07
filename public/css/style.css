@@ -797,10 +797,10 @@ pre {
   animation: circ-anim 24s linear infinite; }
 
 .g2 {
-  animation: circ-anim 18s linear infinite; }
+  animation: circ-anim 30s linear infinite; }
 
 .g3 {
-  animation: circ-anim 21s linear infinite; }
+  animation: circ-anim 27s linear infinite; }
 
 #first div {
   --this-scale: 1.0;
