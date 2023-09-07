@@ -1,16 +1,14 @@
-$(document).ready(function() {
+$(document).ready(function () {
   // Critical
-        // this code will run after all other $(document).ready() scripts
-        // have completely finished, AND all page elements are fully loaded.
- 
-  $('.double-layered-text').each(function() {
+
+  $('.double-layered-text').each(function () {
     var text = $(this).text();
     $(this).attr('data-text', text);
     //var parentdiv = $(this).closest(".intromessage");
     $('.intromessage').addClass('loaded');
     $('.circles').addClass('loaded');
   });
-  $('.nav__group a').on('click', function(event) {
+  $('.nav__group a').on('click', function (event) {
     event.preventDefault(); // Prevent default behavior
     const targetId = $(this).attr('href'); // Get the href attribute
     const targetElement = $(targetId); // Find the corresponding element by id
@@ -20,7 +18,7 @@ $(document).ready(function() {
       }, 1000); // Smoothly scroll to the element
     }
   });
-  $('#selected').on('click', function(event) {
+  $('#selected').on('click', function (event) {
     event.preventDefault(); // Prevent default behavior
     const targetId = $(this).attr('href'); // Get the href attribute
     const targetElement = $(targetId); // Find the corresponding element by id
@@ -33,7 +31,7 @@ $(document).ready(function() {
   function setIntroMaxHeight() {
     const herocontHeight = $('.herocont').outerHeight(); // Get the height of .herocont
 
-    if (herocontHeight>400) {
+    if (herocontHeight > 400) {
       const minHeight = herocontHeight + 400; // Calculate max height
 
       $('.sectionn.intro').css('min-height', minHeight + 'px'); // Set max height of .sectionn.intro
@@ -41,29 +39,29 @@ $(document).ready(function() {
       // Remove the min-height property if it's less than or equal to 400
       $('.sectionn.intro').css('min-height', '');
     }
-    }
-  
+  }
+
   setIntroMaxHeight();
   //not as critical
   function checkScrollClasses() {
-    
+
     var $window = $(window),
-    $body = $('body');
+      $body = $('body');
     var y = $window.scrollTop();
 
 
-    var offset=$window.height() / 2;
+    var offset = $window.height() / 2;
     var $sections = $('[data-color]'); // Select all sections with data-color attribute
     $sections.each(function () {
       var $this = $(this);
-      var sectionTop = $this.offset().top-offset;
+      var sectionTop = $this.offset().top - offset;
       var sectionBottom = sectionTop + $this.outerHeight();
 
       var sectionColor = $this.data('color');
 
       // Check if the section is on screen
       if (y >= sectionTop && y <= sectionBottom) {
-        $body.removeClass(function(index, classNames) {
+        $body.removeClass(function (index, classNames) {
           // Remove any existing color classes from the body
           return (classNames.match(/color-\S+/g) || []).join(' ');
         });
@@ -72,7 +70,7 @@ $(document).ready(function() {
       }
     });
 
-    
+
     // Add lightup and brighten classes for .profImgcont element
     var profImgcont = $(".profImgcont");
     var aboutmeElement = profImgcont.closest(".aboutme");
@@ -92,7 +90,7 @@ $(document).ready(function() {
           }, 400); // 2000 milliseconds (2 seconds) delay
         }
       }
-    
+
       // Start adding the 'float' class with the first li
       addFloatClass(0);
 
@@ -105,7 +103,7 @@ $(document).ready(function() {
     }
 
     // Scroll-based class addition for .buttontocasestudy elements
-    $(".buttontocasestudy").each(function() {
+    $(".buttontocasestudy").each(function () {
       var parentElement = $(this).closest(".card-containerr");
       var cardElement = $(this).closest(".carddContent");
       var t = parentElement.offset().top - 600;
@@ -122,19 +120,19 @@ $(document).ready(function() {
     // Change 33% earlier than scroll position so colour is there when you arrive.
     //var scroll = y + ($window.height() / 3);
 
-    
-    
-    
+
+
+
   }
 
   checkScrollClasses();
-     });
   $(window).resize(setIntroMaxHeight);
-  $(document).scroll(function() {
+  $(document).scroll(function () {
     checkScrollClasses();
-   
 
-    
+
+
 
   });
-  
+
+});
