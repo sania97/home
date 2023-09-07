@@ -1,6 +1,9 @@
 $(document).ready(function() {
   // Critical
-
+$(window).load(function() {
+        // this code will run after all other $(document).ready() scripts
+        // have completely finished, AND all page elements are fully loaded.
+ 
   $('.double-layered-text').each(function() {
     var text = $(this).text();
     $(this).attr('data-text', text);
@@ -126,6 +129,7 @@ $(document).ready(function() {
   }
 
   checkScrollClasses();
+     });
   $(window).resize(setIntroMaxHeight);
   $(document).scroll(function() {
     checkScrollClasses();
