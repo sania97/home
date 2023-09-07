@@ -1,12 +1,12 @@
 $(document).ready(function() {
-  // Hide the second navigation bar initially
+  // Critical
 
   $('.double-layered-text').each(function() {
     var text = $(this).text();
     $(this).attr('data-text', text);
-    var parentdiv = $(this).closest(".intromessage");
-    parentdiv.addClass('loaded');
-
+    //var parentdiv = $(this).closest(".intromessage");
+    $('.intromessage').addClass('loaded');
+    $('.circles').addClass('loaded');
   });
   $('.nav__group a').on('click', function(event) {
     event.preventDefault(); // Prevent default behavior
@@ -30,12 +30,19 @@ $(document).ready(function() {
   });
   function setIntroMaxHeight() {
     const herocontHeight = $('.herocont').outerHeight(); // Get the height of .herocont
-    if (herocontHeight>1000) {
-    const maxHeight = herocontHeight + 600; // Calculate max height
-    $('.sectionn.intro').css('min-height', maxHeight + 'px'); // Set max height of .sectionn.intro
-    }
-  }
 
+    if (herocontHeight>400) {
+      const minHeight = herocontHeight + 400; // Calculate max height
+
+      $('.sectionn.intro').css('min-height', minHeight + 'px'); // Set max height of .sectionn.intro
+    } else {
+      // Remove the min-height property if it's less than or equal to 400
+      $('.sectionn.intro').css('min-height', '');
+    }
+    }
+  
+  setIntroMaxHeight();
+  //not as critical
   function checkScrollClasses() {
     
     var $window = $(window),
@@ -69,7 +76,7 @@ $(document).ready(function() {
     var aboutmeElement = profImgcont.closest(".aboutme");
     var aboutmePts = $(".features-list li");
 
-    var x = profImgcont.offset().top - 600;
+    var x = aboutmeElement.offset().top - 600;
 
     if (y > x) {
       profImgcont.addClass("lightup");
@@ -117,7 +124,6 @@ $(document).ready(function() {
     
     
   }
-  setIntroMaxHeight();
 
   checkScrollClasses();
   $(window).resize(setIntroMaxHeight);
