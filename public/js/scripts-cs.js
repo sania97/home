@@ -1,4 +1,6 @@
 $(document).ready(function () {
+  $(window).load(function() {
+
   // Hide the second navigation bar initially
   $('.nav-toc__group a').on('click', function (event) {
     event.preventDefault(); // Prevent default behavior
@@ -54,6 +56,8 @@ $(document).ready(function () {
     });
   }
   checkScrollClasses();
+      });
+
   // Scroll-based class addition and navigation bar switching
   $(document).scroll(function () {
     checkScrollClasses();
