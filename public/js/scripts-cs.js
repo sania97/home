@@ -1,5 +1,4 @@
 $(document).ready(function () {
-  $(window).load(function() {
 
   // Hide the second navigation bar initially
   $('.nav-toc__group a').on('click', function (event) {
@@ -68,4 +67,3 @@ $(document).ready(function () {
   });
 
   // ... (existing code)
-});
