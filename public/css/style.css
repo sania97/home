@@ -2222,9 +2222,7 @@ pre {
   cursor: pointer;
   font-size: 2rem;
 }
-.buttontocasestudy > .appear {
-    background-color: green;
-}
+
 
 .buttontocasestudy:before {
   color: #38376D;
@@ -2259,7 +2257,9 @@ pre {
   color: #110A49;
   text-shadow: 0 0 0.5rem rgba(71, 153, 253, 0.68), 0 0 1rem rgba(71, 153, 253, 0.48), 0 0 3rem rgba(71, 153, 253, 0.28);
 }
-
+.buttontocasestudy:hover > .appear {
+    background-color: green;
+}
 .buttontocasestudy:hover:after,
 .buttontocasestudy:active:after {
   color: #38376D;
