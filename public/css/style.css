@@ -2874,7 +2874,7 @@ body.home:after {
 }
 
 @media (max-width: 768px) {
-  .cards .card-containerr {
+  .cards{
     max-width: 90%;
   }
 
