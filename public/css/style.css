@@ -2257,12 +2257,7 @@ pre {
   color: #110A49;
   text-shadow: 0 0 0.5rem rgba(71, 153, 253, 0.68), 0 0 1rem rgba(71, 153, 253, 0.48), 0 0 3rem rgba(71, 153, 253, 0.28);
 }
-.buttontocasestudy:hover > .appear {
-    background-color: green;
-  -webkit-transform: translateX(-1.2rem);
-  -ms-transform: translateX(-1.2rem);
-  transform: translateX(-1.2rem);
-}
+
 .buttontocasestudy:hover:after,
 .buttontocasestudy:active:after {
   color: #38376D;
