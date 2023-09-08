@@ -2219,7 +2219,6 @@ pre {
   z-index: 6;
   padding: 0rem 1.4rem;
   text-decoration: none;
-  cursor: pointer;
   font-size: 2rem;
 }
 
@@ -2255,7 +2254,6 @@ pre {
 .buttontocasestudy:hover,
 .buttontocasestudy:active {
   color: #110A49;
-  text-shadow: 0 0 0.5rem rgba(71, 153, 253, 0.68), 0 0 1rem rgba(71, 153, 253, 0.48), 0 0 3rem rgba(71, 153, 253, 0.28);
 }
 
 .buttontocasestudy:hover:after,
