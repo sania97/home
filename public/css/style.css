@@ -2259,6 +2259,9 @@ pre {
 }
 .buttontocasestudy:hover > .appear {
     background-color: green;
+  -webkit-transform: translateX(-1.2rem);
+  -ms-transform: translateX(-1.2rem);
+  transform: translateX(-1.2rem);
 }
 .buttontocasestudy:hover:after,
 .buttontocasestudy:active:after {
