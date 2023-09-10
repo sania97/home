@@ -1385,7 +1385,7 @@ pre {
 }
 
 .circles {
-  background-image: url("/public/images/star-bg.jpg");
+  background-image: url("/public/images/bg.png");
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -1403,10 +1403,11 @@ pre {
   transition: 500ms ease-in-out;
   overflow: hidden;
   opacity: 0;
+  background-size:cover;
 }
 
 .circles.loaded {
-  opacity: .4;
+  opacity: 0;
 }
 
 .circle {
