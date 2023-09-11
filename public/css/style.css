@@ -1407,12 +1407,14 @@ pre {
 }
 
 .circles.loaded {
-  opacity: 0;
+  opacity: 1;
 }
 
 .circle {
   position: absolute;
   z-index: 1;
+    opacity: 0;
+
 }
 
 .circle .shapee {
