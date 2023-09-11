@@ -1407,7 +1407,7 @@ pre {
 }
 
 .circles.loaded {
-  opacity: 0;
+  opacity: 0.4;
 }
 
 .circle {
