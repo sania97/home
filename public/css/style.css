@@ -1402,12 +1402,12 @@ pre {
   -o-transition: 500ms ease-in-out;
   transition: 500ms ease-in-out;
   overflow: hidden;
-  opacity: 0;
+  opacity: 1;
   background-size:cover;
 }
 
 .circles.loaded {
-  opacity: 1.0;
+  opacity: 0;
 }
 
 .circle {
@@ -1419,7 +1419,7 @@ pre {
   margin: 3rem;
   border-radius: 50%;
   border-radius: 50%;
-  opacity: 0.2;
+  opacity: 0;
   width: calc(var(--base-width) * var(--this-scale));
   height: calc(var(--base-height) * var(--this-scale));
 }
@@ -1431,20 +1431,7 @@ pre {
   }
 }
 
-.g4 {
-  -webkit-animation: circ-anim 24s linear infinite;
-  animation: circ-anim 24s linear infinite;
-}
 
-.g2 {
-  -webkit-animation: circ-anim 30s linear infinite;
-  animation: circ-anim 30s linear infinite;
-}
-
-.g3 {
-  -webkit-animation: circ-anim 27s linear infinite;
-  animation: circ-anim 27s linear infinite;
-}
 
 #first div {
   --this-scale: 1.0;
