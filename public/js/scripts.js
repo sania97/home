@@ -1,17 +1,32 @@
 $(document).ready(function () {
-  // Critical
+  setIntroMaxHeight();
+
+  //on sections where intromessage is tall (usually small screens) this function will make sure it does not overflow onto next section
+  function setIntroMaxHeight() {
+    const herocontHeight = $('.herocont').outerHeight();
+    if (herocontHeight > 600) {
+      const minHeight = herocontHeight + 600;
+      $('.sectionn.intro').css('min-height', minHeight + 'px');
+    } else {
+      $('.sectionn.intro').css('min-height', '');
+    }
+  }
+
+  //on adding top layer of intromessage of text
+  //small intro animation, circles dont show up until loaded and words float up
 
   $('.double-layered-text').each(function () {
     var text = $(this).text();
     $(this).attr('data-text', text);
-    //var parentdiv = $(this).closest(".intromessage");
     $('.intromessage').addClass('loaded');
     $('.circles').addClass('loaded');
   });
+
+  //directing links on page to sections
   $('.nav__group a').on('click', function (event) {
-    event.preventDefault(); // Prevent default behavior
-    const targetId = $(this).attr('href'); // Get the href attribute
-    const targetElement = $(targetId); // Find the corresponding element by id
+    event.preventDefault();
+    const targetId = $(this).attr('href');
+    const targetElement = $(targetId);
     if (targetElement.length) {
       $('html, body').animate({
         scrollTop: targetElement.offset().top
@@ -19,48 +34,39 @@ $(document).ready(function () {
     }
   });
   $('#selected').on('click', function (event) {
-    event.preventDefault(); // Prevent default behavior
-    const targetId = $(this).attr('href'); // Get the href attribute
-    const targetElement = $(targetId); // Find the corresponding element by id
+    event.preventDefault();
+    const targetId = $(this).attr('href');
+    const targetElement = $(targetId);
     if (targetElement.length) {
       $('html, body').animate({
         scrollTop: targetElement.offset().top
       }, 1000); // Smoothly scroll to the element
     }
   });
-  function setIntroMaxHeight() {
-    const herocontHeight = $('.herocont').outerHeight(); // Get the height of .herocont
 
-    if (herocontHeight > 400) {
-      const minHeight = herocontHeight + 400; // Calculate max height
 
-      $('.sectionn.intro').css('min-height', minHeight + 'px'); // Set max height of .sectionn.intro
-    } else {
-      // Remove the min-height property if it's less than or equal to 400
-      $('.sectionn.intro').css('min-height', '');
-    }
-  }
-
-  setIntroMaxHeight();
-  //not as critical
+  //scroll animations
   function checkScrollClasses() {
 
-    var $window = $(window),
-      $body = $('body');
+    var $window = $(window);
+    var $body = $('body');
     var y = $window.scrollTop();
-
-
     var offset = $window.height() / 2;
+    var offsetthird = ($window.height() / 3) * 2;
+
+    //changing body color animation
     var $sections = $('[data-color]'); // Select all sections with data-color attribute
     $sections.each(function () {
       var $this = $(this);
       var sectionTop = $this.offset().top - offset;
       var sectionBottom = sectionTop + $this.outerHeight();
-
       var sectionColor = $this.data('color');
+      console.log("top"+sectionTop +"off"+offset);
+      console.log("color"+sectionColor);
 
       // Check if the section is on screen
       if (y >= sectionTop && y <= sectionBottom) {
+
         $body.removeClass(function (index, classNames) {
           // Remove any existing color classes from the body
           return (classNames.match(/color-\S+/g) || []).join(' ');
@@ -70,45 +76,13 @@ $(document).ready(function () {
       }
     });
 
-
-    // Add lightup and brighten classes for .profImgcont element
-    var profImgcont = $(".profImgcont");
-    var aboutmeElement = profImgcont.closest(".aboutme");
-    var aboutmePts = $(".features-list li");
-
-    var x = aboutmeElement.offset().top - 600;
-
-    if (y > x) {
-      profImgcont.addClass("lightup");
-      aboutmeElement.addClass("brighten");
-      //aboutmePts.addClass("float");
-      function addFloatClass(index) {
-        if (index < aboutmePts.length) {
-          aboutmePts.eq(index).addClass("float");
-          setTimeout(function () {
-            addFloatClass(index + 1);
-          }, 400); // 2000 milliseconds (2 seconds) delay
-        }
-      }
-
-      // Start adding the 'float' class with the first li
-      addFloatClass(0);
-
-
-    } else {
-      profImgcont.removeClass("lightup");
-      aboutmeElement.removeClass("brighten");
-      //aboutmePts.removeClass("float");
-
-    }
-
-    // Scroll-based class addition for .buttontocasestudy elements
+    // Scroll-based class addition for card elements
     $(".buttontocasestudy").each(function () {
       var parentElement = $(this).closest(".card-containerr");
       var cardElement = $(this).closest(".carddContent");
-      var t = parentElement.offset().top - 600;
+      var t = parentElement.offset().top;
 
-      if (y > t) {
+      if (y > (t - offsetthird)) {
         parentElement.addClass("lightup");
         cardElement.addClass("brighten");
       } else {
@@ -117,22 +91,50 @@ $(document).ready(function () {
       }
     });
 
-    // Change 33% earlier than scroll position so colour is there when you arrive.
-    //var scroll = y + ($window.height() / 3);
+    // Add lightup and brighten classes for .profImgcont element
+    //bulletpoints float up
 
+    var profImgcont = $(".profImgcont");
+    var aboutmeElement = profImgcont.closest(".aboutme");
+    var aboutmePts = $(".features-list li");
+    var x = aboutmeElement.offset().top;
+    var animationTimeout;
 
+    function addFloatClass(index) {
+      if (index < aboutmePts.length) {
+        var currentElement = aboutmePts.eq(index);
+
+        if (index === 0 || aboutmePts.eq(0).hasClass("float")) {
+          currentElement.addClass("float");
+        }
+
+        animationTimeout = setTimeout(function () {
+          addFloatClass(index + 1);
+        }, 200); // 2000 milliseconds (2 seconds) delay
+      }
+    }
+
+    if (y > (x - offsetthird)) {
+
+      profImgcont.addClass("lightup");
+      aboutmeElement.addClass("brighten");
+      addFloatClass(0);
+    } else {
+      profImgcont.removeClass("lightup");
+      aboutmeElement.removeClass("brighten");
+      clearTimeout(animationTimeout); // Clear the animation timeout
+      aboutmePts.removeClass("float"); // Remove the "float" class from all elements
+    }
 
 
   }
 
   checkScrollClasses();
+
   $(window).resize(setIntroMaxHeight);
+
   $(document).scroll(function () {
     checkScrollClasses();
-
-
-
-
   });
 
 });
