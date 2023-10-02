@@ -61,8 +61,7 @@ $(document).ready(function () {
       var sectionTop = $this.offset().top - offset;
       var sectionBottom = sectionTop + $this.outerHeight();
       var sectionColor = $this.data('color');
-      console.log("top"+sectionTop +"off"+offset);
-      console.log("color"+sectionColor);
+
 
       // Check if the section is on screen
       if (y >= sectionTop && y <= sectionBottom) {
