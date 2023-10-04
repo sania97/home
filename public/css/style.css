@@ -1490,7 +1490,7 @@ pre {
   background-size: contain;
   pointer-events: none;
   background-position: top;
-
+  background-size:100% 100%;
 
 }
 
