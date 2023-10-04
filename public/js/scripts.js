@@ -1,5 +1,4 @@
 $(document).ready(function () {
-  setIntroMaxHeight();
 
   //on sections where intromessage is tall (usually small screens) this function will make sure it does not overflow onto next section
   function setIntroMaxHeight() {
@@ -11,7 +10,21 @@ $(document).ready(function () {
       $('.sectionn.intro').css('min-height', '');
     }
   }
-
+  function clickAndSelect() {
+    const $cards = $('.card-containerr');
+  
+    $cards.each(function() {
+      const $card = $(this);
+  
+      $card.on('click', function(e) {
+        e.preventDefault();
+        const $link = $card.find('a.btn.topage'); 
+        if ($link.length) {
+          window.location = $link.attr('href');
+        }
+      });
+    });
+  }
   //on adding top layer of intromessage of text
   //small intro animation, circles dont show up until loaded and words float up
 
@@ -43,6 +56,9 @@ $(document).ready(function () {
       }, 1000); // Smoothly scroll to the element
     }
   });
+  
+  clickAndSelect();
+  setIntroMaxHeight();
 
 
   //scroll animations
@@ -79,14 +95,17 @@ $(document).ready(function () {
     $(".buttontocasestudy").each(function () {
       var parentElement = $(this).closest(".card-containerr");
       var cardElement = $(this).closest(".carddContent");
+
       var t = parentElement.offset().top;
 
       if (y > (t - offsetthird)) {
         parentElement.addClass("lightup");
         cardElement.addClass("brighten");
+
       } else {
         parentElement.removeClass("lightup");
         cardElement.removeClass("brighten");
+
       }
     });
 
