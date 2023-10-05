@@ -17,6 +17,37 @@ Typography
 @import url("https://fonts.cdnfonts.com/css/open-sauce-one");
 @import url("https://fonts.cdnfonts.com/css/atkinson-hyperlegible");
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: "Vinila Test", sans-serif;
+  line-height: 1.4;
+  --base-width: 55rem;
+  --base-height: 55rem;
+}
+
+body {
+  background-size: cover;
+  margin: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#01011B), color-stop(50%, #01011B), to(#090528));
+  background: -o-linear-gradient(top, #01011B 0%, #01011B 50%, #090528 100%);
+  background: linear-gradient(to bottom, #01011B 0%, #01011B 50%, #090528 100%);
+}
 
 /* responsive design
 whole page is gridded out into 12 cols, 
@@ -1958,37 +1989,6 @@ a {
   }
 }
 
-*,
-*:after,
-*:before {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-:root {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  font-size: 62.5%;
-  max-width: 100%;
-  overflow-x: hidden;
-  font-family: "Vinila Test", sans-serif;
-  line-height: 1.4;
-  --base-width: 70rem;
-  --base-height: 70rem;
-}
-
-body {
-  background-size: cover;
-  margin: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(#01011B), color-stop(50%, #01011B), to(#090528));
-  background: -o-linear-gradient(top, #01011B 0%, #01011B 50%, #090528 100%);
-  background: linear-gradient(to bottom, #01011B 0%, #01011B 50%, #090528 100%);
-}
 
 .sectionn {
   display: -webkit-box;
