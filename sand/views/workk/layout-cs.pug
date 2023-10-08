@@ -1,0 +1,24 @@
+block variables
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    link(rel="shortcut icon", href="/public/images/favicon.ico")
+    meta(http-equiv="x-ua-compatible" content="ie=edge")
+    meta(name="description" content="Sania Syed's is a digital Product Designer based in Los Angeles, CA.")
+
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    meta(name="theme-color", content="#000000")
+    link(rel="stylesheet" href="/public/css/style.css")
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(type="text/javascript" src="/public/js/scripts-cs.js")
+
+    title #{title} | Sania Syed 
+  body
+
+    include header-cs.pug
+    block intro
+    block discovery
+    block solutions
+    block conclusion
+    include footer-cs.pug

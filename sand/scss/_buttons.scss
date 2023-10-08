@@ -1,0 +1,697 @@
+@import '_colors';
+
+//basic button - grey bg
+a {
+    text-decoration: none;
+}
+.btn {
+    padding: 1.4rem 1.8rem;
+    display: inline-block;
+    border-radius: 1rem;
+    font-size: 1.8rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 250ms ease-in-out;
+    letter-spacing: 0.5px;
+    //white-space: nowrap;
+    overflow: hidden;
+    font-family: $font-family_1;
+    cursor: pointer;
+
+    &.primary {
+        background: $blue-80;
+        color: $neutral-0;
+        border: .4rem solid $transparent;
+
+        &:hover, &:active {
+            background: $blue-60;
+            color: $neutral-0;
+            border: .4rem solid $transparent;
+        }
+    }
+
+    &.secondary {
+        color: $blue-80;
+        background: $transparent;
+        border: .4rem solid $blue-60;
+
+        &:hover, &:active {
+            border: .4rem solid $blue-50;
+            color: $blue-50;
+            background: $blue-30;
+
+
+        }
+    }
+
+    &.tertiary {
+        color: $blue-40;
+        border-radius: 1.2rem;
+
+        background: $neutral-10;
+        border: 0rem solid $neutral-0;
+        padding: 1.4rem;
+
+        &:hover, &:active {
+
+            color: $blue-80;
+
+        }
+    }
+
+    
+    &.topage {
+        border: none;
+        position: relative;
+        text-decoration: none;
+        display: flex;
+        padding:0rem 0rem;
+
+    }
+
+
+
+    &.link {
+        color: $neutral-60;
+        border: none;
+        font-weight: 400;
+        white-space: normal;
+        padding: 1rem 0rem;
+
+        &:hover, &:active {
+            color: $blue-70;
+            text-shadow:$text-shadow-hover;
+            text-shadow:$text-shadow-blue-less;
+
+        }
+        &.current {
+            color: $blue-60;
+            text-shadow:$text-shadow-current;
+            transition: all 0.2s ease-in-out;
+
+            &:hover, &:active {
+                color: $blue-70;
+                text-shadow:$text-shadow-blue;
+                text-shadow:$text-shadow-hover;
+
+            }    
+        }
+
+
+        &.giant {
+            font-size: 3.2rem;
+        }
+
+        &.cardd {
+            font-size: 2.4rem;
+        }
+
+        &.footer {
+            font-size: 1.4rem;
+            white-space: normal;
+        }
+
+        &.dark-bg {
+            font-weight: 400;
+            color: $blue-30;
+
+            &:hover, &:active {
+                border: none;
+                color: $blue-40;
+
+            }
+
+            &.current {
+                font-weight: 700;
+            }
+        }
+
+        &.inline {
+            font-weight: 500;
+            color: $blue-60;
+
+            &.notlink {
+                border: none;
+                cursor: auto
+            }
+
+            &.underline {
+                font-weight: 600;
+
+                cursor: pointer;
+                text-decoration: underline;
+
+                &:hover, &:active {
+                    color: $blue-40;
+                    text-decoration: none;
+
+
+                }
+            }
+        }
+    }
+
+    &.graphic {
+        padding: 0rem 0rem;
+        color: $blue-60;
+        border: none;
+        font-weight: 400;
+
+        &:hover, &:active {
+            border: none;
+        }
+    }
+
+    &.wicon {
+
+        text-decoration: inherit;
+        gap:1rem;
+        display: inline-flex;
+        justify-content: flex-start;
+        padding-right:1rem;
+        // can be any color
+        &:before,
+        &:after {
+            padding: 0rem;
+            //display: inline-block;
+            font-weight: 400;
+            /* Make sure to use the regular weight */
+
+        }
+
+        &.right {
+            
+            &:before {
+                display: none;
+            }
+            &:after {
+                margin-left: 0rem;
+                
+            }
+
+        }
+
+        &.left {
+            &:after {
+                display: none;
+            }
+            &:before {
+                margin-right: 1rem;
+            }
+        }
+
+        &.alone {
+            padding: 1.4rem 1.4rem;
+            text-align: center;
+            &:before {
+                font-size: 2.0rem;
+            }
+            &:after {
+                display: none;
+            }
+        }
+
+        
+
+        &.heading {
+            text-align: center;
+            padding: .5rem 3rem;
+            border-radius: 2rem;
+            background-color: $blue-30;
+            width: 8rem;
+            height: 8rem;
+            position: relative;
+            opacity: 0.8;
+            cursor: auto;
+            &:before {
+                font-size: 5.0rem;
+                position: absolute;
+                top: 50%;
+                /* Vertically align at 50% */
+                left: 50%;
+                /* Horizontally align at 50% */
+                transform: translate(-50%, -50%);
+            }
+            &:after {
+                display: none;
+            }
+        }
+
+        //icon types
+        &.light:before,
+        &.light:after {
+            font-family: quote("FontAwesome");
+            content: "\f0eb";
+        }
+
+        &.sun:before,
+        &.sun:after {
+            font-family: quote("FontAwesome");
+            content: "\f185";
+        }
+
+        &.engine:before,
+        &.engine:after {
+            font-family: quote("FontAwesome");
+            content: "\f1e6";
+        }
+
+        &.doc:before,
+        &.doc:after {
+            font-family: quote("FontAwesome");
+            content: "\f15c";
+        }
+
+        &.searchic:before,
+        &.searchic:after {
+            font-family: quote("FontAwesome");
+            content: "\f002";
+        }
+
+        &.menu:before,
+        &.menu:after {
+            font-family: quote("FontAwesome");
+            content: "\f0c9";
+        }
+
+        &.home:before,
+        &.home:after {
+            font-family: quote("FontAwesome");
+            content: "\f015";
+        }
+
+        &.phone:before,
+        &.phone:after {
+            font-family: quote("FontAwesome");
+            content: "\f095";
+        }
+
+        &.email:before,
+        &.email:after {
+            font-family: quote("FontAwesome");
+            content: "\f0e0";
+            font-weight: normal;
+            /* Make sure to use the regular weight */
+
+        }
+
+        &.sales:before,
+        &.sales:after {
+            font-family: quote("FontAwesome");
+            content: "\f0d1";
+        }
+
+        &.go:before,
+        &.go:after {
+            font-family: quote("FontAwesome");
+            content: "\f178";
+
+        }
+
+        &.caret:before,
+        &.caret:after {
+            font-family: quote("FontAwesome");
+            content: "\f0d7";
+        }
+
+        &.scrolldown:before,
+        &.scrolldown:after {
+            font-family: quote("FontAwesome");
+            content: "\f103";
+        }
+        &.scrollright:before,
+        &.scrollright:after {
+            font-family: quote("FontAwesome");
+            content: "\f105";
+        }
+        &.scrollup:before,
+        &.scrollup:after {
+            font-family: quote("FontAwesome");
+            content: "\f102";
+        }
+        &.meeting:before,
+        &.meeting:after {
+            font-family: quote("FontAwesome");
+            content: "\f086";
+        }
+        &.brand:before,
+        &.brand:after {
+            font-family: quote("FontAwesome");
+            content: "\f249";
+        }
+
+        &.animated {
+            &:hover {
+                &:after {
+                    transform: translateX(1rem); /* Adjust the translation value as needed for your design */
+
+                }
+            }
+        }
+        
+
+    }
+
+    //headers
+    &.tab {
+        padding: 1rem 0rem;
+        border: none;
+        text-align: left;
+        position: relative;
+        text-decoration: none;
+        color: $neutral-0;
+        font-size: 2.0rem;
+        display: flex;
+        background: transparent;
+        font-weight: 700;
+        letter-spacing: 2px;
+        &.dark {
+            color:$blue-80;
+        }
+        
+    }
+    //labels
+    &.chip {
+        padding: 0.4rem 0.8rem;
+        border-radius: 1rem;
+        color: $blue-80;
+        background-color: $blue-20;
+        text-align: center;
+        cursor:default;
+        &.label {
+            font-weight: 500;
+            padding: 0.8rem 1rem;
+            font-size:1.2rem;
+            text-transform:uppercase;   
+ 
+        }    
+    }
+    //section header titles
+    &.title {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
+        padding:0rem;
+        font-size:2.4rem;
+        align-items: center;
+        font-family: $font-family_2;
+        cursor:default;
+        &:after {
+            font-size: 3.0rem;
+            width: 4rem;
+            text-align: center;
+            color:$neutral-20;
+        }
+    }
+    //contact resume buttons
+        &.giant {
+            font-family: $font-family_1;
+            border: 0.6rem solid $neutral-0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 3rem;
+            gap: 3rem;
+            color: $neutral-0;
+            width: 100%;
+            margin-bottom: 1rem;
+    
+            padding: 3rem;
+            text-align: left;
+            justify-content: flex-start;
+    
+            &:before {
+                font-size: 3.6rem;
+                width: 4rem;
+                text-align: center;
+            }
+    
+            &:after {
+                display: none;
+            }
+    
+            &.pink {
+                &:hover, &:active {
+                    animation: border-flicker 0.5s linear forwards;
+                }
+                &:before {
+                    font-size: 4.0rem;
+                }
+            }
+    
+            &.green {
+                &:hover, &:active {
+                    animation: border-flicker-g 0.5s linear forwards;
+                }
+                &:before {
+                    font-size: 4.0rem;
+                }
+            }
+        }
+
+    @keyframes border-flicker {
+        34% {
+            border: 0.6rem solid $pink-50;
+            box-shadow: $border-shadow-pink;
+
+            text-shadow: $text-shadow-pink;
+
+        }
+
+        100% {
+            border: 0.6rem solid $pink-50;
+            box-shadow: $border-shadow-pink;
+            text-shadow: $text-shadow-pink;
+
+        }
+    }
+
+    @keyframes border-flicker-g {
+        34% {
+            border: 0.6rem solid $green-50;
+            box-shadow: $border-shadow-green;
+            text-shadow: $text-shadow-green;
+
+        }
+
+        100% {
+            border: 0.6rem solid $green-50;
+            box-shadow: $border-shadow-green;
+            text-shadow: $text-shadow-green;
+        }
+    }
+
+}
+
+
+.buttontocasestudy {
+    position: relative;
+    z-index: 6;
+    font-size: 2.4rem;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    color: $neutral-60;
+    padding: 1rem .4rem;
+
+    &:before {
+        color: $neutral-60;
+        content: '[';
+        display: inline-block;
+        left: .3rem;
+        position: absolute;
+        font-size: 2.6rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+
+    }
+
+    &:after {
+        color: $neutral-60;
+        content: ']';
+        display: inline-block;
+        right: .3rem;
+        position: absolute;
+        font-weight: 500;
+        font-size: 2.6rem;
+        transition: all 0.3s ease;
+
+    }
+
+    .text {
+        flex: 1; // Allow the text to take up available space
+        text-align: left; // Center the text horizontally
+        transition: all 0.3s ease;
+        padding:0.1rem 2rem 0rem 2rem;
+        font-size: 2.4rem;
+        margin:auto;
+    }
+
+    
+
+    &:hover,
+    &:active {
+        color: $neutral-60;
+        text-shadow: $text-shadow-blue;
+
+        &:before {
+            color: $neutral-60;
+            content: '[';
+            display: inline-block;
+            left: 0rem;
+            position: absolute;
+            font-size: 2.6rem;
+            font-weight: 500;
+        }
+    
+        &:after {
+            color: $neutral-60;
+            content: ']';
+            display: inline-block;
+            right: 0rem;
+            position: absolute;
+            font-weight: 500;
+            font-size: 2.6rem;
+        }
+    }
+}
+
+
+.buttontocasestudyfancy {
+    position: relative;
+    z-index: 6;
+    font-size: 2.4rem;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    color: $neutral-60;
+    padding: 1rem .2rem;
+    &:before {
+        color: $neutral-60;
+        content: '[';
+        display: inline-block;
+        left: 0rem;
+        position: absolute;
+        font-size: 2.6rem;
+        font-weight: 500;
+    }
+
+    &:after {
+        color: $neutral-60;
+        content: ']';
+        display: inline-block;
+        right: 0rem;
+        position: absolute;
+        font-weight: 500;
+        font-size: 2.6rem;
+    }
+
+    .text {
+        flex: 1; // Allow the text to take up available space
+        text-align: left; // Center the text horizontally
+        transition: all 0.3s ease;
+        padding:0.1rem 3rem 0rem 3rem;
+        font-size: 2.4rem;
+        margin:auto;
+    }
+
+    .icon {
+        transition: all 0.3s ease;
+        position: absolute; /* Add this to position the icon */
+        flex:1;
+        right:6rem;
+        &:before {
+            font-family: "FontAwesome";
+          content: "\f105";
+          position: absolute;
+          top: 50%; /* Adjust as needed to vertically center the icon */
+          left: 50%; /* Adjust as needed to horizontally center the icon */
+          transform: translate(-50%, -50%); /* Center the icon within its container */
+          opacity: 0;
+          transition: all 0.3s ease;
+          font-size: 2rem;
+        }
+      }
+
+
+    
+
+    &:hover,
+    &:active {
+        color: $neutral-60;
+        text-shadow: $text-shadow-blue;
+
+        .text {
+            padding:0.1rem 4rem 0rem 2rem;
+            margin:0rem;
+            //transform: translateX(-1.2rem); // Move text to the left on hover
+        }
+
+        .icon {
+            right:2rem;
+
+            &:before {
+                opacity: 1;
+
+            }
+
+        }
+
+
+    }
+}
+
+//displaying
+.button-row {
+    display: flex;
+    overflow: hidden;
+    z-index: 1000;
+    gap: 1rem;
+    padding: .4rem;
+    justify-content: center;
+
+    &.header {
+        justify-content: flex-end;
+        align-items: flex-end;
+
+        z-index: 99;
+        align-items: center;
+
+        a:last-child {
+            z-index: 100;
+        }
+    }
+
+    @media(max-width:$sm) {
+        flex-direction: column;
+        align-items: flex-start;
+
+        &.header {
+            flex-direction: row;
+
+        }
+    }
+}
+
+
+.label-row {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    z-index: 1000;
+    gap: .4rem;
+    flex-wrap:wrap;
+    padding-top:0.6rem;
+
+    @media(max-width:$sm) {
+        justify-content: center;
+
+        &.header {
+            flex-direction: row;
+
+        }
+    }
+}
+

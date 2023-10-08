@@ -1,0 +1,449 @@
+@import '_colors';
+@import '_layout';
+
+
+/* CIRCLES */
+
+@keyframes circ-anim {
+  10% {
+    transform: rotate(0deg);
+    animation-timing-function: ease-in;
+
+  }
+
+  20% {
+    transform: rotate(90deg);
+    animation-timing-function: ease-out;
+
+
+  }
+
+  40% {
+    transform: rotate(360deg);
+    animation-timing-function: ease-in;
+
+  }
+}
+
+@keyframes circ-anim2 {
+
+  40% {
+    transform: rotate(0deg);
+    animation-timing-function: ease-in;
+  }
+
+  50% {
+    transform: rotate(90deg);
+    animation-timing-function: ease-out;
+
+  }
+
+  70% {
+    transform: rotate(360deg);
+    animation-timing-function: ease-in;
+  }
+
+
+}
+
+@keyframes circ-anim3 {
+  60% {
+    transform: rotate(0deg);
+    animation-timing-function: ease-in;
+  }
+
+  70% {
+    transform: rotate(90deg);
+    animation-timing-function: ease-out;
+  }
+
+  90% {
+    transform: rotate(360deg);
+    animation-timing-function: ease-in;
+  }
+}
+
+.circlesCont {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  padding: 0rem;
+}
+
+.circles-content {
+
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  transition: all 0.8s ease-in;
+  overflow: hidden;
+  //background-image: url("/public/images/bgg.jpg");
+  opacity: 0;
+
+  position: relative;
+
+  &.loaded {
+    opacity: 1;
+    //transition: all 0.8s ease-in;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+.circles-container {
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  .circle {
+    z-index: 1000;
+    position: absolute;
+
+    .shapee {
+      will-change: transform;
+      transform: translateZ(0);
+      border: 0.1rem solid rgba(255, 255, 255, 0.5);
+      background: $circles-gradient;
+      border-radius: 50%;
+      margin: 3rem;
+      opacity: 0.4;
+      width: calc(var(--base-width) * var(--this-scale));
+      height: calc(var(--base-height) * var(--this-scale));
+
+      @media (max-width: $sm) {
+        width: calc(var(--base-width) * var(--this-scale-half));
+        height: calc(var(--base-height) * var(--this-scale-half));
+      }
+
+      &.grp1 {
+        animation: circ-anim 16s normal infinite;
+        box-shadow: $circ-shadow-1;
+
+      }
+
+      &.grp2 {
+        box-shadow: $circ-shadow-1;
+        animation: circ-anim2 16s normal infinite;
+
+      }
+
+      &.grp3 {
+        animation: circ-anim3 16s normal infinite;
+        box-shadow: $circ-shadow-1;
+      }
+    }
+  }
+
+  #first div {
+    --this-scale: 1;
+
+    @media (max-width: $sm) {
+      --this-scale-half: calc(var(--this-scale) / 2);
+    }
+  }
+
+  #second div {
+    --this-scale: 1.2;
+
+    @media (max-width: $sm) {
+      --this-scale-half: calc(var(--this-scale) / 2);
+    }
+  }
+
+  #third div {
+    --this-scale: 1.4;
+
+    @media (max-width: $sm) {
+      --this-scale-half: calc(var(--this-scale) / 2);
+    }
+  }
+
+  #fourth div {
+    --this-scale: 1.6;
+
+    @media (max-width: $sm) {
+      --this-scale-half: calc(var(--this-scale) / 2);
+    }
+  }
+
+  #fifth div {
+    --this-scale: 1.8;
+
+    @media (max-width: $sm) {
+      --this-scale-half: calc(var(--this-scale) / 2);
+    }
+  }
+
+  #sixth div {
+    --this-scale: 2;
+
+    @media (max-width: $sm) {
+      --this-scale-half: calc(var(--this-scale) / 2);
+    }
+  }
+
+  #seventh div {
+    --this-scale: 2.2;
+
+    @media (max-width: $sm) {
+      --this-scale-half: calc(var(--this-scale) / 2);
+    }
+  }
+
+  #eighth div {
+    --this-scale: 2.4;
+
+    @media (max-width: $sm) {
+      --this-scale-half: calc(var(--this-scale) / 2);
+    }
+  }
+
+  #ninth div {
+    --this-scale: 2.6;
+
+    @media (max-width: $sm) {
+      --this-scale-half: calc(var(--this-scale) / 2);
+    }
+  }
+
+  #tenth div {
+    --this-scale: 2.8;
+
+    @media (max-width: $sm) {
+      --this-scale-half: calc(var(--this-scale) / 2);
+    }
+  }
+
+  #el div {
+    --this-scale: 3;
+
+    @media (max-width: $sm) {
+      --this-scale-half: calc(var(--this-scale) / 2);
+    }
+  }
+
+  #tw div {
+    --this-scale: 3.2;
+
+    @media (max-width: $sm) {
+      --this-scale-half: calc(var(--this-scale) / 2);
+    }
+  }
+
+  #th div {
+    --this-scale: 3.4;
+
+    @media (max-width: $sm) {
+      --this-scale-half: calc(var(--this-scale) / 2);
+    }
+  }
+
+  #fo div {
+    --this-scale: 3.6;
+
+    @media (max-width: $sm) {
+      --this-scale-half: calc(var(--this-scale) / 2);
+    }
+  }
+
+  #fi div {
+    --this-scale: 3.8;
+
+    @media (max-width: $sm) {
+      --this-scale-half: calc(var(--this-scale) / 2);
+    }
+  }
+}
+
+
+
+@keyframes blob {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+
+}
+
+.gradient-container {
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  display: flex;
+  flex-direction: column;
+  background-color: $gcolor_4;
+  z-index: 1;
+  .color-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    align-self: stretch;
+    height: 30rem;
+    overflow: hidden;
+    //animation: blob 24s ease-in-out infinite;
+    .coldiv {
+      flex: 1;
+      height: 50rem;
+      width: 25rem;
+      margin: -10rem;
+      /* Use negative margin to center the circle within the container */
+      filter: blur(50px);
+    
+      text-align: center;
+      border-radius: 50%;
+      position: relative;
+      /* Allow .coldiv elements to be positioned outside the row */
+    
+      &:nth-child(1) {
+        background-color: $gcolor_1;
+        z-index: 1;
+        width: 14rem;
+    
+      }
+    
+      &:nth-child(2) {
+        background-color: $gcolor_2;
+        z-index: 2;
+        width: 28rem;
+    
+      }
+    
+      &:nth-child(3) {
+        background-color: $gcolor_3;
+        z-index: 4;
+        width: 12rem;
+        margin-top: 10rem;
+    
+    
+    
+      }
+    
+      &:nth-child(4) {
+        background-color: $gcolor_4;
+        z-index: 3;
+        width: 20rem;
+        margin-top: 10rem;
+    
+    
+      }
+    
+      &:nth-child(5) {
+        background-color: $gcolor_5;
+        z-index: 2;
+        width: 12rem;
+    
+      }
+    
+      &:nth-child(6) {
+        background-color: $gcolor_6;
+        z-index: 1;
+    
+      }
+  
+  }
+  
+  
+  
+  }
+  .color-row2 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+    margin-top: -30rem;
+    align-self: stretch;
+    height: 0rem;
+    position: relative;
+    z-index: 1000;
+    overflow: visible;
+    animation: none;
+    //background-color: $gcolor_4;
+    .majordiv {
+      margin: 0rem -20rem;
+      filter: blur(100px);
+      height: 30vh;
+
+      background:$gcolor-major;
+
+      &:nth-child(1) {
+        border-radius: 25% 75% 100% 0% / 100% 100% 0% 0%;
+        flex: 1;
+      }
+  
+      &:nth-child(2) {
+        border-radius: 50% 50% 100% 0% / 100% 100% 0% 0%;
+        flex: 1;
+  
+      }
+  
+      &:nth-child(3) {
+        border-radius: 50% 50% 100% 0% / 100% 100% 0% 0%;
+        flex: 1;
+  
+      }
+  
+      &:nth-child(4) {
+        border-radius: 80% 20% 100% 0% / 100% 100% 0% 0%;
+        flex: 1;
+      }
+    }
+  }
+}
+
+
+
+
+
+.cat-container {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+
+  img.tooltip-trigger:hover+.tooltip {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(-100%);
+  }
+
+  .tooltip {
+    visibility: hidden;
+    background-color: $blue-10;
+    color: $blue-80;
+    text-align: center;
+    border-radius: .6rem;
+    padding: .5rem;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+
+    //transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+  }
+}

@@ -1,0 +1,90 @@
+extends layout.pug
+
+block hero
+  
+                
+          
+
+block featured
+  .sectionn(data-color='first')
+    .container.wspace
+      section.page-section#work
+        .cards
+          each study in casestudies
+            .card-containerr
+              .cardd
+                .carddContent
+                  .row
+                    .col-xs-12.col-sm-12.col-md-12.col-lg-5.switchcol
+                      .card-left
+                        .cardText
+                          h4.titlefont.block.inlineh #{study.titlefirst}
+                          h6.titlefont.inlineh #{study.title}
+                          p.body #{study.name}
+                          .label-row
+                            each chip in study.chips
+                              a.btn.chip.label=chip
+                        a.btn.topage(href=`/work/${study.slug}`) 
+                          .buttontocasestudy
+                            .text.p.body Read more
+                    .col-xs-12.col-sm-12.col-md-12.col-lg-7
+                      .card-right 
+                        .cardImgcont
+                          img.cardImg(src=`${study.imagePrefix}${study.imgs[0]}`, alt=study.name)
+
+          
+
+
+block testimonial
+  .sectionn.notmobile(data-color='mid')
+    .container.about.notmobile
+      section.page-section#about
+        .aboutme
+          .row.middle-xs.switch
+            .col-xs-12.col-sm-12.col-md-12.col-lg-5.switchcol
+              .profImgcont
+                img.profImg(src=`/public/images/me.jpg`, alt="Image of me")
+            .col-xs-12.col-sm-12.col-md-12.col-lg-7
+              .textblock
+                .aboutmetxt 
+                  h4.titlefont.block
+                    | Hello, I'm Sania!
+                  p.body.upper
+                    | A little about me
+                  ul.features-list
+                    li
+                      | I was born and raised in Los Angeles, CA, and graduated from UCLA with a degree in Psychology. Understanding human behavior and cognition empowers me to create designs that intuitively cater to users' needs. 
+                    li
+                      | I've collaborated with diverse businesses, utilizing my design expertise to solve challenges and enhance visual experiences. I specialize in developing and maintaining design systems, ensuring seamless and polished outcomes across the board.
+                    li
+                      | In my free time, I enjoy trying out new hikes near and far, redecorating, discussing shows and movies, crocheting, and hanging out with my cat. 
+                      span.emoji &#128516;
+  .sectionn.mobile
+    .container.mobile
+        section.page-section
+          .aboutme
+            .row.middle-xs
+              .col-xs-12.col-sm-12.col-md-5.col-lg-5
+                .textblock
+                  .aboutmetxt 
+                    h4.titlefont.block
+                      | Hello, I'm Sania!
+                    p.body.upper
+                      | A little about me
+                .profImgcont
+                  img.profImg.lightup(src=`/public/images/me.jpg`, alt="Image of me")
+              .col-xs-12.col-sm-12.col-md-7.col-lg-7
+                .textblock
+                  .aboutmetxt 
+                    ul.features-list
+                      li
+                        | I was born and raised in Los Angeles, CA, and ended up at UCLA, where I graduated with a degree in Psychology. Understanding human behavior and cognition empowers me to create designs that intuitively cater to users' needs. 
+                      li
+                        | I've collaborated with diverse businesses, utilizing my design expertise to solve challenges and enhance visual experiences. I specialize in developing and maintaining design systems, ensuring seamless and polished outcomes across the board.
+                      li
+                        | In my free time, I enjoy trying out new hikes near and far, redecorating, discussing shows and movies, crocheting, and hanging out with my cat. 
+                        span.emoji &#128516;
+					  
+
+          
+          

@@ -1,0 +1,246 @@
+extends layout-cs.pug
+
+block intro
+  .sectionn.gray-first
+    .container.wspace
+      section.page-section
+        .slides
+          .slide-containerr
+            .slide
+              .slideContent.titleslide
+                .row
+                  .col-xs-12.col-sm-12.col-md-12.col-lg-5
+                    .slide-left
+                      .slideText.projectheadline
+                        a.btn.chip Case Study
+                        h4.titlefont.block #{page.titlefirst}
+                        h5.titlefont #{page.title}
+                        p.body.large #{page.name}
+
+                  .col-xs-12.col-sm-12.col-md-12.col-lg-7
+                    .slide-right
+                      .slideImgcont
+                        img.slideImg(src=page.imagePrefix + page.imgs[1], alt=page.name)
+          
+          
+          
+
+block discovery
+  .sectionn.gray#2
+    .container.wspace
+      section.page-section
+        .slides
+          .slide-containerr#nav-trigger
+            .slide
+              .slideContent
+                .row
+                  .col-xs-12.col-sm-12.col-md-4.col-lg-4
+                    .slide-left
+                      .slideText
+                        p.body.upper.graytxt Duration
+                        p.body #{page.background.duration}
+                      .slideText
+                        p.body.upper.graytxt My role
+                        p.body #{page.background.role}
+                  .col-xs-12.col-sm-12.col-md-8.col-lg-8
+                    .slide-right
+                      .slideText
+                        p.body.upper.graytxt Background
+                        p.body #{page.background.text}
+          .slide-containerr
+            .row
+              .col-xs-12.col-sm-12.col-md-6.col-lg-5
+                .slide
+                  .slideContent
+                    .row
+                      .col
+                        .slide-left
+                          .slideTitle.less
+                            a.btn.title.wicon.right.meeting Meeting + Understanding
+                          .slideText
+                            p.body #{page.discovery.d1}
+                          .slideText
+                            p.body #{page.discovery.d2}
+              .col-xs-12.col-sm-12.col-md-6.col-lg-7
+                .slide
+                  .slideContent
+                    .row
+                      .slide-left
+                        .slideTitle.less
+                          a.btn.title.wicon.right.searchic User Research
+                        .slideText
+                          p.body.upper.graytxt Methods
+                          p.body #{page.discovery.r1}
+                        .slideText
+                          p.body.upper.graytxt Insights
+                          p.body #{page.discovery.r2}
+          .slide-containerr
+            .slide
+              .slideContent
+                .slideTitle
+                  h5.titlefont Who are the Users?
+                .row
+                  .col-xs-12.col-sm-12.col-md-5.col-lg-4
+                    .slide-right
+                      .slideText
+                        p.body #{page.discovery.persona}
+                  .col-xs-12.col-sm-12.col-md-7.col-lg-4
+                    .slide-left
+                      .slideText.bubble
+                        h6.titlefont.block #{page.personas.p1[0]}
+                        p.body.small #{page.personas.p1[1]}
+                        p.body #{page.personas.p1[2]}
+                  .col-xs-12.col-sm-12.col-md-7.col-lg-4
+                    .slide-left
+                      .slideText.bubble
+                        h6.titlefont.block #{page.personas.p2[0]}
+                        p.body.small #{page.personas.p2[1]}
+                        p.body #{page.personas.p2[2]}
+          .slide-containerr
+            .slide
+              .slideContent
+                .slideTitle
+                  h5.titlefont Establishing Goals
+                .slideText
+                  p.body #{page.exploration.text}
+                .row
+                  each goal, index in page.exploration.goals
+                    .col-xs-12.col-sm-12.col-md-6.col-lg-4
+                      .slideText.bubble
+                        h6.titlefont.block #{index + 1}
+                        p.body #{goal}
+                  
+          
+
+
+block solutions
+  .sectionn.gray#3
+    .container.wspace
+      section.page-section
+        .slides
+          - var firstSol = page.solSections[0]; // Get the first sol section
+          .row
+            .col-xs-12.col-sm-12.col-md-12.col-lg-12
+              .slideTitlesticky
+                p.body= firstSol.text
+                h4.titlefont.block= firstSol.title
+
+            .col-xs-12.col-sm-12.col-md-12.col-lg-12
+              .content
+                .slide-containerr
+                  .slide
+                    .slideContent.solutions
+                      each contentItem in firstSol.content
+                        .solContent
+                          .slideTitle.less
+                            p.body.upper.graytxt= contentItem.subtitle
+                          .slideText.sol
+                            each paragraph in contentItem.text.split('\n')
+                              p.body= paragraph
+                            if contentItem.path
+                              img.solslidegray(src=page.imagePrefix + contentItem.path, alt=contentItem.caption)
+                            if contentItem.caption
+                              p.body= contentItem.caption
+  .sectionn.gray#4
+    .container.wspace
+      section.page-section
+        .slides
+          each sol in page.solSections.slice(1)
+            .row
+              .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                .slideTitlesticky
+                  a.btn.chip.label= sol.text
+                  h4.titlefont.block= sol.title
+                  
+              .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                .content
+                  .slide-containerr
+                    .slide
+                      .slideContent.solutions
+                        each contentItem in sol.content
+                          .solContent
+                            .slideTitle.less
+                              p.body.upper.graytxt= contentItem.subtitle
+                            .slideText.sol
+                              each paragraph in contentItem.text.split('\n')
+                                p.body= paragraph
+                              if contentItem.path
+                                img.solslidegray(src=page.imagePrefix + contentItem.path, alt=contentItem.caption)
+                              if contentItem.caption
+                                p.body= contentItem.caption
+                        
+  
+block conclusion
+  .sectionn.gray#5
+    .container.wspace
+      section.page-section
+        .slides
+          .slide-containerr
+            .row
+              .col-xs-12.col-sm-12.col-md-12.col-lg-6
+                .slide
+                  .slideContent
+                    .row
+                      .col
+                        .slide-left
+                          .slideTitle
+                            h6.titlefont What I Learned
+                          .slideText
+                            p.body.upper.graytxt Challenges
+                            p.body #{page.learned.ch}
+                          .slideText
+                            p.body.upper.graytxt Solutions
+                            p.body #{page.learned.sol}
+          
+              .col-xs-12.col-sm-12.col-md-12.col-lg-6
+                .slide
+                  .slideContent
+                    .row
+                      .col
+                        .slide-left
+                          .slideTitle
+                            h6.titlefont Looking Forward
+                          .slideText
+                            p.body.upper.graytxt Results
+                            p.body #{page.learned.res}
+                          .slideText
+                            p.body.upper.graytxt What's next
+                            p.body #{page.learned.next}
+  .sectionn.gray
+    .container.wspace
+      section.page-section
+        .slides
+          .slide-containerr
+            .row
+              .col-xs-12.col-sm-12.col-md-12.col-lg-4
+                .slide
+                  .slideContent.nextcs
+                    .row
+                      .col
+                        .slideTitle
+                          h4.titlefont Thank you for reading!
+                        .slideText
+                          p.body Check out another case study
+                    .cat-container
+                      img.catImg(src=`/public/images/cat.png`, alt="Cat", class="tooltip-trigger")
+                      .tooltip meow
+              .col-xs-12.col-sm-12.col-md-12.col-lg-8
+                .slides.slidescol
+                  each study in casestudies
+                    if study.slug !== page.slug
+                      .slide
+                        .slideContent.nextcs
+                          .row
+                            .col-xs-12.col-sm-12.col-md-6.col-lg-6
+                              .slide-left
+                                .slideText.projectheadline
+                                  h6.titlefont= study.titlefirst
+                                  p.body=study.title
+                                a.btn.topage(href=`/work/${study.slug}`) 
+                                  .buttontocasestudy
+                                    .text.p.body Read more
+                                    .icon 
+                            .col-xs-12.col-sm-12.col-md-6.col-lg-6
+                              .slideImgcont
+                                img.slideImg(src=`${study.imagePrefix}${study.imgs[0]}`, alt=study.name)
+                  

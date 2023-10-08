@@ -1,0 +1,222 @@
+/* LAYOUT */
+$outer-margin: 2rem;
+$gutter-width: 1rem;
+$gutter-compensation: (
+  $gutter-width * 0.5) * -1;
+$half-gutter-width: $gutter-width * 0.5;
+$xl: 1200px;
+$lg: 996px;
+$md: 768px;
+$sm: 544px;
+$columns: 12;
+
+@function strip-unit($number) {
+  @if type-of($number)=="number" and not unitless($number) {
+    @return $number / ($number * 0 + 1
+  );
+}
+
+@return $number;
+}
+
+.container-fluid,
+.container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container {
+  max-width: 100vw;
+  padding: 0rem 1rem;
+}
+
+.container-fluid {
+  padding-right: $outer-margin;
+  padding-left: $outer-margin;
+}
+
+.row {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: $gutter-compensation;
+  margin-left: $gutter-compensation;
+
+  @media (max-width: $sm) {
+    justify-content: center;
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+.row.reverse {
+  flex-direction: row-reverse;
+}
+
+.col.reverse {
+  flex-direction: column-reverse;
+}
+
+[class^="col-"] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  padding-right: $half-gutter-width;
+  padding-left: $half-gutter-width;
+  margin-bottom: 1rem;
+
+  @media (max-width: $sm) {
+    padding: 0rem;
+
+  }
+}
+
+[class^="col-"].stretch {
+  display: flex;
+  padding-right: 0rem;
+  padding-left: 0rem;
+  justify-content: space-around;
+
+}
+
+@mixin generateColumnWidths($className) {
+  @for $i from 1 through $columns {
+    .col-#{$className}-#{$i} {
+      flex-basis: $i / $columns * 100%;
+      max-width: $i / $columns * 100%;
+    }
+  }
+}
+
+@mixin helperClasses($className) {
+  .col-#{$className} {
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 100%;
+  }
+
+  .start-#{$className} {
+    justify-content: flex-start;
+    text-align: start;
+  }
+
+  .center-#{$className} {
+    justify-content: flex-start;
+    text-align: start;
+  }
+
+  .end-#{$className} {
+    justify-content: flex-end;
+    text-align: end;
+  }
+
+  .top-#{$className} {
+    align-items: flex-start;
+  }
+
+  .middle-#{$className} {
+    align-items: center;
+  }
+
+  .bottom-#{$className} {
+    align-items: flex-end;
+  }
+
+  .around-#{$className} {
+    justify-content: space-around;
+  }
+
+  .between-#{$className} {
+    justify-content: space-between;
+  }
+
+  .first-#{$className} {
+    order: -1;
+  }
+
+  .last-#{$className} {
+    order: 1;
+  }
+}
+
+@mixin makeGrid($sizes...) {
+
+  @each $classname,
+  $width in keywords($sizes) {
+    $minwidth: strip-unit($width);
+
+    @if $width {
+      @media screen and (min-width: #{$minwidth}px) {
+        .container {
+          width: #{$minwidth}px;
+        }
+
+        @include generateColumnWidths($classname);
+        @include helperClasses($classname);
+      }
+    }
+
+    @else {
+      @include generateColumnWidths($classname);
+      @include helperClasses($classname);
+    }
+  }
+}
+
+@include makeGrid($xs: null, $sm: $sm, $md: $md, $lg: $lg, $xl: $xl);
+
+.box,
+.box-first,
+.box-large,
+.box-nested,
+.box-row {
+  position: relative;
+  box-sizing: border-box;
+  min-height: 1rem;
+  margin-bottom: 0;
+  padding: 1rem;
+}
+
+.box,
+.box-first,
+.box-large,
+.box-nested,
+.box-row {
+  padding: 0rem;
+}
+
+.box-row {
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+
+}
+
+.box-nested {
+  flex: 1;
+}
+
+
+
+
+
+.fullbox {
+  height: 100%;
+}
+
+.content {
+  display: flex;
+  gap: 8rem;
+  flex-direction: column;
+  text-align: left;
+
+  &.center {
+    align-items: center;
+    text-align: center;
+
+  }
+}
+
+
+
+
