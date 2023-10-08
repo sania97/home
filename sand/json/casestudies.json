@@ -1,0 +1,397 @@
+@@ -0,0 +1,397 @@
+{
+  "erp": {
+    "slug": "erp",
+    "name": "Hardware Fabrication Company",
+    "titlefirst": "Streamlining Manufacturing",
+
+    "title": "Designing a customized Enterprise Resource Planning Platform",
+    "imagePrefix": "/public/images/erp/",
+    "chips": [
+      "Product Design"
+    ],
+    "imgs": [
+      "title-card.jpg",
+      "mfirst.jpg"
+    ],
+    "background": {
+      "duration": "6 months",
+      "role": "Strategy, User Research, Product Design",
+      "text": "Client X [name redacted at client request], a printed circuit board manufacturing company, sought to optimize its manufacturing processes and enhance overall inefficiency. They wanted to create a tailored Enterprise Resource Planning (ERP) platform that could streamline their manufacturing, inventory tracking, and quality management processes. The company's existing systems for resource planning were nearly all offline and inefficient, prompting the need for a comprehensive solution."
+    },
+    "discovery": {
+      "d1": "I began the project by conducting meetings with key stakeholders involved in the overall manufacturing process at all levels at the company. As an exercise, I asked them to walk me through the entire process of completing a manufacturing project.",
+      "d2": "These discussions helped me understand the pain points and challenges they faced in their day-to-day operations, and helped me formulate the overall needs the platform would have to address.",
+      "r1": "First I gathered material the company provided and studied how the manufacturing process at this company truly worked; specifically how stock was brought in, how inventory was stored, and how manufacturing was completed. ",
+      "r2": "In order to better understand the potential needs of the software, I conducted a Competitive analysis of existing ERP Platforms. I listed the key features present in every platform, and noted common patterns of navigation.",
+      "persona": "I created two User Personas that matched to essential roles in the manufacturing process at this company. These helped anchor my design process moving forward. "
+    },
+    "personas": {
+      "p1": [
+        "Kelly",
+        "Manager",
+        "\"As the manager, I need a clear overview of all processes that have happened and all that are happening currently in the workshop, so that I can monitor progress, catch mistakes, and figure out ways to be more efficient. \""
+      ],
+      "p2": [
+        "Tom",
+        "Logistical Associate",
+        "\"As an associate more involved in the hands on process of manufacturing, I want easy to use software that is streamlined, so that my workflow does not increase.\""
+      ]
+    },
+    "exploration": {
+      "text": "Before moving onto the design phase, I used all information gathered from the Discovery phase to refine and categorize the end goals of the software.",
+      "goals": [
+        "Record stock and inventory input and output",
+        "Keep a record of specific steps involved with manufacturing processes",
+        "Track the currently active processes relating to manufacturing happening at the company"
+      ]
+    },
+    "solSections": [
+      {
+        "title": "User Flows",
+        "text": "Tailoring to users needs",
+        "content": [
+          {
+            "subtitle": "Established process",
+            "text": "At this company, all records of most parts of the manufacturing process were made and kept offline. This was necessary for security but limited efficiency by a great deal. ",
+            "path": "sol1.jpg",
+            "caption": "Samples of the documents that kept records of each step of the manufacturing process at this company. "
+          },
+          {
+            "subtitle": "Mapping out",
+            "text": "With knowledge gained from user research and discussions with the stakeholders, I set out to create a detailed map of the information architecture. From this exercise, I was able to determine three overall modules the software would have: Inventory, Manufacturing, Quality Management. By analyzing the necessary functions of each of those modules, I mapped out all the pages that would be necessary underneath those.",
+            "path": "sol2.jpg",
+            "caption": "I iterated upon this, meeting with the stakeholders to confirm that the architecture did align with the established processes."
+          },
+          {
+            "subtitle": "Design System",
+            "text": "After creating the User flow, I started working on creating the smaller components of the design system, such as clickable elements and section headings.",
+            "path": "sol3.jpg",
+            "caption": ""
+          }
+        ]
+      },
+      {
+        "title": "Stock + Inventory",
+        "text": "Module 1",
+        "content": [
+          {
+            "subtitle": "Item movement",
+            "text": "The first module I tackled was Stock + Inventory. One of the most important aspects of a manufacturing business is being able to track where items are at any given moment. Through creating the information architecture, I realized that Items could be divided into two main categories: Raw material or Finished Product. Either way they would need to have similar attributes: current amounts in possession and storage location. I kept in mind that Items as an object will eventually need to be added to specific instruction manuals for specific products. ",
+            "path": "sol4.jpg",
+            "caption": "A demonstration of how an Item could be selected, and all the attributes that would display about that item. "
+          },
+          {
+            "subtitle": "Warehouse",
+            "text": "From there I moved onto Warehouse records. Warehouse would be a visual map, configured by calculating where an item was and the quantity. ",
+            "path": "sol5.jpg",
+            "caption": "Warehouse and Items were connected: one will affect the other."
+          }
+        ]
+      },
+      {
+        "title": "Manufacturing",
+        "text": "Module 2",
+        "content": [
+          {
+            "subtitle": "Items involved",
+            "text": "While creating the flow, I spent a lot of time learning about the process of making a product at this company: from the moment the customer places an order to the moment it leaves the facility. That helped me visualize the overall structure of a Product object in the software, and what its attributes would need to be.  ",
+            "path": "solflow.jpg",
+            "caption": ""
+          },
+          {
+            "subtitle": "Product to Work Order",
+            "text": "In this software, a Product would inherently have two main attributes: Bill of material (items required to make the product) and Procedures (all steps involved in making a product). Once the Product was added to a Project, its specific assigned Procedures would then create Work orders, which would assign employees to specific jobs and keep track of progress.",
+            "path": "sol6.jpg",
+            "caption": ""
+          },
+          {
+            "subtitle": "Project Plan",
+            "text": "Connected to manufacturing a Product was a Project Page, which would house the records of the product manufacturing life cycle. Projects would also include information about the Project Quote provided to the client, the Sales order, and shipping information.",
+
+
+            "path": "sol7.jpg",
+            "caption": "The Project Page provides a visual overview of the progress; managers move the progress along, verifying what needs to be verified and then assigning accordingly."
+          }
+         
+        ]
+      },
+      {
+        "title": "Quality Management",
+        "text": "Module 3",
+        "content": [
+          {
+            "subtitle": "Maintaining Quality",
+            "text": "Through discussions with the company, I learned that another essential aspect of the manufacturing process was Quality Management. At this company, there were many established processes in place for checking and maintaining product quality, and they were keen on keeping it that way. I designed this module as a sort of template gallery, that would create documents based on the parameters provided. ",
+            "path": "sol8.jpg",
+            "caption": "Procedures could be created from a basic template, and then assigned to a specific product. That way when a Product is added to a work order, the specific Procedures belonging to it would be loaded as well. "
+          },
+          {
+            "subtitle": "Digital + Document",
+            "text": "Printed forms were necessary in this aspect of the business, so we decided that the main function of this module would be to store the forms in a digital and print format. ",
+            "path": "sol9.jpg",
+            "caption": ""
+          },
+          {
+            "subtitle": "",
+            "text": "",
+            "path": "sol10.jpg",
+            "caption": "I maintained the basic structure of the example form I was given, slightly modified for user interaction. "
+          }
+        ]
+      }
+    ],
+    "mockups": [
+     
+    ],
+    "learned": {
+      "ch": "The project immersed me in manufacturing, an industry I was not used to. It did seem a bit tedious at first, due to the fact that I would have to learn how specific manufacturing processes worked. ",
+      "sol": "I resolved this by making sure I understood all aspects of the many specific processes at this company before starting any design. Refining project goals helped a lot as well, to keep the design process on track.",
+      "res": "The stakeholders were extremely satisfied with the results provided, and felt really confident about their trajectory moving forward. ",
+      "next": "Development is in progress. Metrics will be updated once available."
+    }
+  },
+  "led": {
+    "slug": "led",
+    "name": "LED Lighting Provider",
+    "titlefirst": "Elevating Design Strategy",
+
+    "title": "Updating Content and Crafting a Functional Design System",
+    "imagePrefix": "/public/images/led/",
+    "chips": [
+      "Content Writing",
+      "Design System"
+    ],
+    "imgs": [
+      "title-card.jpg",
+      "mfirst.jpg"
+    ],
+    "background": {
+      "duration": "8 months",
+      "role": "User Research, Web Design, Content Design, Copywriting",
+      "text": "A LED lighting solutions provider needed to finalize some of their website content before the launch of their website. They needed a website that not only showcased their innovative LED lights but also effectively communicated their value proposition. My role primarily involved enhancing their copywriting and translating subpar designs into a functional design system."
+    },
+    "discovery": {
+      "d1": "I began the project by conducting meetings with the client to determine the project scope and timeline.",
+      "d2": "The direction of the brand was already mostly defined, but I directed some exercises to determine that mission of the company and how the stakeholders wanted that to be communicated. I also gathered details about how the typical customer would interact with the website, concluding that product features would need to be highlighted the most, as they were the biggest contributing factor in sales.",
+      "r1": "In order to better understand the potential needs of the new website, I conducted a Competitive analysis of similar LED manufacturers, as well as other sustainably minded products.",
+      "r2": "This analysis revealed that clear and concise information about the specific product features, along with a straightforward way to compare products were of the utmost importance. I noted that many websites prominently featured their company values as a selling point; usually these were commitment to efficiency and reliability.",
+      "persona-creation": ""
+    },
+    "personas": {
+      "p1": [],
+      "p2": []
+    },
+    "exploration": {
+      "text": "Before moving onto the content creation and design phase, I used all information gathered from the Discovery phase to create three goals (expected results) of the project moving forward.",
+      "goals": [
+        "Revamp the website's copy to clearly and persuasively communicate the benefits and features of the LED Products",
+        "Ensure that user experience aligned with industry standards and user-centered design principles.",
+        "Transform the existing designs into a functional design system that would maintain brand consistency and facilitate efficient web development."
+      ]
+    },
+    "solSections": [
+      {
+        "title": "Copywriting",
+        "text": "Communicating benefits and features",
+        "content": [
+          {
+            "subtitle": "Establishing a voice",
+            "text": "Leveraging the insights gained during the exploration phase, I set out to complete the copywriting content for all the pages. The website's main purpose was to sell and to inform so I began by first focusing on identifying where to place the Calls to Action (CTAs). Once I had that mapped out, I took all the information I had about the company and products' unique features and advantages, and filled it in the relevant areas. ",
+            "path": "",
+            "caption": ""
+          },
+          {
+            "subtitle": "",
+            "text": "The copy aimed to connect with users on both functional and emotional levels, highlighting energy savings, durability, and aesthetic appeal.",
+            "path": "sol1.jpg",
+            "caption": "This text content goes in the hero section of the home page, serving as the user's initial point of engagement upon entering the website. It emphasizes the innovative nature of the product, and then immediately highlights two key metrics the typical customer would expect to know. "
+          },
+          {
+            "subtitle": "",
+            "text": "",
+            "path": "sol2.jpg",
+            "caption": "During the discovery phase, I learned about the importance of highlighting specific brand attributes. This content gives the user a great primer about the company's core values and promises to their customers.  "
+          },
+          {
+            "subtitle": "",
+            "text": "",
+            "path": "sol3.jpg",
+            "caption": "This text content was given to me by the client, but it was all combined in one giant paragraph, making it disinteresting and flat. I decided to create three separate sections, which communicated the feature attibutes in a much clearer way and just had better visual appeal. "
+          }
+        ]
+      },
+      {
+        "title": "Design system",
+        "text": "Ensure consistency and efficiency in design process",
+        "content": [
+          {
+            "subtitle": "Communicating the issues",
+            "text": "The client had hired a designer before me, and gave me their file so I could edit the text content directly in the file. (Just copywriting was the original scope of this project.) Once I started working in this file however, I noticed that the previous designer did not use Figma in all its functional ways, there was no Auto Layout or even frames used. Working in this design file was extremely frustrating, and in the end the design was not responsive at all. ",
+            "caption": "As someone with experience in creating design systems in Figma and in Web Development, I communicated to the client that I believed they would benefit greatly if I took the designs and remade them to fit a design system. After a bit of back and forth, they accepted and I began work on creating this design system based on the webpages provided. ",
+            "path": ""
+          },
+          {
+            "subtitle": "Atomic Design System",
+            "text": "Building upon the wireframes, I developed a responsive design system that included standardized aspects of the design: a consistent color palette inspired by energy-efficient lighting, typography choices that conveyed professionalism and modernity, and imagery that showcased the aspirational benefits of the product. Creating the design system and documentation made development very seamless and opened up opportunities for efficient content creation in the future.",
+            "path": "sol5.jpg",
+            "caption": "Atoms phase of the design system"
+          },
+          {
+            "subtitle": "",
+            "text": "",
+            "path": "sol4.jpg",
+            "caption": "I delivered a responsive design system that made it so much easier to adapt to various devices and screen sizes."
+          }
+        ]
+      }
+    ],
+    "mockups": [
+      {
+        "title": "About Page",
+        "path": "m1.jpg"
+      },
+      {
+        "title": "Product Page",
+        "path": "m2.jpg"
+      }
+    ],
+    "learned": {
+      "ch": "The text content I was given was very verbose and had no personality. In addition, communicating with stakeholders about changing problems with their existing designs was a challenge. ",
+      "sol": "I resolved text content issues by involving stakeholders early, asking them what personality they wanted the brand to embody. As for the design, truth be told I did want to change more aspects, but then I understood that the stakeholders had spect a lot of time finalizing the previous design, so I resigned myself to just making the design system match the prototypes.",
+      "res": "The collaboration between stakeholders, user research, and iterative design processes resulted in a successful result that aligns with the company’s vision, enhances their online presence, and increases the potential of future content creation. The design system has allowed web development to progress a lot faster.",
+      "next": "Web development of the website is currently in progress. Metrics will be updated once website is launched."
+    }
+  },
+  "bpg": {
+    "slug": "bpg",
+    "name": "Blake Pro Gear",
+    "titlefirst": "Reshaping Design Approach",
+
+    "title": "Brand and Website Design Overhaul for an Outdoor Gear Retailer",
+    "imagePrefix": "/public/images/bpg/",
+    "chips": [
+      "Brand Design",
+      "Web Design"
+    ],
+    "imgs": [
+      "title-card.jpg",
+      "mfirst.jpg"
+    ],
+    "background": {
+      "duration": "2 months",
+      "role": "Strategy, User Research, Brand Design, Web Design",
+      "text": "BlakeProGear, a company specializing in outdoor gear equipment made with superior material, needed to bring their brand into a new era, so they hired me to overhaul their design practices. Through the process of assessing their needs, I determined that they would need a brand guideline and design system that would allow them to update content while still staying within a common design language. I was able to create a brand guideline and responsive design system for them, that allowed a cohesive brand experience for their customers and efficient website content creation in the future."
+    },
+    "discovery": {
+      "d1": "I began the project by conducting meetings with the client to determine the project scope and timeline.",
+      "d2": "The direction of the brand was not defined at all, so I directed some exercises to determine that mission of the company, the desired brand personality, and how the stakeholders wanted that to be communicated.",
+      "r1": "In order to better understand the potential needs of the new website, I conducted a Competitive analysis of typical outdoor gear company websites.",
+      "r2": "The analysis of the competitor websites showed that the basic standard in the field seemed to be a focus on showcasing products with high-quality photos and detailed descriptions, as well as providing information on the company's values and commitment to sustainability. Additionally, many prioritize user reviews and ratings, as well as offering a seamless shopping experience with easy navigation and checkout processes.",
+      "persona": "I asked BPG to provide any customer insights they had noticed through their experiences providing customer service, and they determined that their customers differentiated themselves into two groups: skilled people and unskilled people. I used this to create two User Personas with unique goals, which would help anchor my design process moving forward."
+    },
+    "personas": {
+      "p1": [
+        "Steve",
+        "engineer",
+        "\"As an avid hiker, I want to replace some items in my collection with higher quality and sustainable products, so that my hikes are more enjoyable.\""
+      ],
+      "p2": [
+        "Tasha",
+        "college graduate",
+        "\"As a person about to hike seriously for the first time, I want to buy reliable products that I can trust, so I can stay safe.\""
+      ]
+    },
+    "exploration": {
+      "text": "Before moving onto the design phase, I used all information gathered from the Discovery phase to create three goals (expected results) of the project moving forward.",
+      "goals": [
+        "develop a cohesive brand experience that allows the brand to communicate its core values and differentiate itself",
+        "create a design system for the website owner, that would ensure consistency and scalability for years to come",
+        "use basic design principles to improve user experience for the many types of customers across product pages"
+      ]
+    },
+    "solSections": [
+      {
+        "title": "Brand Guideline",
+        "text": "Establishing strong brand identity and recognition",
+        "content": [
+          {
+            "subtitle": "Defining the brand",
+            "text": "With validation from user research and persona creation, I met with the stakeholders to conduct a brand audit where we determined specificities of the brand personality and visual identity. I compiled all of these into a brand guideline presentation that could be shared with the stakeholders.",
+            "path": "sol1.jpg",
+            "caption": "Screenshot of the resulting brand guideline. This was discussed heavily and iterated upon to ensure a satisfying result for the client."
+          },
+          {
+            "subtitle": "Updating the Logo",
+            "text": "The logo served as the backbone for the rest of the visual elements on the webpage. First I took the logo and redesigned it to a form that would work for both print and web. The colors from the logo helped me create a color palette that would guide the design of the webpages.",
+            "path": "sol2.jpg",
+            "caption": ""
+
+          }
+        ]
+      },
+      {
+        "title": "Design System",
+        "text": "Ensure consistency and efficiency in design process",
+        "content": [
+          {
+            "subtitle": "Color + Typography + Grid",
+            "text": "I began creating the design system by following the general Atomic Design System process. I utilized Figma’s Design Library in many ways, the first being for creating and organizing the variety of color palettes, typography, and grid styles.",
+            "path": "sol3.jpg",
+            "caption": "To promote design unity, I created a complete color palettes for all the colors selected in the Brand Guideline. This made iteration and scalability so much easier for later on."
+          },
+          {
+            "subtitle": "Atoms to Molecules",
+            "text": "From there, I moved onto adding functionality and creating more complex elements, such as Clickable elements and Header content.",
+            "path": "sol4.jpg",
+            "caption": ""
+          },
+          {
+            "subtitle": "Organisms",
+            "text": "I created a preliminary map of the Information Architecture by organizing the potential functionalities of each page I planned to design, which helped me identify the sections needed on each page for proper functionality. Then I was able to create very basic prototypes, which would guide the rest of my design process.",
+            "path": "sol5.jpg",
+            "caption": ""
+          },
+          {
+            "subtitle": "Utilizing Figma",
+            "text": "Once I started creating the sections each page needed, I used Figma’s Variant features to create the screen responsive versions of those sections.",
+            "path": "sol6.jpg",
+            "caption": ""
+          },
+          {
+            "subtitle": "Static v. Variant",
+            "text": "After I had completed all the sections, I went back and determined which sections could use more visual customization, and thus created a matrix of Variants.",
+            "path": "sol7.jpg",
+            "caption": "In this section, I am giving the website owner the ability to change the background color based on the collection that is being highlighted, while keeping them aligned with the established brand guidelines. This strategy streamlines the implementation process for developers."
+          }
+        ]
+      }
+    ],
+    "mockups": [
+      {
+        "title": "Home Page",
+        "path": "m1.jpg"
+      },
+      {
+        "title": "Product Listing Page",
+        "path": "m2.jpg"
+      },
+      {
+        "title": "Product Page",
+        "path": "m3.jpg"
+      },
+      {
+        "title": "Responsive Versions",
+        "path": "m4.jpg"
+      }
+    ],
+    "learned": {
+      "ch": "Communicating with stakeholders about changing their existing designs was a challenge. ",
+      "sol": "I resolved this by allowing the stakeholders to make design decisions and keeping them informed during every step of the process. I tried not to stray too far from their choices, just adding functionality and complexity where it was needed. ",
+      "res": "I was able to deliver a completely revitalized brand direction for BlakeProGear, through a completed brand guideline and organized design system. The stakeholders were extremely satisfied with the results provided, and felt really confident about their trajectory moving forward. ",
+      "next": "Unfortunately, web development has been put on pause due to supply chain issues within the company. Metrics will be updated once website is launched."
+    }
+  }
+
+
+}
