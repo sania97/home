@@ -1852,17 +1852,10 @@ COLORS - END
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
-    -webkit-filter: blur(6rem);
-            filter: blur(6rem);
+    -webkit-filter: blur(4rem);
+            filter: blur(4rem);
     background: #fee185; }
-    @media (max-width: 768px) {
-      .gradient-container .color-row {
-        -webkit-filter: blur(4rem);
-                filter: blur(4rem); } }
-    @media (min-width: 1200px) {
-      .gradient-container .color-row {
-        -webkit-filter: blur(12rem);
-                filter: blur(12rem); } }
+    
     .gradient-container .color-row .coldiv {
       -webkit-box-flex: 1;
           -ms-flex: 1;
