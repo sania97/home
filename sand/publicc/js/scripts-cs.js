@@ -11,7 +11,21 @@ $(document).ready(function () {
       }, 1000); // Smoothly scroll to the element
     }
   });
-
+  function clickAndSelect() {
+    const $slides = $('.slide');
+  
+    $slides.each(function() {
+      const $slide = $(this);
+  
+      $slide.on('click', function(e) {
+        e.preventDefault();
+        const $link = $slide.find('a.btn.topage'); 
+        if ($link.length) {
+          window.location = $link.attr('href');
+        }
+      });
+    });
+  }
   // Initial check when the page loads
   function checkScrollClasses() {
     var y = $(this).scrollTop();
@@ -61,6 +75,8 @@ $(document).ready(function () {
     });
   }
   checkScrollClasses();
+  clickAndSelect();
+
   $(document).scroll(function () {
     checkScrollClasses();
 
