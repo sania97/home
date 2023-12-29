@@ -9,14 +9,16 @@
 style.scss 
 compiles to style.css
 */
-/* -------------------------------- 
-LAYOUT
--------------------------------- */
+
 @import url("https://fonts.cdnfonts.com/css/vinila-test");
 @import url("https://fonts.cdnfonts.com/css/open-sauce-one");
 @import url("https://fonts.cdnfonts.com/css/atkinson-hyperlegible");
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
+
+/* -------------------------------- 
+LAYOUT
+-------------------------------- */
 .container-fluid,
 .container {
   margin-right: auto;
@@ -678,7 +680,14 @@ COLORS
 
 /* TYPOGRAPHY */
 .titlefont {
-  font-family: "Open Sauce One", sans-serif; }
+  font-family: "Open Sauce One", sans-serif, sans-serif; }
+
+.body {
+  font-family: "Atkinson Hyperlegible", sans-serif, sans-serif;
+  line-height: 1.2;
+  font-size: 2.0rem;
+  margin: 0rem 0rem;
+  font-weight: normal; }
 
 h1 {
   font-weight: 500;
@@ -712,13 +721,6 @@ h6 {
 .block {
   font-weight: 800; }
 
-.body {
-  font-family: "Atkinson Hyperlegible", sans-serif;
-  line-height: 1.2;
-  font-size: 2.0rem;
-  margin: 0rem 0rem;
-  font-weight: normal; }
-
 .large {
   font-size: 2.2rem; }
 
@@ -741,7 +743,7 @@ h6 {
   float: left; }
 
 input[type="search"] {
-  font-family: "Open Sauce One", sans-serif !important;
+  font-family: "Atkinson Hyperlegible", sans-serif, sans-serif;
   padding: .2rem; }
 
 .special {
@@ -803,13 +805,13 @@ input[type="search"] {
     -webkit-transform: translateY(0rem);
         -ms-transform: translateY(0rem);
             transform: translateY(0rem);
-    /* Final position */
     opacity: 1; }
   .intromessage .double-layered-text {
-    font: 500 6rem "Open Sauce One", sans-serif;
+    font-family: "Open Sauce One", sans-serif, sans-serif;
+    font-weight: 500;
+    font-size: 6.0rem;
     position: relative;
     display: inline-block;
-    /* Make sure both elements stay on the same line */
     letter-spacing: 0.1rem;
     -webkit-text-stroke-width: 0.2rem;
     -webkit-font-smoothing: subpixel-antialiased;
@@ -820,8 +822,7 @@ input[type="search"] {
     left: 0rem;
     top: 0rem;
     z-index: 1;
-    padding: 0rem .4rem .4rem 0rem;
-    /* Add the top layer using ::before pseudo-element */ }
+    padding: 0rem .4rem .4rem 0rem; }
     .intromessage .double-layered-text .emoji {
       -webkit-text-fill-color: #fff; }
     .intromessage .double-layered-text::before {
@@ -853,7 +854,8 @@ a {
   transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
   letter-spacing: 0.5px;
   overflow: hidden;
-  font-family: "Vinila Test", sans-serif;
+  font-family: "Vinila Test", sans-serif, sans-serif;
+  /* Root font */
   cursor: pointer; }
   .btn.primary {
     background: #0A1B46;
@@ -954,8 +956,7 @@ a {
     padding-right: 1rem; }
     .btn.wicon:before, .btn.wicon:after {
       padding: 0rem;
-      font-weight: 400;
-      /* Make sure to use the regular weight */ }
+      font-weight: 400; }
     .btn.wicon.right:before {
       display: none; }
     .btn.wicon.right:after {
@@ -985,9 +986,7 @@ a {
         font-size: 5.0rem;
         position: absolute;
         top: 50%;
-        /* Vertically align at 50% */
         left: 50%;
-        /* Horizontally align at 50% */
         -webkit-transform: translate(-50%, -50%);
             -ms-transform: translate(-50%, -50%);
                 transform: translate(-50%, -50%); }
@@ -1020,8 +1019,7 @@ a {
     .btn.wicon.email:before, .btn.wicon.email:after {
       font-family: "FontAwesome";
       content: "\f0e0";
-      font-weight: normal;
-      /* Make sure to use the regular weight */ }
+      font-weight: normal; }
     .btn.wicon.sales:before, .btn.wicon.sales:after {
       font-family: "FontAwesome";
       content: "\f0d1"; }
@@ -1049,8 +1047,7 @@ a {
     .btn.wicon.animated:hover:after {
       -webkit-transform: translateX(1rem);
           -ms-transform: translateX(1rem);
-              transform: translateX(1rem);
-      /* Adjust the translation value as needed for your design */ }
+              transform: translateX(1rem); }
   .btn.tab {
     padding: 1rem 0rem;
     border: none;
@@ -1096,7 +1093,7 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    font-family: "Open Sauce One", sans-serif;
+    font-family: "Open Sauce One", sans-serif, sans-serif;
     cursor: default; }
     .btn.title:after {
       font-size: 3.0rem;
@@ -1104,7 +1101,7 @@ a {
       text-align: center;
       color: #DBE3EF; }
   .btn.giant {
-    font-family: "Vinila Test", sans-serif;
+    font-family: "Vinila Test", sans-serif, sans-serif;
     border: 0.6rem solid #fff;
     cursor: pointer;
     display: -webkit-box;
@@ -1304,7 +1301,6 @@ a {
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
     position: absolute;
-    /* Add this to position the icon */
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
@@ -1314,13 +1310,10 @@ a {
       content: "\f105";
       position: absolute;
       top: 50%;
-      /* Adjust as needed to vertically center the icon */
       left: 50%;
-      /* Adjust as needed to horizontally center the icon */
       -webkit-transform: translate(-50%, -50%);
           -ms-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%);
-      /* Center the icon within its container */
       opacity: 0;
       -webkit-transition: all 0.3s ease;
       -o-transition: all 0.3s ease;
@@ -1404,8 +1397,6 @@ a {
 /* -------------------------------- 
 COLORS - END
 -------------------------------- */
-
-
 
 /* CIRCLES */
 @-webkit-keyframes circ-anim {
@@ -1620,33 +1611,22 @@ COLORS - END
 .circles-content {
   width: 100vw;
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   -webkit-transition: all 0.8s ease-in;
   -o-transition: all 0.8s ease-in;
   transition: all 0.8s ease-in;
   overflow: hidden;
-  opacity: 0;
-  position: relative; }
+  opacity: 0; }
   .circles-content.loaded {
     opacity: 1; }
 
 .circles-container {
   z-index: 1000;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  top: 5vh;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1656,6 +1636,9 @@ COLORS - END
   @media (max-width: 768px) {
     .circles-container {
       top: -15vh; } }
+  @media (max-width: 544px) {
+    .circles-container {
+      height: 100vh; } }
   .circles-container .shapeee {
     z-index: 1000;
     position: absolute;
@@ -1828,7 +1811,7 @@ COLORS - END
 
 .gradient-container {
   height: 100%;
-  width: 110%;
+  width: 110vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1837,36 +1820,27 @@ COLORS - END
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #01011B;
-  z-index: 1; }
+  z-index: 1;
+  position: absolute; }
   .gradient-container .color-row {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    height: 30rem;
+    height: 30vh;
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
-    -webkit-filter: blur(4rem);
-            filter: blur(4rem);
-    background: #fee185; }
-    
+    -webkit-filter: blur(4vw);
+            filter: blur(4vw);
+    width: 100vw; }
     .gradient-container .color-row .coldiv {
       -webkit-box-flex: 1;
           -ms-flex: 1;
               flex: 1;
-      height: 50rem;
-      width: 25rem;
-      margin: -2rem;
-      text-align: center;
-      border-radius: 50%;
+      height: 50vh;
+      margin: -2vh;
       position: relative;
-      /* Allow .coldiv elements to be positioned outside the row */ }
+      border-radius: 50%; }
       .gradient-container .color-row .coldiv:nth-child(1) {
         background-color: #fee185;
         z-index: 1;
@@ -1901,42 +1875,21 @@ COLORS - END
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-top: -24rem;
-    -ms-flex-item-align: stretch;
-        -ms-grid-row-align: stretch;
-        align-self: stretch;
-    height: 80rem;
-    position: relative;
+    margin-top: -30vh;
+    height: 80vh;
     z-index: 1000;
     overflow: visible;
-    -webkit-filter: blur(10rem);
-            filter: blur(10rem); }
+    width: 100vw;
+    -webkit-filter: blur(6vw);
+            filter: blur(6vw);
+    opacity: 0.8; }
     .gradient-container .color-row2 .majordiv {
-      margin: 0rem -20rem;
-      height: 80rem;
+      margin: 0vh -40vh;
+      height: 80vh;
       background: -webkit-gradient(linear, left top, left bottom, from(#685ae9), color-stop(10%, #110A49));
       background: -o-linear-gradient(top, #685ae9 0%, #110A49 10%);
       background: linear-gradient(180deg, #685ae9 0%, #110A49 10%);
-      border-radius: 50% 50% 100% 0% / 100% 100% 0% 0%;
-      /*&:nth-child(3) {
-        border-radius: 50% 50% 100% 0% / 100% 100% 0% 0%;
-        flex: 1;
-      }
-
-      &:nth-child(4) {
-        border-radius: 80% 20% 100% 0% / 100% 100% 0% 0%;
-        flex: 1;
-      }
-      */ }
+      border-radius: 50% 50% 100% 0% / 100% 100% 0% 0%; }
       .gradient-container .color-row2 .majordiv:nth-child(1), .gradient-container .color-row2 .majordiv:nth-child(3) {
         -webkit-box-flex: 1;
             -ms-flex: 1;
@@ -1991,10 +1944,8 @@ COLORS - END
   font-size: 62.5%;
   max-width: 100%;
   overflow-x: hidden;
-  font-family: "Vinila Test", sans-serif;
-  line-height: 1.4;
-  --base-width: 120rem;
-  --base-height: 120rem; }
+  font-family: "Vinila Test", sans-serif, sans-serif;
+  line-height: 1.4; }
 
 body {
   background-size: cover;
@@ -2004,9 +1955,7 @@ body {
   background: linear-gradient(to bottom, #01011B 0%, #01011B 50%, #090528 100%); }
 
 .test {
-  width: 10rem;
-  height: 10rem;
-  background-color: red; }
+  border: 10px solid red; }
 
 .loadedd {
   opacity: 1; }
@@ -2118,7 +2067,8 @@ body {
   .container.top.herocont {
     padding: 2rem;
     top: 35vh;
-    background-color: transparent;
+    background: -o-radial-gradient(50% 50%, 22% 50%, #01011B 0%, rgba(1, 1, 27, 0) 100%);
+    background: radial-gradient(22% 50% at 50% 50%, #01011B 0%, rgba(1, 1, 27, 0) 100%);
     border-radius: 1.2rem; }
     @media (max-width: 996px) {
       .container.top.herocont {
@@ -2154,9 +2104,9 @@ body {
     pointer-events: none; }
   @media (max-width: 768px) {
     .container.circlesCont::before {
-      background: -webkit-gradient(linear, left bottom, left top, color-stop(80%, rgba(1, 1, 27, 0.9)), to(rgba(1, 1, 27, 0))), radial-gradient(165% 100% at 50% 100%, #01011B 0%, rgba(9, 5, 40, 0.9) 80%, rgba(9, 5, 40, 0) 100%);
-      background: -o-linear-gradient(bottom, rgba(1, 1, 27, 0.9) 80%, rgba(1, 1, 27, 0) 100%), -o-radial-gradient(50% 100%, 165% 100%, #01011B 0%, rgba(9, 5, 40, 0.9) 80%, rgba(9, 5, 40, 0) 100%);
-      background: linear-gradient(0deg, rgba(1, 1, 27, 0.9) 80%, rgba(1, 1, 27, 0) 100%), radial-gradient(165% 100% at 50% 100%, #01011B 0%, rgba(9, 5, 40, 0.9) 80%, rgba(9, 5, 40, 0) 100%); } }
+      background: -webkit-gradient(linear, left bottom, left top, color-stop(80%, rgba(1, 1, 27, 0.9)), to(rgba(1, 1, 27, 0))), radial-gradient(165% 100% at 50% 100%, #01011B 0%, #090528 90%, rgba(9, 5, 40, 0) 100%);
+      background: -o-linear-gradient(bottom, rgba(1, 1, 27, 0.9) 80%, rgba(1, 1, 27, 0) 100%), -o-radial-gradient(50% 100%, 165% 100%, #01011B 0%, #090528 90%, rgba(9, 5, 40, 0) 100%);
+      background: linear-gradient(0deg, rgba(1, 1, 27, 0.9) 80%, rgba(1, 1, 27, 0) 100%), radial-gradient(165% 100% at 50% 100%, #01011B 0%, #090528 90%, rgba(9, 5, 40, 0) 100%); } }
 
 .mobile {
   display: none; }
@@ -2235,7 +2185,8 @@ body {
       -o-transition: all 300ms ease-in-out;
       transition: all 300ms ease-in-out;
       color: #4799FD;
-      font: 500 3rem "Vinila Test", sans-serif;
+      font-weight: 500;
+      font-size: 3.0rem;
       content: "[";
       display: inline-block;
       opacity: 0;
@@ -2247,7 +2198,8 @@ body {
       -o-transition: all 300ms ease-in-out;
       transition: all 300ms ease-in-out;
       color: #4799FD;
-      font: 500 3rem "Vinila Test", sans-serif;
+      font-weight: 500;
+      font-size: 3.0rem;
       content: "]";
       display: inline-block;
       opacity: 0;
@@ -2298,7 +2250,7 @@ body {
   @media (max-width: 544px) {
     .cards {
       padding-left: 0rem;
-      padding-top: 5rem; } }
+      padding-top: 8rem; } }
   .cards .card-containerr {
     position: relative;
     margin: auto;
@@ -2528,7 +2480,8 @@ body {
           -ms-flex-direction: column;
               flex-direction: column;
       gap: 2rem;
-      font-family: "Open Sauce One", sans-serif;
+      font-family: "Open Sauce One", sans-serif, sans-serif;
+      /* Root font */
       padding-left: 4rem; }
       .aboutme .textblock .aboutmetxt .features-list {
         margin: 1rem; }
@@ -2537,7 +2490,8 @@ body {
           position: relative;
           padding: 0rem 1rem 1rem 5rem;
           font-size: 1.8rem;
-          font-family: "Atkinson Hyperlegible", sans-serif;
+          font-family: "Atkinson Hyperlegible", sans-serif, sans-serif;
+          /* Root font */
           font-weight: 400;
           opacity: 0;
           -webkit-transform: translateY(2rem);
@@ -2577,9 +2531,11 @@ body {
       padding-left: 0rem;
       padding-top: 30rem;
       text-align: center; }
-      .aboutme .profImgcont, .aboutme .profImgcont.lightup {
+      .aboutme .profImgcont,
+      .aboutme .profImgcont.lightup {
         margin: auto; }
-        .aboutme .profImgcont::before, .aboutme .profImgcont.lightup::before {
+        .aboutme .profImgcont::before,
+        .aboutme .profImgcont.lightup::before {
           width: calc(100% + 3rem);
           height: calc(100% + 3rem);
           z-index: -1;
@@ -2643,7 +2599,8 @@ body {
       -o-transition: all 300ms ease-in-out;
       transition: all 300ms ease-in-out;
       color: #4799FD;
-      font: 500 3rem "Vinila Test", sans-serif;
+      font-weight: 500;
+      font-size: 3.0rem;
       content: "]";
       display: inline-block;
       opacity: 0;
@@ -2655,7 +2612,8 @@ body {
       -o-transition: all 300ms ease-in-out;
       transition: all 300ms ease-in-out;
       color: #4799FD;
-      font: 500 3rem "Vinila Test", sans-serif;
+      font-weight: 500;
+      font-size: 3.0rem;
       content: "[";
       display: inline-block;
       opacity: 0;
@@ -2861,15 +2819,13 @@ body {
           opacity: 1;
           -webkit-transform: translateY(0);
               -ms-transform: translateY(0);
-                  transform: translateY(0);
-          /* Final position */ }
+                  transform: translateY(0); }
         .slides .slide-containerr .slide .slideContent.nextcs {
           height: 100%;
           padding: 2.8rem;
           -webkit-transform: translateY(0);
               -ms-transform: translateY(0);
                   transform: translateY(0);
-          /* Final position */
           opacity: 1;
           -webkit-box-align: start;
               -ms-flex-align: start;
@@ -2889,7 +2845,6 @@ body {
           -webkit-transform: translateY(0);
               -ms-transform: translateY(0);
                   transform: translateY(0);
-          /* Final position */
           padding: 4rem 3.2rem;
           gap: 4rem; }
           .slides .slide-containerr .slide .slideContent.solutions .slideText {
@@ -2906,7 +2861,6 @@ body {
             -webkit-transform: translateY(1.4rem);
                 -ms-transform: translateY(1.4rem);
                     transform: translateY(1.4rem);
-            /* Final position */
             opacity: 0.2;
             -webkit-transition: all .8s ease-in-out;
             -o-transition: all .8s ease-in-out;
@@ -2930,18 +2884,25 @@ body {
   @media (max-width: 544px) {
     .slides {
       padding-left: 0rem; }
-      .slides .slide-containerr .slide .slideContent, .slides .slide-containerr .slide .slideContent.titleslide {
+      .slides .slide-containerr .slide .slideContent,
+      .slides .slide-containerr .slide .slideContent.titleslide {
         padding: 4rem 2.4rem; }
-        .slides .slide-containerr .slide .slideContent .slideImgcont, .slides .slide-containerr .slide .slideContent.titleslide .slideImgcont {
+        .slides .slide-containerr .slide .slideContent .slideImgcont,
+        .slides .slide-containerr .slide .slideContent.titleslide .slideImgcont {
           padding: 1rem 1rem; }
-        .slides .slide-containerr .slide .slideContent .slideText, .slides .slide-containerr .slide .slideContent.titleslide .slideText {
+        .slides .slide-containerr .slide .slideContent .slideText,
+        .slides .slide-containerr .slide .slideContent.titleslide .slideText {
           padding-right: 1rem; }
-          .slides .slide-containerr .slide .slideContent .slideText.projectheadline, .slides .slide-containerr .slide .slideContent.titleslide .slideText.projectheadline {
+          .slides .slide-containerr .slide .slideContent .slideText.projectheadline,
+          .slides .slide-containerr .slide .slideContent.titleslide .slideText.projectheadline {
             padding-right: 1rem;
             overflow-wrap: break-word; }
-            .slides .slide-containerr .slide .slideContent .slideText.projectheadline h4, .slides .slide-containerr .slide .slideContent .slideText.projectheadline h6, .slides .slide-containerr .slide .slideContent.titleslide .slideText.projectheadline h4, .slides .slide-containerr .slide .slideContent.titleslide .slideText.projectheadline h6 {
+            .slides .slide-containerr .slide .slideContent .slideText.projectheadline h4, .slides .slide-containerr .slide .slideContent .slideText.projectheadline h6,
+            .slides .slide-containerr .slide .slideContent.titleslide .slideText.projectheadline h4,
+            .slides .slide-containerr .slide .slideContent.titleslide .slideText.projectheadline h6 {
               font-size: 3rem; }
-            .slides .slide-containerr .slide .slideContent .slideText.projectheadline h5, .slides .slide-containerr .slide .slideContent.titleslide .slideText.projectheadline h5 {
+            .slides .slide-containerr .slide .slideContent .slideText.projectheadline h5,
+            .slides .slide-containerr .slide .slideContent.titleslide .slideText.projectheadline h5 {
               font-size: 2.6rem; }
       .slides .slide-containerr .slide.nextcs .slideImgcont {
         max-height: 30rem;
