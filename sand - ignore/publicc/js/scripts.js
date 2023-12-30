@@ -6,8 +6,12 @@ $(document).ready(function () {
     if (herocontHeight > 600) {
       const minHeight = herocontHeight + 600;
       $('.sectionn.intro').css('min-height', minHeight + 'px');
+      $('.circles-container').css('top', '-15vh');
+
     } else {
       $('.sectionn.intro').css('min-height', '');
+      $('.circles-container').css('top', '');
+
     }
   }
   function clickAndSelect() {
