@@ -229,11 +229,12 @@ block conclusion
                   each study in casestudies
                     if study.slug !== page.slug
                       .slide
-                        .slideContent.nextcs
+                        .slideContent.nextcs.cslink
                           .row
                             .col-xs-12.col-sm-12.col-md-6.col-lg-6
                               .slide-left
                                 .slideText.projectheadline
+                                  a.btn.chip Case Study
                                   h6.titlefont= study.titlefirst
                                   p.body=study.title
                                 a.btn.topage(href=`/work/${study.slug}`) 

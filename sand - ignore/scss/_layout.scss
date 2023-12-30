@@ -1,4 +1,3 @@
-/* LAYOUT */
 $outer-margin: 2rem;
 $gutter-width: 1rem;
 $gutter-compensation: (
@@ -18,6 +17,9 @@ $columns: 12;
 
 @return $number;
 }
+/* -------------------------------- 
+LAYOUT
+-------------------------------- */
 
 .container-fluid,
 .container {
@@ -217,6 +219,8 @@ $columns: 12;
   }
 }
 
-
+/* -------------------------------- 
+LAYOUT - end
+-------------------------------- */
 
 

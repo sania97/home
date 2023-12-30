@@ -1,5 +1,3 @@
-/* COLORS */
-
 @import '_layout';
 $neutral-0: #fff;
 $neutral-10: #EBEDF4;
@@ -13,7 +11,6 @@ $neutral-80: #110A49;
 $neutral-90: #090528;
 $neutral-100: #01011B;
 
-
 $blue-10: #E4F0FF;
 $blue-20: #C8E2FF;
 $blue-30: #9FCBFF;
@@ -25,198 +22,152 @@ $blue-80: #0A1B46;
 $blue-90: #060E30;
 $blue-100: #01011B;
 
-
 $pink-50: #D05FDD;
 $green-50: #4BC7BF;
-
-
-$gcolor_1: #fee185;
-$gcolor_2: #4bc7bf;
-$gcolor_3: #685ae9;
-$gcolor_4: #9b54c3;
-$gcolor_5: #ed5b80;
-$gcolor_6: #f88c5b;
-$gcolor_7: #01011b;
-
-$gcolor-major: linear-gradient(180deg, #110a49 20%, #01011b 70%);
-$gcolor-major-bg: linear-gradient(
-to bottom,
-rgba(17, 10, 73, 0) 20%,
-rgba(17, 10, 73, 1) 
-);
 
 $frost: rgba($blue-30, 0.2);
 $transparent: rgba($neutral-0, 0.0);
 $opaque: rgba($blue-10, 0.5);
 
 $body-gradient: linear-gradient(to bottom, $neutral-100 0%, $neutral-100 50%, $neutral-90 100%);
+$intro-message-gradient: radial-gradient(120% 50% at 60% 50%, $neutral-100 0%, rgba($neutral-100, 0.00) 100%);
 
-$text-shadow-blue: 0 0 0.5rem rgba($blue-50, 0.68), 0 0 1rem rgba($blue-50, 0.48), 0 0 3rem rgba($blue-50, 0.28);
+$text-shadow-blue: 0 0 2rem rgba($blue-50, 0.68), 0 0 1rem rgba($blue-50, 0.48), 0 0 4rem rgba($blue-50, 0.28);
 $text-shadow-blue-less: 0 0 0.5rem rgba($blue-50, 0.68);
-
 $text-shadow-current: 0px 0px 1px $blue-100;
 $text-shadow-hover: 0px 0px 1px $blue-100, 0 0 0.5rem rgba($blue-50, 0.68);
-
-
 $text-shadow-pink: 0 0 0.5rem rgba($pink-50, 0.68), 0 0 1rem rgba($pink-50, 0.4), 0 0 3rem rgba($pink-50, 0.2);
 $text-shadow-green: 0 0 0.5rem rgba($green-50, 0.68), 0 0 1rem rgba($green-50, 0.4), 0 0 3rem rgba($green-50, 0.2);
 
-
-
-$border-shadow-pink: 0 0 1.5rem -0.1rem $pink-50, 0 0 1.5rem -0.1rem $pink-50 inset,-0.1rem -0.1rem 16rem -0.1rem rgba($pink-50, 0.1) inset;
+$border-shadow-pink: 0 0 1.5rem -0.1rem $pink-50, 0 0 1.5rem -0.1rem $pink-50 inset, -0.1rem -0.1rem 16rem -0.1rem rgba($pink-50, 0.1) inset;
 $border-shadow-green: 0 0 1.5rem -0.1rem $green-50, 0 0 1.5rem -0.1rem $green-50 inset, -0.1rem -0.1rem 16rem -0.1rem rgba($green-50, 0.1) inset;
 $border-2col: $pink-50 $green-50 $green-50 $pink-50;
-
 $border-shadow-blue: 0 0 4rem 1rem rgba($blue-50, 0.5);
 $border-shadow-2col: 0 0 4rem 0rem rgba($blue-10, 0.8);
 
 $white-border-sec: inset 1.2rem 0 $neutral-0, inset -1.2rem 0 $neutral-0;
 
-$circles-bg-gradient: linear-gradient(0deg, $neutral-100 0%, rgba($neutral-100, 1.0) 65%, rgba($neutral-100, 0.0) 100%), radial-gradient(165% 100% at 50% 100%, $neutral-100 0%, rgba($neutral-100, 0.5) 75%, rgba($neutral-100, 0.00) 100%);
-$circles-bg-gradient-mb: linear-gradient(0deg, $neutral-100 0%, $neutral-100 80%, rgba($neutral-100, 0.0) 100%);
-
+$circles-bg-gradient: linear-gradient(0deg, $neutral-100 0%, rgba($neutral-100, 0.9) 62%, rgba($neutral-100, 0.00) 100%),
+  radial-gradient(165% 100% at 50% 100%, $neutral-100 0%, rgba($neutral-90, 0.0) 80%, rgba($neutral-90, 0.00) 100%);
+$circles-bg-gradient-mb: linear-gradient(0deg, rgba($neutral-100, 0.9) 80%, rgba($neutral-100, 0.00) 100%),
+  radial-gradient(200% 100% at 50% 100%, $neutral-100 0%, $neutral-90 92%, rgba($neutral-90, 0.00) 100%);
+  //background: radial-gradient(100% 100% at 50.07% 100%, #110A49 94.03%, rgba(17, 10, 73, 0.00) 100%);
 $circ-shadow-1: 0 -0.3rem 0 $blue-20 inset,
-0rem -0.5rem 0.4rem $blue-30 inset;
+  0rem -0.5rem 0.4rem $blue-30 inset;
 $circles-gradient: radial-gradient(ellipse at center,
-    rgba($blue-40, 0.1) 53%,
-    rgba($blue-40, 0.3) 100%) padding-box;
+    rgba($blue-50, 0.15) 53%,
+    rgba($blue-50, 0.4) 100%) padding-box;
+$gcolor_1: #fee185;
+$gcolor_2: #4bc7bf;
+$gcolor_3: #685ae9;
+$gcolor_4: #9b54c3;
+$gcolor_5: #ed5b80;
+$gcolor_6: #f88c5b;
+$gcolor_7: #110A49;
+$gcolor-major: linear-gradient(180deg, $gcolor_3 0%, $neutral-80 10%);
 
-
-    ::-webkit-scrollbar {
-      width: 0.8rem;
-    }
-    
-    ::-webkit-scrollbar-track {
-      background-color: $neutral-90;
-    
-    }
-    
-    ::-webkit-scrollbar-thumb {
-      -webkit-border-radius: 1rem;
-      border-radius: 1rem;
-      background-color: $neutral-50;
-    }
-    
 /* -------------------------------- 
-Typography
+COLORS
 -------------------------------- */
-
+::-webkit-scrollbar {
+  width: 0.8rem;
+}
+::-webkit-scrollbar-track {
+  background-color: $neutral-90;
+}
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 1rem;
+  border-radius: 1rem;
+  background-color: $neutral-50;
+}
+$reduce-motion: false;
+@media (prefers-reduced-motion: reduce) {
+  $reduce-motion: true;
+}
+/* TYPOGRAPHY */
 @import url("https://fonts.cdnfonts.com/css/vinila-test");
 @import url('https://fonts.cdnfonts.com/css/open-sauce-one');
 @import url('https://fonts.cdnfonts.com/css/atkinson-hyperlegible');
-
-
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-
-$font-family_1: 'Vinila Test', sans-serif;
-$font-family_2: 'Open Sauce One', sans-serif;
-$font-family_3: 'Atkinson Hyperlegible', sans-serif;
-
+$font1: 'Vinila Test', sans-serif;
+$font2: 'Open Sauce One', sans-serif;
+$font3: 'Atkinson Hyperlegible', sans-serif;
 .titlefont {
-  font-family: $font-family_2;
+  font-family: $font2, sans-serif;
 }
-
-
-h1 {
-  font-weight: 500;
-  font-size: 7rem;
-
-}
-
-h2 {
-  font-weight: 500;
-  font-size: 6rem;
-  letter-spacing: -1.5px;
-}
-
-h3 {
-  font-weight: 500;
-  font-size: 5rem;
-}
-
-h4 {
-  font-weight: 500;
-  font-size: 4rem;
-}
-
-h5 {
-  font-weight: 500;
-  font-size: 3rem;
-}
-
-h6 {
-  font-weight: 600;
-  font-size: 2.4rem;
-}
-
-.normal {
-  font-weight: 500;
-  font-size: 2rem;
-
-}
-
-.block {
-  font-weight: 800;
-}
-
 .body {
-  font-family: $font-family_3;
+  font-family: $font3, sans-serif;
   line-height: 1.2;
   font-size: 2.0rem;
   margin: 0rem 0rem;
   font-weight: normal;
 }
-
+h1 {
+  font-weight: 500;
+  font-size: 7rem;
+}
+h2 {
+  font-weight: 500;
+  font-size: 6rem;
+  letter-spacing: -1.5px;
+}
+h3 {
+  font-weight: 500;
+  font-size: 5rem;
+}
+h4 {
+  font-weight: 500;
+  font-size: 4rem;
+}
+h5 {
+  font-weight: 500;
+  font-size: 3rem;
+}
+h6 {
+  font-weight: 600;
+  font-size: 2.4rem;
+}
+.normal {
+  font-weight: 500;
+  font-size: 2rem;
+}
+.block {
+  font-weight: 800;
+}
 .large {
   font-size: 2.2rem;
 }
-
 .medium {
   font-size: 1.8rem;
 }
-
 .small {
   font-weight: 600;
   font-size: 1.6rem;
   margin: .4rem 0rem;
-
 }
-
-
-
 .upper {
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 1px;
-
 }
-
 .inlineh {
   margin: 0;
   display: inline;
   float: left;
-
-
 }
-
 input[type="search"] {
-  font-family: $font-family_2 !important;
+  font-family: $font3, sans-serif;
   padding: .2rem;
 }
-
 .special {
   color: $blue-30;
 }
-
 .whitetxt {
   color: $blue-10;
 }
-
 .graytxt {
   color: $neutral-50;
 }
-
-
 @mixin aligned-font-icon($font-lib: null, $alignment: left, $align-margin: 10px) {
   @if alignment==left {
     &:before {
@@ -224,14 +175,12 @@ input[type="search"] {
       @include font-icon($font-lib);
     }
   }
-
   @else if alignment==right {
     &:after {
       margin-left: $align-margin;
       @include font-icon($font-lib);
     }
   }
-
   @else {
     &:before {
       margin-right: $align-margin;
@@ -239,62 +188,40 @@ input[type="search"] {
     }
   }
 }
-
 @mixin font-icon($font-lib: null) {
   display: inline-block;
   font-family: quote($font-lib);
   speak: none;
   text-decoration: inherit;
 }
-
-
-// logo anim
-@keyframes type {
-  from {
-    width: 0;
-  }
-}
-
 .anim {
   cursor: pointer;
   display: flex;
   font-size: 3rem;
   width: 20rem;
   -webkit-text-fill-color: $neutral-0;
-
-  &.dark {
-    -webkit-text-fill-color: $neutral-100;
-
-  }
-
+  padding: .5rem;
   .anim-btn {
     height: 1.2em;
+    transition: all .3s ease;
   }
-
-  .anim-text {
-    height: 1.2em;
-    width: 0;
-    overflow: hidden;
-  }
-
   &:hover,
   &:active {
     >* {
       text-shadow: $text-shadow-blue;
-
+      -webkit-text-fill-color: $neutral-10;
     }
-
-    .anim-text {
-      width: 100%;
-      animation: type 0.8s linear forwards;
-
+  }
+  &.dark {
+    -webkit-text-fill-color: $neutral-100;
+    &:hover,
+    &:active {
+      >* {
+        -webkit-text-fill-color: $neutral-70;
+      }
     }
-
-
-
   }
 }
-
 .intromessage {
   display: flex;
   flex-direction: column;
@@ -306,55 +233,51 @@ input[type="search"] {
   /* Final position */
   opacity: 0;
   transition: all .8s ease-in-out;
-
   h5 {
     font-size: 2.4rem;
   }
-
   &.loaded {
     transform: translateY(0rem);
-    /* Final position */
     opacity: 1;
   }
-
   .double-layered-text {
-    font: 500 6rem $font-family_2;
+    font-family: $font2, sans-serif;
+    font-weight: 500; 
+    font-size: 6.0rem;
     position: relative;
     display: inline-block;
-    /* Make sure both elements stay on the same line */
     letter-spacing: 0.1rem;
     -webkit-text-stroke-width: 0.2rem;
     -webkit-font-smoothing: subpixel-antialiased;
-    -webkit-text-stroke-color: $frost;
-    -webkit-text-fill-color: $blue-60;
-    text-shadow: none;
-    width: calc(100% + .4rem);
-    z-index: -1;
-
-
-    /* Add the top layer using ::before pseudo-element */
+    -webkit-text-stroke-color: $neutral-0;
+    -webkit-text-fill-color: $frost;
+    text-shadow: $text-shadow-blue;
+    width: 100%;
+    left: 0rem;
+    top: 0rem;
+    z-index: 1;
+    padding: 0rem .4rem .4rem 0rem;
+    .emoji {
+      -webkit-text-fill-color: $neutral-0;
+    }
     &::before {
       content: attr(data-text);
       position: absolute;
-      left: -.4rem;
-      top: -.4rem;
-      width: 100%;
-
-      z-index: 1;
-      -webkit-text-stroke-color: $neutral-0;
-      -webkit-text-fill-color: $frost;
-      text-shadow: $text-shadow-blue;
-
+      -webkit-text-stroke-color: $blue-60;
+      -webkit-text-fill-color: $blue-60;
+      text-shadow: none;
+      z-index: -1;
+      left: 0.4rem;
+      top: 0.4rem;
+      .emoji {
+        -webkit-text-fill-color: $neutral-0;
+      }
     }
-
-
   }
 }
-
 a {
   text-decoration: none;
 }
-
 .btn {
   padding: 1.4rem 1.8rem;
   display: inline-block;
@@ -366,14 +289,12 @@ a {
   letter-spacing: 0.5px;
   //white-space: nowrap;
   overflow: hidden;
-  font-family: $font-family_1;
+  font-family: $font1, sans-serif; /* Root font */
   cursor: pointer;
-
   &.primary {
     background: $blue-80;
     color: $neutral-0;
     border: .4rem solid $transparent;
-
     &:hover,
     &:active {
       background: $blue-60;
@@ -381,203 +302,147 @@ a {
       border: .4rem solid $transparent;
     }
   }
-
   &.secondary {
     color: $blue-80;
     background: $transparent;
     border: .4rem solid $blue-60;
-
     &:hover,
     &:active {
       border: .4rem solid $blue-50;
       color: $blue-50;
       background: $blue-30;
-
-
     }
   }
-
   &.tertiary {
     color: $blue-40;
     border-radius: 1.2rem;
-
     background: $neutral-10;
     border: 0rem solid $neutral-0;
     padding: 1.4rem;
-
     &:hover,
     &:active {
-
       color: $blue-80;
-
     }
   }
-
-
   &.topage {
     border: none;
     position: relative;
     text-decoration: none;
     display: flex;
     padding: 0rem 0rem;
-
   }
-
-
-
   &.link {
     color: $neutral-60;
     border: none;
     font-weight: 400;
     white-space: normal;
     padding: 1rem 0rem;
-
     &:hover,
     &:active {
       color: $blue-70;
       text-shadow: $text-shadow-hover;
       text-shadow: $text-shadow-blue-less;
-
     }
-
     &.current {
       color: $blue-60;
       text-shadow: $text-shadow-current;
       transition: all 0.2s ease-in-out;
-
       &:hover,
       &:active {
         color: $blue-70;
         text-shadow: $text-shadow-blue;
         text-shadow: $text-shadow-hover;
-
       }
     }
-
-
     &.giant {
       font-size: 3.2rem;
     }
-
     &.cardd {
       font-size: 2.4rem;
     }
-
     &.footer {
       font-size: 1.4rem;
       white-space: normal;
     }
-
     &.dark-bg {
       font-weight: 400;
       color: $blue-30;
-
       &:hover,
       &:active {
         border: none;
         color: $blue-40;
-
       }
-
       &.current {
         font-weight: 700;
       }
     }
-
     &.inline {
       font-weight: 500;
       color: $blue-60;
-
       &.notlink {
         border: none;
         cursor: auto
       }
-
       &.underline {
         font-weight: 600;
-
         cursor: pointer;
         text-decoration: underline;
-
         &:hover,
         &:active {
           color: $blue-40;
           text-decoration: none;
-
-
         }
       }
     }
   }
-
   &.graphic {
     padding: 0rem 0rem;
     color: $blue-60;
     border: none;
     font-weight: 400;
-
     &:hover,
     &:active {
       border: none;
     }
   }
-
   &.wicon {
-
     text-decoration: inherit;
     gap: 1rem;
     display: inline-flex;
     justify-content: flex-start;
     padding-right: 1rem;
-
     // can be any color
     &:before,
     &:after {
       padding: 0rem;
-      //display: inline-block;
       font-weight: 400;
-      /* Make sure to use the regular weight */
-
     }
-
     &.right {
-
       &:before {
         display: none;
       }
-
       &:after {
         margin-left: 0rem;
-
       }
-
     }
-
     &.left {
       &:after {
         display: none;
       }
-
       &:before {
         margin-right: 1rem;
       }
     }
-
     &.alone {
       padding: 1.4rem 1.4rem;
       text-align: center;
-
       &:before {
         font-size: 2.0rem;
       }
-
       &:after {
         display: none;
       }
     }
-
-
-
     &.heading {
       text-align: center;
       padding: .5rem 3rem;
@@ -588,142 +453,112 @@ a {
       position: relative;
       opacity: 0.8;
       cursor: auto;
-
       &:before {
         font-size: 5.0rem;
         position: absolute;
         top: 50%;
-        /* Vertically align at 50% */
         left: 50%;
-        /* Horizontally align at 50% */
         transform: translate(-50%, -50%);
       }
-
       &:after {
         display: none;
       }
     }
-
     //icon types
     &.light:before,
     &.light:after {
       font-family: quote("FontAwesome");
       content: "\f0eb";
     }
-
     &.sun:before,
     &.sun:after {
       font-family: quote("FontAwesome");
       content: "\f185";
     }
-
     &.engine:before,
     &.engine:after {
       font-family: quote("FontAwesome");
       content: "\f1e6";
     }
-
     &.doc:before,
     &.doc:after {
       font-family: quote("FontAwesome");
       content: "\f15c";
     }
-
     &.searchic:before,
     &.searchic:after {
       font-family: quote("FontAwesome");
       content: "\f002";
     }
-
     &.menu:before,
     &.menu:after {
       font-family: quote("FontAwesome");
       content: "\f0c9";
     }
-
     &.home:before,
     &.home:after {
       font-family: quote("FontAwesome");
       content: "\f015";
     }
-
     &.phone:before,
     &.phone:after {
       font-family: quote("FontAwesome");
       content: "\f095";
     }
-
     &.email:before,
     &.email:after {
       font-family: quote("FontAwesome");
       content: "\f0e0";
       font-weight: normal;
-      /* Make sure to use the regular weight */
-
     }
-
     &.sales:before,
     &.sales:after {
       font-family: quote("FontAwesome");
       content: "\f0d1";
     }
-
     &.go:before,
     &.go:after {
       font-family: quote("FontAwesome");
       content: "\f178";
-
     }
-
     &.caret:before,
     &.caret:after {
       font-family: quote("FontAwesome");
       content: "\f0d7";
     }
-
     &.scrolldown:before,
     &.scrolldown:after {
       font-family: quote("FontAwesome");
       content: "\f103";
     }
-
     &.scrollright:before,
     &.scrollright:after {
       font-family: quote("FontAwesome");
       content: "\f105";
     }
-
     &.scrollup:before,
     &.scrollup:after {
       font-family: quote("FontAwesome");
       content: "\f102";
     }
-
     &.meeting:before,
     &.meeting:after {
       font-family: quote("FontAwesome");
       content: "\f086";
     }
-
     &.brand:before,
     &.brand:after {
       font-family: quote("FontAwesome");
       content: "\f249";
     }
-
     &.animated {
       &:hover {
         &:after {
           transform: translateX(1rem);
-          /* Adjust the translation value as needed for your design */
-
         }
       }
     }
-
-
   }
-
   //headers
   &.tab {
     padding: 1rem 0rem;
@@ -737,13 +572,10 @@ a {
     background: transparent;
     font-weight: 700;
     letter-spacing: 2px;
-
     &.dark {
       color: $blue-80;
     }
-
   }
-
   //labels
   &.chip {
     padding: 0.4rem 0.8rem;
@@ -752,16 +584,13 @@ a {
     background-color: $blue-20;
     text-align: center;
     cursor: default;
-
     &.label {
       font-weight: 500;
       padding: 0.8rem 1rem;
       font-size: 1.2rem;
       text-transform: uppercase;
-
     }
   }
-
   //section header titles
   &.title {
     display: flex;
@@ -771,9 +600,8 @@ a {
     padding: 0rem;
     font-size: 2.4rem;
     align-items: center;
-    font-family: $font-family_2;
+    font-family: $font2, sans-serif; 
     cursor: default;
-
     &:after {
       font-size: 3.0rem;
       width: 4rem;
@@ -781,10 +609,9 @@ a {
       color: $neutral-20;
     }
   }
-
   //contact resume buttons
   &.giant {
-    font-family: $font-family_1;
+    font-family: $font1, sans-serif; 
     border: 0.6rem solid $neutral-0;
     cursor: pointer;
     display: flex;
@@ -803,41 +630,26 @@ a {
       width: 4rem;
       text-align: center;
     }
-
     &:after {
       display: none;
     }
-
-    &.pink, &.green {
+    &.pink,
+    &.green {
       border: 0.6rem solid $neutral-0;
-
-
       &:before {
         font-size: 4.0rem;
       }
     }
-
-
   }
   @keyframes border-flicker {
     34% {
-      opacity:0.0;
-
-
+      opacity: 0.0;
     }
-
     100% {
-      opacity:1.0;
-
-
+      opacity: 1.0;
     }
   }
-
- 
-
 }
-
-
 .buttontocasestudy {
   position: relative;
   z-index: 6;
@@ -847,8 +659,7 @@ a {
   flex-direction: row;
   color: $neutral-60;
   padding: 1rem .4rem;
-
-  &:before {
+  &::before {
     color: $neutral-60;
     content: '[';
     display: inline-block;
@@ -857,10 +668,8 @@ a {
     font-size: 2.6rem;
     font-weight: 500;
     transition: all 0.3s ease;
-
   }
-
-  &:after {
+  &::after {
     color: $neutral-60;
     content: ']';
     display: inline-block;
@@ -869,30 +678,23 @@ a {
     font-weight: 500;
     font-size: 2.6rem;
     transition: all 0.3s ease;
-
   }
-
   .text {
-    flex: 1; // Allow the text to take up available space
-    text-align: left; // Center the text horizontally
+    flex: 1; 
+    text-align: left; 
     transition: all 0.3s ease;
     padding: 0.1rem 2rem 0rem 2rem;
     font-size: 2.4rem;
     margin: auto;
   }
-
-
-
   &:hover,
   &:active {
     color: $neutral-60;
     text-shadow: $text-shadow-blue;
-
     &:before {
       opacity: 1;
       transform: translateX(-0.2rem);
     }
-
     &:after {
       opacity: 1;
       transform: translateX(0.2rem);
@@ -901,13 +703,13 @@ a {
 }
 @keyframes border-flicker-btn {
   0% {
-    opacity:0.0;
+    opacity: 0.0;
   }
   34% {
-      opacity:0.4;
+    opacity: 0.4;
   }
   100% {
-      opacity:1;
+    opacity: 1;
   }
 }
 .bigbtn {
@@ -925,29 +727,25 @@ a {
     pointer-events: none;
     border: 0.6rem solid $pink-50;
     box-shadow: $border-shadow-pink;
-    opacity:0.0;
+    opacity: 0.0;
+  }
+  &:hover {
+    &::before {
+      animation: border-flicker-btn 0.3s ease-in-out forwards;
+    }
+  }
+  &.green {
+    &::before {
+      border: 0.6rem solid $green-50;
+      box-shadow: $border-shadow-green;
     }
     &:hover {
       &::before {
         animation: border-flicker-btn 0.3s ease-in-out forwards;
-
       }
     }
-    &.green {
-      &::before {
-        border: 0.6rem solid $green-50;
-        box-shadow: $border-shadow-green;
-
-      }
-      &:hover {
-        &::before {
-          animation: border-flicker-btn 0.3s ease-in-out forwards;
-        }
-      }
-    }
-    }
-
-
+  }
+}
 .buttontocasestudyfancy {
   position: relative;
   z-index: 6;
@@ -957,7 +755,6 @@ a {
   flex-direction: row;
   color: $neutral-60;
   padding: 1rem .2rem;
-
   &:before {
     color: $neutral-60;
     content: '[';
@@ -967,7 +764,6 @@ a {
     font-size: 2.6rem;
     font-weight: 500;
   }
-
   &:after {
     color: $neutral-60;
     content: ']';
@@ -977,67 +773,47 @@ a {
     font-weight: 500;
     font-size: 2.6rem;
   }
-
   .text {
-    flex: 1; // Allow the text to take up available space
-    text-align: left; // Center the text horizontally
+    flex: 1; 
+    text-align: left; 
     transition: all 0.3s ease;
     padding: 0.1rem 3rem 0rem 3rem;
     font-size: 2.4rem;
     margin: auto;
   }
-
   .icon {
     transition: all 0.3s ease;
     position: absolute;
-    /* Add this to position the icon */
     flex: 1;
     right: 6rem;
-
     &:before {
       font-family: "FontAwesome";
       content: "\f105";
       position: absolute;
       top: 50%;
-      /* Adjust as needed to vertically center the icon */
       left: 50%;
-      /* Adjust as needed to horizontally center the icon */
       transform: translate(-50%, -50%);
-      /* Center the icon within its container */
       opacity: 0;
       transition: all 0.3s ease;
       font-size: 2rem;
     }
   }
-
-
-
-
   &:hover,
   &:active {
     color: $neutral-60;
     text-shadow: $text-shadow-blue;
-
     .text {
       padding: 0.1rem 4rem 0rem 2rem;
       margin: 0rem;
-      //transform: translateX(-1.2rem); // Move text to the left on hover
     }
-
     .icon {
       right: 2rem;
-
       &:before {
         opacity: 1;
-
       }
-
     }
-
-
   }
 }
-
 //displaying
 .button-row {
   display: flex;
@@ -1046,31 +822,23 @@ a {
   gap: 1rem;
   padding: .4rem;
   justify-content: center;
-
   &.header {
     justify-content: flex-end;
     align-items: flex-end;
-
     z-index: 99;
     align-items: center;
-
     a:last-child {
       z-index: 100;
     }
   }
-
   @media(max-width:$sm) {
     flex-direction: column;
     align-items: flex-start;
-
     &.header {
       flex-direction: row;
-
     }
   }
 }
-
-
 .label-row {
   display: flex;
   flex-direction: row;
@@ -1079,14 +847,13 @@ a {
   gap: .4rem;
   flex-wrap: wrap;
   padding-top: 0.6rem;
-
   @media(max-width:$sm) {
     justify-content: center;
-
     &.header {
       flex-direction: row;
-
     }
   }
 }
-
+/* -------------------------------- 
+COLORS - END
+-------------------------------- */
