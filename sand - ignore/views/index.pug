@@ -1,9 +1,10 @@
 extends layout.pug
-
 block hero
-  
-                
-          
+  .font_preload(style='opacity: 0')
+    span(style="font-family: 'Vinila Test', Arial, sans-serif;")
+    span(style="font-family: 'Open Sauce', Arial, sans-serif;")
+    |     ...
+
 
 block featured
   .sectionn(data-color='first')
@@ -18,8 +19,8 @@ block featured
                     .col-xs-12.col-sm-12.col-md-12.col-lg-5.switchcol
                       .card-left
                         .cardText
-                          h4.titlefont.block.inlineh #{study.titlefirst}
-                          h6.titlefont.inlineh #{study.title}
+                          h4.titlefont.block #{study.titlefirst}
+                          h6.titlefont #{study.title}
                           p.body #{study.name}
                           .label-row
                             each chip in study.chips
