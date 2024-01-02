@@ -1,5 +1,17 @@
 $(document).ready(function () {
   // Hide the second navigation bar initially
+  function throttle(func, limit) {
+    let inThrottle;
+    return function() {
+      const context = this;
+      const args = arguments;
+      if (!inThrottle) {
+        func.apply(context, args);
+        inThrottle = true;
+        setTimeout(() => inThrottle = false, limit);
+      }
+    };
+  }
   // setting link target properly
   $('.nav-toc__group a').on('click', function (event) {
     event.preventDefault();
@@ -11,7 +23,21 @@ $(document).ready(function () {
       }, 1000); // Smoothly scroll to the element
     }
   });
-
+  function clickAndSelect() {
+    const $slides = $('.slide');
+  
+    $slides.each(function() {
+      const $slide = $(this);
+  
+      $slide.on('click', function(e) {
+        e.preventDefault();
+        const $link = $slide.find('a.btn.topage'); 
+        if ($link.length) {
+          window.location = $link.attr('href');
+        }
+      });
+    });
+  }
   // Initial check when the page loads
   function checkScrollClasses() {
     var y = $(this).scrollTop();
@@ -60,11 +86,10 @@ $(document).ready(function () {
       }
     });
   }
-  checkScrollClasses();
-  $(document).scroll(function () {
-    checkScrollClasses();
+  
+  clickAndSelect();
 
-    
-  });
+  const throttledScroll = throttle(checkScrollClasses, 100);
+  $(document).scroll(throttledScroll);
 
 });
