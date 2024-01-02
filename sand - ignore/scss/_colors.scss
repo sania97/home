@@ -46,6 +46,7 @@ $border-shadow-blue: 0 0 4rem 1rem rgba($blue-50, 0.5);
 $border-shadow-2col: 0 0 4rem 0rem rgba($blue-10, 0.8);
 
 $white-border-sec: inset 1.2rem 0 $neutral-0, inset -1.2rem 0 $neutral-0;
+$card-highlight:inset 0.6rem 0rem $blue-20, inset -0.6rem 0rem $blue-20;
 
 $circles-bg-gradient: linear-gradient(0deg, $neutral-100 0%, rgba($neutral-100, 0.9) 62%, rgba($neutral-100, 0.00) 100%),
   radial-gradient(165% 100% at 50% 100%, $neutral-100 0%, rgba($neutral-90, 0.0) 80%, rgba($neutral-90, 0.00) 100%);
@@ -85,16 +86,124 @@ $reduce-motion: false;
   $reduce-motion: true;
 }
 /* TYPOGRAPHY */
-@import url("https://fonts.cdnfonts.com/css/vinila-test");
-@import url('https://fonts.cdnfonts.com/css/open-sauce-one');
-@import url('https://fonts.cdnfonts.com/css/atkinson-hyperlegible');
+//@import url('https://fonts.cdnfonts.com/css/open-sauce-one');
+//@import url('https://fonts.cdnfonts.com/css/atkinson-hyperlegible');
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-$font1: 'Vinila Test', sans-serif;
-$font2: 'Open Sauce One', sans-serif;
-$font3: 'Atkinson Hyperlegible', sans-serif;
-.titlefont {
-  font-family: $font2, sans-serif;
+@font-face {
+  font-family: 'Vinila Test';
+  src: url('https://fonts.cdnfonts.com/s/92714/VinilaTest-Regular.eot'); /* IE9+ Compat Modes */
+  src: url('https://fonts.cdnfonts.com/s/92714/VinilaTest-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+      url('https://fonts.cdnfonts.com/s/92714/VinilaTest-Regular.woff') format('woff'), /* Modern browsers */
+       url('https://fonts.cdnfonts.com/s/92714/VinilaTest-Regular.woff2') format('woff2'), /* Super modern browsers */
+       url('https://fonts.cdnfonts.com/s/92714/VinilaTest-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('https://fonts.cdnfonts.com/s/92714/VinilaTest-Regular.svg#FontName') format('svg'); /* Legacy iOS */
+  font-weight: 400;
+  font-display: swap;
 }
+@font-face {
+  font-family: 'Vinila Test';
+  src: url('https://fonts.cdnfonts.com/s/92714/VinilaTest-Light.eot'); /* IE9+ Compat Modes */
+  src: url('https://fonts.cdnfonts.com/s/92714/VinilaTest-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+      url('https://fonts.cdnfonts.com/s/92714/VinilaTest-Light.woff') format('woff'), /* Modern browsers */
+       url('https://fonts.cdnfonts.com/s/92714/VinilaTest-Light.woff2') format('woff2'), /* Super modern browsers */
+       url('https://fonts.cdnfonts.com/s/92714/VinilaTest-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('https://fonts.cdnfonts.com/s/92714/VinilaTest-Light.svg#FontName') format('svg'); /* Legacy iOS */
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Vinila Test';
+  src: url('https://fonts.cdnfonts.com/s/92714/VinilaTest-Bold.eot'); /* IE9+ Compat Modes */
+  src: url('https://fonts.cdnfonts.com/s/92714/VinilaTest-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+      url('https://fonts.cdnfonts.com/s/92714/VinilaTest-Bold.woff') format('woff'), /* Modern browsers */
+       url('https://fonts.cdnfonts.com/s/92714/VinilaTest-Bold.woff2') format('woff2'), /* Super modern browsers */
+       url('https://fonts.cdnfonts.com/s/92714/VinilaTest-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('https://fonts.cdnfonts.com/s/92714/VinilaTest-Bold.svg#FontName') format('svg'); /* Legacy iOS */
+  font-weight: 800;
+  font-display: swap;
+
+}
+@font-face {
+  font-family: 'Open Sauce';
+  src: url('https://fonts.cdnfonts.com/s/88496/OpenSauceOne-Medium.eot'); /* IE9+ Compat Modes */
+  src: url('https://fonts.cdnfonts.com/s/88496/OpenSauceOne-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('https://fonts.cdnfonts.com/s/88496/OpenSauceOne-Medium.woff') format('woff'), /* Modern browsers */
+       url('https://fonts.cdnfonts.com/s/88496/OpenSauceOne-Medium.ttf')  format('truetype'), /* Safari, Android, iOpen Sauce */
+       url('https://fonts.cdnfonts.com/s/88496/OpenSauceOne-Medium.svg#FontName') format('svg'); 
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+
+}
+@font-face {
+    font-family: 'Open Sauce';
+    src: url('https://fonts.cdnfonts.com/s/88496/OpenSauceOne-SemiBold.eot'); /* IE9+ Compat Modes */
+    src: url('https://fonts.cdnfonts.com/s/88496/OpenSauceOne-SemiBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('https://fonts.cdnfonts.com/s/88496/OpenSauceOne-SemiBold.woff') format('woff'), /* Modern browsers */
+         url('https://fonts.cdnfonts.com/s/88496/OpenSauceOne-SemiBold.ttf')  format('truetype'), /* Safari, Android, iOpen Sauce */
+         url('https://fonts.cdnfonts.com/s/88496/OpenSauceOne-SemiBold.svg#FontName') format('svg'); 
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+
+  }
+@font-face {
+  font-family: 'Open Sauce';
+  src: url('https://fonts.cdnfonts.com/s/88496/OpenSauceOne-ExtraBold.eot'); /* IE9+ Compat Modes */
+  src: url('https://fonts.cdnfonts.com/s/88496/OpenSauceOne-ExtraBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('https://fonts.cdnfonts.com/s/88496/OpenSauceOne-ExtraBold.woff') format('woff'), /* Modern browsers */
+        url('https://fonts.cdnfonts.com/s/88496/OpenSauceOne-ExtraBold.ttf')  format('truetype'), /* Safari, Android, iOpen Sauce */
+        url('https://fonts.cdnfonts.com/s/88496/OpenSauceOne-ExtraBold.svg#FontName') format('svg'); 
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+
+}
+
+@font-face {
+  font-family: 'Atkinson';
+  src: url('https://fonts.cdnfonts.com/s/59451/AtkinsonHyperlegibleRegular102.eot'); /* IE9+ Compat Modes */
+  src: url('https://fonts.cdnfonts.com/s/59451/AtkinsonHyperlegibleRegular102.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('https://fonts.cdnfonts.com/s/59451/AtkinsonHyperlegibleRegular102.woff') format('woff'), /* Modern browsers */
+       url('https://fonts.cdnfonts.com/s/59451/AtkinsonHyperlegibleRegular102.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('https://fonts.cdnfonts.com/s/59451/AtkinsonHyperlegibleRegular102.svg#FontName') format('svg'); /* Legacy iOS */
+       font-display: swap;
+
+  }
+$font1: 'Vinila Test', sans-serif;
+$font2: 'Open Sauce', sans-serif;
+$font3: 'Atkinson', sans-serif;
+
+
+
+
+
+h1 {
+  font-size: 7rem;
+}
+h2 {
+  font-size: 6rem;
+  letter-spacing: -1.5px;
+}
+h3 {
+  font-size: 5rem;
+}
+h4 {
+  font-size: 4rem;
+}
+h5 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+h6 {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+.titlefont {
+  font-family: $font2;
+}
+
 .body {
   font-family: $font3, sans-serif;
   line-height: 1.2;
@@ -102,38 +211,16 @@ $font3: 'Atkinson Hyperlegible', sans-serif;
   margin: 0rem 0rem;
   font-weight: normal;
 }
-h1 {
-  font-weight: 500;
-  font-size: 7rem;
-}
-h2 {
-  font-weight: 500;
-  font-size: 6rem;
-  letter-spacing: -1.5px;
-}
-h3 {
-  font-weight: 500;
-  font-size: 5rem;
-}
-h4 {
-  font-weight: 500;
-  font-size: 4rem;
-}
-h5 {
-  font-weight: 500;
-  font-size: 3rem;
-}
-h6 {
-  font-weight: 600;
-  font-size: 2.4rem;
-}
+
+
 .normal {
-  font-weight: 500;
   font-size: 2rem;
 }
 .block {
+  font-family: $font2;
   font-weight: 800;
 }
+
 .large {
   font-size: 2.2rem;
 }
@@ -141,7 +228,6 @@ h6 {
   font-size: 1.8rem;
 }
 .small {
-  font-weight: 600;
   font-size: 1.6rem;
   margin: .4rem 0rem;
 }
@@ -149,12 +235,9 @@ h6 {
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 1px;
+  font-family: $font3;
 }
-.inlineh {
-  margin: 0;
-  display: inline;
-  float: left;
-}
+
 input[type="search"] {
   font-family: $font3, sans-serif;
   padding: .2rem;
@@ -235,6 +318,7 @@ input[type="search"] {
   transition: all .8s ease-in-out;
   h5 {
     font-size: 2.4rem;
+    //font-family: $font1;
   }
   &.loaded {
     transform: translateY(0rem);
@@ -257,6 +341,9 @@ input[type="search"] {
     top: 0rem;
     z-index: 1;
     padding: 0rem .4rem .4rem 0rem;
+    @media (max-width: $sm) {
+      font-size: 5.0rem;
+    }
     .emoji {
       -webkit-text-fill-color: $neutral-0;
     }
@@ -275,6 +362,9 @@ input[type="search"] {
     }
   }
 }
+
+
+
 a {
   text-decoration: none;
 }
@@ -365,7 +455,7 @@ a {
       white-space: normal;
     }
     &.dark-bg {
-      font-weight: 400;
+      font-weight: normal;
       color: $blue-30;
       &:hover,
       &:active {
@@ -395,6 +485,8 @@ a {
       }
     }
   }
+
+letter-spacing: -0.2px;
   &.graphic {
     padding: 0rem 0rem;
     color: $blue-60;
@@ -411,18 +503,20 @@ a {
     display: inline-flex;
     justify-content: flex-start;
     padding-right: 1rem;
+    font-display: optional;
     // can be any color
     &:before,
     &:after {
       padding: 0rem;
       font-weight: 400;
+      min-width: 1rem;
     }
     &.right {
       &:before {
         display: none;
       }
       &:after {
-        margin-left: 0rem;
+        transform: translateX(0);
       }
     }
     &.left {
@@ -430,7 +524,7 @@ a {
         display: none;
       }
       &:before {
-        margin-right: 1rem;
+        transform: translateX(0);
       }
     }
     &.alone {
@@ -464,7 +558,6 @@ a {
         display: none;
       }
     }
-    //icon types
     &.light:before,
     &.light:after {
       font-family: quote("FontAwesome");
@@ -530,6 +623,7 @@ a {
     &.scrolldown:after {
       font-family: quote("FontAwesome");
       content: "\f103";
+      
     }
     &.scrollright:before,
     &.scrollright:after {
@@ -559,6 +653,7 @@ a {
       }
     }
   }
+  
   //headers
   &.tab {
     padding: 1rem 0rem;
@@ -570,7 +665,7 @@ a {
     font-size: 2.0rem;
     display: flex;
     background: transparent;
-    font-weight: 700;
+    font-weight: 800;
     letter-spacing: 2px;
     &.dark {
       color: $blue-80;
@@ -589,6 +684,8 @@ a {
       padding: 0.8rem 1rem;
       font-size: 1.2rem;
       text-transform: uppercase;
+      font-family: $font3;
+      text-shadow: $neutral-50 0 0 0.1rem;
     }
   }
   //section header titles
@@ -650,6 +747,7 @@ a {
     }
   }
 }
+
 .buttontocasestudy {
   position: relative;
   z-index: 6;
@@ -659,6 +757,14 @@ a {
   flex-direction: row;
   color: $neutral-60;
   padding: 1rem .4rem;
+  .text {
+    flex: 1; 
+    text-align: left; 
+    transition: all 0.3s ease;
+    padding: 0.1rem 2rem 0rem 2rem;
+    font-size: 2.4rem;
+    margin: auto;
+  }
   &::before {
     color: $neutral-60;
     content: '[';
@@ -679,24 +785,15 @@ a {
     font-size: 2.6rem;
     transition: all 0.3s ease;
   }
-  .text {
-    flex: 1; 
-    text-align: left; 
-    transition: all 0.3s ease;
-    padding: 0.1rem 2rem 0rem 2rem;
-    font-size: 2.4rem;
-    margin: auto;
-  }
+  
   &:hover,
   &:active {
     color: $neutral-60;
     text-shadow: $text-shadow-blue;
     &:before {
-      opacity: 1;
       transform: translateX(-0.2rem);
     }
     &:after {
-      opacity: 1;
       transform: translateX(0.2rem);
     }
   }

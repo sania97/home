@@ -5,6 +5,14 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script type="text/javascript" src="/public/js/scripts.js"></script>
         <meta charset="utf-8">
+        <link rel="preload" href="https://fonts.cdnfonts.com/s/92714/VinilaTest-Bold.woff" as="font" type="font/woff" crossorigin="anonymous">
+        <link rel="preload" href="https://fonts.cdnfonts.com/s/92714/VinilaTest-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+        <link rel="preload" href="https://fonts.cdnfonts.com/s/92714/VinilaTest-Light.woff" as="font" type="font/woff" crossorigin="anonymous">
+        <link rel="preload" href="https://fonts.cdnfonts.com/s/59451/AtkinsonHyperlegibleRegular102.woff" as="font" type="font/woff" crossorigin="anonymous">
+        <link rel="preload" href="https://fonts.cdnfonts.com/s/88496/OpenSauceOne-Medium.woff" as="font" type="font/woff" crossorigin="anonymous">
+        <script>
+            //window.onanimationiteration = console.log;
+        </script>
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="description" content="Sania Syed's is a digital Product Designer based in Los Angeles, CA.">
         <link rel="shortcut icon" href="/public/images/favicon.ico">
@@ -14,27 +22,7 @@
         <title>Sania Syed | Product Designer</title>
     </head>
     <body>
-        <script id="__bs_script__">
-            //<![CDATA[
-            (function() {
-                try {
-                    var script = document.createElement('script');
-                    if ('async') {
-                        script.async = true;
-                    }
-                    script.src = '/browser-sync/browser-sync-client.js?v=2.29.3'.replace("HOST", location.hostname);
-                    if (document.body) {
-                        document.body.appendChild(script);
-                    } else if (document.head) {
-                        document.head.appendChild(script);
-                    }
-                } catch (e) {
-                    console.error("Browsersync: could not append script tag", e);
-                }
-            }
-            )()
-            //]]>
-        </script>
+        <!--.sectionn.intro-->
         <div class="sectionn intro">
             <div class="container notmobile top navcont">
                 <section class="page-section">
@@ -115,6 +103,11 @@
                 </div>
             </div>
         </div>
+        <div class="font_preload" style="opacity: 0">
+            <span style="font-family: 'Vinila Test', Arial, sans-serif;"></span>
+            <span style="font-family: 'Open Sauce', Arial, sans-serif;"></span>
+            ...
+        </div>
         <div class="sectionn" data-color="first">
             <div class="container wspace">
                 <section class="page-section" id="work">
@@ -126,8 +119,8 @@
                                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5 switchcol">
                                             <div class="card-left">
                                                 <div class="cardText">
-                                                    <h4 class="titlefont block inlineh">Streamlining Manufacturing</h4>
-                                                    <h6 class="titlefont inlineh">Designing a customized Enterprise Resource Planning Platform</h6>
+                                                    <h4 class="titlefont block">Streamlining Manufacturing</h4>
+                                                    <h6 class="titlefont">Designing a customized Enterprise Resource Planning Platform</h6>
                                                     <p class="body">Hardware Fabrication Company</p>
                                                     <div class="label-row">
                                                         <a class="btn chip label">Product Design</a>
@@ -158,8 +151,8 @@
                                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5 switchcol">
                                             <div class="card-left">
                                                 <div class="cardText">
-                                                    <h4 class="titlefont block inlineh">Elevating Design Strategy</h4>
-                                                    <h6 class="titlefont inlineh">Updating Content and Crafting a Functional Design System</h6>
+                                                    <h4 class="titlefont block">Elevating Design Strategy</h4>
+                                                    <h6 class="titlefont">Updating Content and Crafting a Functional Design System</h6>
                                                     <p class="body">LED Lighting Provider</p>
                                                     <div class="label-row">
                                                         <a class="btn chip label">Content Writing</a>
@@ -191,8 +184,8 @@
                                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5 switchcol">
                                             <div class="card-left">
                                                 <div class="cardText">
-                                                    <h4 class="titlefont block inlineh">Reshaping Design Approach</h4>
-                                                    <h6 class="titlefont inlineh">Brand and Website Design Overhaul for an Outdoor Gear Retailer</h6>
+                                                    <h4 class="titlefont block">Reshaping Design Approach</h4>
+                                                    <h6 class="titlefont">Brand and Website Design Overhaul for an Outdoor Gear Retailer</h6>
                                                     <p class="body">Blake Pro Gear</p>
                                                     <div class="label-row">
                                                         <a class="btn chip label">Brand Design</a>
@@ -285,7 +278,7 @@
                 </section>
             </div>
         </div>
-        <div class="sectionn" data-color="last">
+        <div class="sectionn">
             <div class="container footercont">
                 <section class="page-section" id="contact">
                     <div class="row middle-xs">

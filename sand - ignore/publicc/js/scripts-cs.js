@@ -1,5 +1,17 @@
 $(document).ready(function () {
   // Hide the second navigation bar initially
+  function throttle(func, limit) {
+    let inThrottle;
+    return function() {
+      const context = this;
+      const args = arguments;
+      if (!inThrottle) {
+        func.apply(context, args);
+        inThrottle = true;
+        setTimeout(() => inThrottle = false, limit);
+      }
+    };
+  }
   // setting link target properly
   $('.nav-toc__group a').on('click', function (event) {
     event.preventDefault();
@@ -74,13 +86,10 @@ $(document).ready(function () {
       }
     });
   }
-  checkScrollClasses();
+  
   clickAndSelect();
 
-  $(document).scroll(function () {
-    checkScrollClasses();
-
-    
-  });
+  const throttledScroll = throttle(checkScrollClasses, 100);
+  $(document).scroll(throttledScroll);
 
 });

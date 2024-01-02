@@ -110,7 +110,7 @@
 .circles-content {
   width: 100vw;
   height: 100vh;
-  transition: all 0.8s ease-in;
+  //transition: all 0.8s ease-in;
   overflow: hidden;
   opacity: 0;
   &.loaded {
@@ -124,6 +124,7 @@
   height: 100%;
   position: absolute;
   display: flex;
+z-index:2;
   @media (max-width: $md) {
     top: -15vh;
   }
@@ -132,7 +133,10 @@
   }
   justify-content: center;
   align-items: center;
-
+  &.changedtop {
+    top: -15vh;
+  }
+  
   .shapeee {
     z-index: 1000;
     position: absolute;
@@ -178,9 +182,9 @@
             animation: none; /* Cancels animation on small screens for all except i 10 and i 13 */
           }
         }
+      
       }
     }
-
     @if $reduce-motion {
       animation: none;
     }
