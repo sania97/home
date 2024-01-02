@@ -12,6 +12,8 @@ $(document).ready(function () {
       }
     };
   }
+  const $titleslide = $('.titleslide');
+  $titleslide.addClass("scrolledd");
   // setting link target properly
   $('.nav-toc__group a').on('click', function (event) {
     event.preventDefault();

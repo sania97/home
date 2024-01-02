@@ -2791,16 +2791,18 @@ body {
                 flex-direction: column;
         gap: 1rem;
         opacity: 0.2;
-        -webkit-transition: all .5s ease-in-out;
-        -o-transition: all .5s ease-in-out;
-        transition: all .5s ease-in-out;
-        -webkit-transform: translateY(1rem);
-            -ms-transform: translateY(1rem);
-                transform: translateY(1rem); }
+        -webkit-transition: all .5s ease;
+        -o-transition: all .5s ease;
+        transition: all .5s ease;
+        -webkit-transform: translateY(2rem);
+            -ms-transform: translateY(2rem);
+                transform: translateY(2rem); }
         .slides .slide-containerr .slide .slideContent.titleslide {
           padding: 6.8rem 3.6rem;
           word-break: normal;
-          overflow-wrap: break-word; }
+          overflow-wrap: break-word; 
+          opacity:1;
+        }
         .slides .slide-containerr .slide .slideContent .slideImgcont {
           max-height: 60rem;
           width: 100%;

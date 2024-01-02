@@ -1,5 +1,9 @@
 $(document).ready(function () {
   //on sections where intromessage is tall (usually small screens) this function will make sure it does not overflow onto next section
+  $('.double-layered-text').each(function () {
+    var text = $(this).text();
+    $(this).attr('data-text', text);
+  });
   function throttle(func, limit) {
     let inThrottle;
     return function() {
@@ -27,10 +31,7 @@ $(document).ready(function () {
       });
     });
   }
-  $('.double-layered-text').each(function () {
-    var text = $(this).text();
-    $(this).attr('data-text', text);
-  });
+
   //on adding top layer of intromessage of text
   //small intro animation, circles dont show up until loaded and words float up
 
