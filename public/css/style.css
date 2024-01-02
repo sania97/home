@@ -9,10 +9,10 @@
 style.scss 
 compiles to style.css
 */
+
 /* -------------------------------- 
 LAYOUT
 -------------------------------- */
-@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 .container-fluid,
 .container {
   margin-right: auto;
@@ -659,7 +659,6 @@ LAYOUT
 /* -------------------------------- 
 LAYOUT - end
 -------------------------------- */
-
 /* -------------------------------- 
 COLORS
 -------------------------------- */
@@ -871,9 +870,6 @@ input[type="search"] {
     top: 0rem;
     z-index: 1;
     padding: 0rem .4rem .4rem 0rem; }
-    @media (max-width: 544px) {
-      .intromessage .double-layered-text {
-        font-size: 5.0rem; } }
     .intromessage .double-layered-text .emoji {
       -webkit-text-fill-color: #fff; }
     .intromessage .double-layered-text::before {
@@ -2107,6 +2103,9 @@ body {
     @media (max-width: 768px) {
       .sectionn.intro {
         min-height: 150vh; } }
+    @media (max-width: 544px) {
+      .sectionn.intro {
+        min-height: 250vh; } }
   .sectionn.headerr {
     padding: 1rem 1rem 0rem 1rem;
     background-color: #EBEDF4;
@@ -2201,12 +2200,11 @@ body {
         top: 30vh; } }
     @media (max-width: 768px) {
       .container.top.herocont {
-        top: 30vh;
-        min-height: 128vh; } }
-    @media (max-width: 768px) {
+        top: 30vh; } }
+    @media (max-width: 544px) {
       .container.top.herocont {
         top: 22vh;
-        min-height: 128vh; } }
+        min-height: 228vh; } }
 
 .container.circlesCont {
   z-index: 1;
@@ -2520,6 +2518,8 @@ body {
               overflow-wrap: break-word; }
               .cards .card-containerr .cardd .carddContent .card-left .cardText h6 {
                 display: none; }
+              .cards .card-containerr .cardd .carddContent .card-left .cardText h4 {
+                font-size: 3.6rem; }
           .cards .card-containerr .cardd .carddContent .card-right {
             min-height: 20rem; }
             .cards .card-containerr .cardd .carddContent .card-right .cardImg {
@@ -2872,11 +2872,15 @@ body {
         opacity: 0.2;
         -webkit-transition: all .5s ease;
         -o-transition: all .5s ease;
-        transition: all .5s ease; }
+        transition: all .5s ease;
+        -webkit-transform: translateY(2rem);
+            -ms-transform: translateY(2rem);
+                transform: translateY(2rem); }
         .slides .slide-containerr .slide .slideContent.titleslide {
           padding: 6.8rem 3.6rem;
           word-break: normal;
-          overflow-wrap: break-word; }
+          overflow-wrap: break-word;
+          opacity: 1.0; }
         .slides .slide-containerr .slide .slideContent .slideImgcont {
           max-height: 60rem;
           width: 100%;
@@ -2941,7 +2945,10 @@ body {
           .slides .slide-containerr .slide .slideContent .slideTitle.less {
             padding-bottom: 0rem; }
         .slides .slide-containerr .slide .slideContent.scrolledd {
-          opacity: 1; }
+          opacity: 1;
+          -webkit-transform: translateY(0);
+              -ms-transform: translateY(0);
+                  transform: translateY(0); }
         .slides .slide-containerr .slide .slideContent.nextcs {
           height: 100%;
           padding: 2.8rem;
@@ -2970,9 +2977,6 @@ body {
                       box-shadow: inset 0.6rem 0rem #C8E2FF, inset -0.6rem 0rem #C8E2FF; }
         .slides .slide-containerr .slide .slideContent.solutions {
           opacity: 1;
-          -webkit-transform: translateY(0);
-              -ms-transform: translateY(0);
-                  transform: translateY(0);
           padding: 4rem 3.2rem;
           gap: 4rem; }
           .slides .slide-containerr .slide .slideContent.solutions .slideText {
@@ -2989,9 +2993,15 @@ body {
             opacity: 0.2;
             -webkit-transition: all .5s ease;
             -o-transition: all .5s ease;
-            transition: all .5s ease; }
+            transition: all .5s ease;
+            -webkit-transform: translateY(2rem);
+                -ms-transform: translateY(2rem);
+                    transform: translateY(2rem); }
             .slides .slide-containerr .slide .slideContent.solutions .solContent.scrolleddd {
-              opacity: 1; }
+              opacity: 1;
+              -webkit-transform: translateY(0rem);
+                  -ms-transform: translateY(0rem);
+                      transform: translateY(0rem); }
           .slides .slide-containerr .slide .slideContent.solutions .solslide {
             max-width: 100%; }
           .slides .slide-containerr .slide .slideContent.solutions .solslidegray {

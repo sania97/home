@@ -59,6 +59,9 @@ body {
         @media (max-width: $md) {
             min-height: 150vh;
         }
+        @media (max-width: $sm) {
+            min-height: 250vh;
+        }
     }
     //case study page
     &.headerr {
@@ -156,11 +159,10 @@ body {
             }
             @media (max-width: $md) {
                 top: 30vh;
-                min-height:128vh;
             }
-            @media (max-width: $md) {
+            @media (max-width: $sm) {
                 top: 22vh;
-                min-height:128vh;
+                min-height:228vh;
             }
             
         }
@@ -429,6 +431,9 @@ body {
                             //word-break: break-all; 
                             h6{
                                 display: none;
+                            }
+                            h4{
+                                font-size: 3.6rem;
                             }
                         }
                         
@@ -733,10 +738,12 @@ body {
                 gap: 1rem;
                 opacity: 0.2;
                 transition: all .5s ease;
+                transform: translateY(2rem);
                 &.titleslide {
                     padding: 6.8rem 3.6rem;
                     word-break: normal;
                     overflow-wrap: break-word;
+                    opacity:1.0;
                 }
                 .slideImgcont {
                     max-height: 60rem;
@@ -794,6 +801,8 @@ body {
                 }
                 &.scrolledd {
                     opacity: 1;
+                    transform: translateY(0);
+
                 }
                 &.nextcs {
                     height: 100%;
@@ -819,7 +828,6 @@ body {
                 }
                 &.solutions {
                     opacity: 1;
-                    transform: translateY(0);
                     padding: 4rem 3.2rem;
                     gap: 4rem;
                     .slideText {
@@ -831,8 +839,12 @@ body {
                         gap: 2rem;
                         opacity: 0.2;
                         transition: all .5s ease;
+                        transform: translateY(2rem);
+
                         &.scrolleddd {
                             opacity: 1;
+                            transform: translateY(0rem);
+
                         }
                     }
                     .solslide {

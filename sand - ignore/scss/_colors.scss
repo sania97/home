@@ -341,9 +341,7 @@ input[type="search"] {
     top: 0rem;
     z-index: 1;
     padding: 0rem .4rem .4rem 0rem;
-    @media (max-width: $sm) {
-      font-size: 5.0rem;
-    }
+
     .emoji {
       -webkit-text-fill-color: $neutral-0;
     }
