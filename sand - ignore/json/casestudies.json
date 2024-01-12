@@ -1,4 +1,3 @@
-@@ -0,0 +1,397 @@
 {
   "erp": {
     "slug": "erp",
@@ -17,13 +16,13 @@
     "background": {
       "duration": "6 months",
       "role": "Strategy, User Research, Product Design",
-      "text": "Client X [name redacted at client request], a printed circuit board manufacturing company, sought to optimize its manufacturing processes and enhance overall inefficiency. They wanted to create a tailored Enterprise Resource Planning (ERP) platform that could streamline their manufacturing, inventory tracking, and quality management processes. The company's existing systems for resource planning were nearly all offline and inefficient, prompting the need for a comprehensive solution."
+      "text": "Client X, a printed circuit board manufacturing company, was severely limited by outdated and inefficient manufacturing processes. They sought to develop a comprehensive, software-based solution that would bring their company into a new stage of production capability. The brief I received was to create a user-friendly Enterprise Resource Planning (ERP) platform that mapped to the client's specific production practices — specifically the manufacturing, inventory tracking, and quality management processes."
     },
     "discovery": {
       "d1": "I began the project by conducting meetings with key stakeholders involved in the overall manufacturing process at all levels at the company. As an exercise, I asked them to walk me through the entire process of completing a manufacturing project.",
-      "d2": "These discussions helped me understand the pain points and challenges they faced in their day-to-day operations, and helped me formulate the overall needs the platform would have to address.",
-      "r1": "First I gathered material the company provided and studied how the manufacturing process at this company truly worked; specifically how stock was brought in, how inventory was stored, and how manufacturing was completed. ",
-      "r2": "In order to better understand the potential needs of the software, I conducted a Competitive analysis of existing ERP Platforms. I listed the key features present in every platform, and noted common patterns of navigation.",
+      "d2": "These discussions helped me understand the pain points and challenges they faced in their day-to-day operations, and helped me formulate some specific facets of the platform.",
+      "r1": "First I analyzed some documentation the company provided about the manufacturing process at this company - specifically how stock was brought in, how inventory was stored, and how manufacturing was completed. ",
+      "r2": "In order to formulate the potential needs of the software, I conducted a Competitive analysis of established ERP Platforms. I listed the key features present in every platform, and noted common patterns of navigation.",
       "persona": "I created two User Personas that matched to essential roles in the manufacturing process at this company. These helped anchor my design process moving forward. "
     },
     "personas": {
@@ -59,7 +58,7 @@
           },
           {
             "subtitle": "Mapping out",
-            "text": "With knowledge gained from user research and discussions with the stakeholders, I set out to create a detailed map of the information architecture. From this exercise, I was able to determine three overall modules the software would have: Inventory, Manufacturing, Quality Management. By analyzing the necessary functions of each of those modules, I mapped out all the pages that would be necessary underneath those.",
+            "text": "With knowledge gained from user research and discussions with the stakeholders, I set out to create a detailed map of the information architecture. From this exercise, I was able to determine three overall modules the software would have: Inventory, Manufacturing, Quality Management. By analyzing the necessary functions of each of those modules, I mapped out all the pages that would make these pages functional.",
             "path": "sol2.jpg",
             "caption": "I iterated upon this, meeting with the stakeholders to confirm that the architecture did align with the established processes."
           },
@@ -169,7 +168,7 @@
     "background": {
       "duration": "8 months",
       "role": "User Research, Web Design, Content Design, Copywriting",
-      "text": "A LED lighting solutions provider needed to finalize some of their website content before the launch of their website. They needed a website that not only showcased their innovative LED lights but also effectively communicated their value proposition. My role primarily involved enhancing their copywriting and translating subpar designs into a functional design system."
+      "text": "Client Z, an LED lighting solutions provider, needed to finalize some of their website content before the launch of their website. Thus the initial project scope involved generating copywriting content for their website that would showcase the specific benefits of their LED products, as well as communicate the company’s unique technological innovation to the field. Eventually the scope of the project expanded to visual design as well, where I transformed existing designs into a functional design system significantly improving design efficiency within the development process at the company. "
     },
     "discovery": {
       "d1": "I began the project by conducting meetings with the client to determine the project scope and timeline.",
@@ -281,11 +280,11 @@
     "background": {
       "duration": "2 months",
       "role": "Strategy, User Research, Brand Design, Web Design",
-      "text": "BlakeProGear, a company specializing in outdoor gear equipment made with superior material, needed to bring their brand into a new era, so they hired me to overhaul their design practices. Through the process of assessing their needs, I determined that they would need a brand guideline and design system that would allow them to update content while still staying within a common design language. I was able to create a brand guideline and responsive design system for them, that allowed a cohesive brand experience for their customers and efficient website content creation in the future."
+      "text": "BlakeProGear, a company specializing in outdoor gear equipment made with superior material, had experienced moderate success and was looking to reach a new stage as a specialty gear supplier. I assessed their needs and determined a proper design-based solution — a brand guideline to establish specific design principles, and a responsive and organized design system that would allow them to generate future content while still staying within a common design language. "
     },
     "discovery": {
       "d1": "I began the project by conducting meetings with the client to determine the project scope and timeline.",
-      "d2": "The direction of the brand was not defined at all, so I directed some exercises to determine that mission of the company, the desired brand personality, and how the stakeholders wanted that to be communicated.",
+      "d2": "The direction of the brand was not defined at all, so I directed some exercises with the stakeholders to determine that mission of the company, the desired brand personality, and how they wanted that to be communicated.",
       "r1": "In order to better understand the potential needs of the new website, I conducted a Competitive analysis of typical outdoor gear company websites.",
       "r2": "The analysis of the competitor websites showed that the basic standard in the field seemed to be a focus on showcasing products with high-quality photos and detailed descriptions, as well as providing information on the company's values and commitment to sustainability. Additionally, many prioritize user reviews and ratings, as well as offering a seamless shopping experience with easy navigation and checkout processes.",
       "persona": "I asked BPG to provide any customer insights they had noticed through their experiences providing customer service, and they determined that their customers differentiated themselves into two groups: skilled people and unskilled people. I used this to create two User Personas with unique goals, which would help anchor my design process moving forward."
