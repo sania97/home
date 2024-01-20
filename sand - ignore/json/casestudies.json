@@ -3,7 +3,6 @@
     "slug": "erp",
     "name": "Hardware Fabrication Company",
     "titlefirst": "Streamlining Manufacturing",
-
     "title": "Designing a customized Enterprise Resource Planning Platform",
     "imagePrefix": "/public/images/erp/",
     "chips": [
@@ -16,14 +15,14 @@
     "background": {
       "duration": "6 months",
       "role": "Strategy, User Research, Product Design",
-      "text": "Client X, a printed circuit board manufacturing company, was severely limited by outdated and inefficient manufacturing processes. They sought to develop a comprehensive, software-based solution that would bring their company into a new stage of production capability. The brief I received was to create a user-friendly Enterprise Resource Planning (ERP) platform that mapped to the client's specific production practices — specifically the manufacturing, inventory tracking, and quality management processes."
+      "text": "Client X, a printed circuit board manufacturing company, was severely limited by outdated and inefficient manufacturing processes. They sought to develop a comprehensive, software-based solution that would bring their company into a new stage of production capability. The brief I received was to create a user-centered Enterprise Resource Planning (ERP) platform that mapped to the client's specific production practices — specifically the manufacturing, inventory tracking, and quality management systems."
     },
     "discovery": {
-      "d1": "I began the project by conducting meetings with key stakeholders involved in the overall manufacturing process at all levels at the company. As an exercise, I asked them to walk me through the entire process of completing a manufacturing project.",
-      "d2": "These discussions helped me understand the pain points and challenges they faced in their day-to-day operations, and helped me formulate some specific facets of the platform.",
-      "r1": "First I analyzed some documentation the company provided about the manufacturing process at this company - specifically how stock was brought in, how inventory was stored, and how manufacturing was completed. ",
-      "r2": "In order to formulate the potential needs of the software, I conducted a Competitive analysis of established ERP Platforms. I listed the key features present in every platform, and noted common patterns of navigation.",
-      "persona": "I created two User Personas that matched to essential roles in the manufacturing process at this company. These helped anchor my design process moving forward. "
+      "d1": "I began the project by conducting meetings with key stakeholders at the company, to determine overall project scope and timelines. From there, I was directed to employees at different levels who were essential to the overall manufacturing process. To learn more specifics, I asked them to walk me through the entire process of completing a manufacturing project, from raw material to production to finished product.",
+      "d2": "These discussions helped me understand the essential steps that moved the projects forward, as well as pain points and challenges faced in typical day-to-day operations. I used these to formulate some specific features of the platform.",
+      "r1": "My primary strategies of User Research were User Interviews, as well as conducting Competitive Analysis of established ERP Platforms. ",
+      "r2": "From User Interviews and documentation provided by the company, I learned exactly how stock was brought in, how inventory was stored, and how manufacturing was completed. These helped me create key benchmarks for the product moving forward. From the Competitive analysis, I focused on identifying established patterns of navigation and I was able to gain comprehensive information about features, strengths, and areas for improvement.",
+      "persona": "In conjunction with stakeholders, I created two User Personas that matched to essential roles in the manufacturing process at this company. These helped anchor my design and decision-making process moving forward. "
     },
     "personas": {
       "p1": [
@@ -38,11 +37,11 @@
       ]
     },
     "exploration": {
-      "text": "Before moving onto the design phase, I used all information gathered from the Discovery phase to refine and categorize the end goals of the software.",
+      "text": "Before moving onto the design phase, I used all information gathered from the Discovery phase to refine the ultimate end goals of the software that would adequately facilitate product manufacturing at this company.",
       "goals": [
+        "Keep a record of Product attributes + specific steps involved with manufacturing them",
         "Record stock and inventory input and output",
-        "Keep a record of specific steps involved with manufacturing processes",
-        "Track the currently active processes relating to manufacturing happening at the company"
+        "Track and assess the currently active manufacturing processes"
       ]
     },
     "solSections": [
@@ -52,67 +51,64 @@
         "content": [
           {
             "subtitle": "Established process",
-            "text": "At this company, all records of most parts of the manufacturing process were made and kept offline. This was necessary for security but limited efficiency by a great deal. ",
+            "text": "At this company, all records of significant portions of the manufacturing process were made and kept offline. This standardized the process and was necessary for security, but limited efficiency by a great deal. ",
             "path": "sol1.jpg",
-            "caption": "Samples of the documents that kept records of each step of the manufacturing process at this company. "
+            "caption": "Each step of the manufacturing process at this company was maintained using Word Documents. "
           },
           {
             "subtitle": "Mapping out",
-            "text": "With knowledge gained from user research and discussions with the stakeholders, I set out to create a detailed map of the information architecture. From this exercise, I was able to determine three overall modules the software would have: Inventory, Manufacturing, Quality Management. By analyzing the necessary functions of each of those modules, I mapped out all the pages that would make these pages functional.",
+            "text": "With knowledge gained from user research about the necessary product features, I set out to create a detailed map of the Information Architecture. From this exercise, I was able to determine three overall modules the software would have: Inventory, Manufacturing, and Quality Management. By analyzing the necessary functions of each of those modules, I mapped out all the pages that would make these pages functional.",
             "path": "sol2.jpg",
             "caption": "I iterated upon this, meeting with the stakeholders to confirm that the architecture did align with the established processes."
           },
           {
             "subtitle": "Design System",
-            "text": "After creating the User flow, I started working on creating the smaller components of the design system, such as clickable elements and section headings.",
+            "text": "After creating the User flow, I began work on the preliminary components of the design system, such as clickable elements and section headings.",
             "path": "sol3.jpg",
             "caption": ""
           }
         ]
       },
       {
-        "title": "Stock + Inventory",
+        "title": "Manufacturing",
         "text": "Module 1",
         "content": [
           {
-            "subtitle": "Item movement",
-            "text": "The first module I tackled was Stock + Inventory. One of the most important aspects of a manufacturing business is being able to track where items are at any given moment. Through creating the information architecture, I realized that Items could be divided into two main categories: Raw material or Finished Product. Either way they would need to have similar attributes: current amounts in possession and storage location. I kept in mind that Items as an object will eventually need to be added to specific instruction manuals for specific products. ",
-            "path": "sol4.jpg",
-            "caption": "A demonstration of how an Item could be selected, and all the attributes that would display about that item. "
-          },
-          {
-            "subtitle": "Warehouse",
-            "text": "From there I moved onto Warehouse records. Warehouse would be a visual map, configured by calculating where an item was and the quantity. ",
-            "path": "sol5.jpg",
-            "caption": "Warehouse and Items were connected: one will affect the other."
-          }
-        ]
-      },
-      {
-        "title": "Manufacturing",
-        "text": "Module 2",
-        "content": [
-          {
-            "subtitle": "Items involved",
-            "text": "While creating the flow, I spent a lot of time learning about the process of making a product at this company: from the moment the customer places an order to the moment it leaves the facility. That helped me visualize the overall structure of a Product object in the software, and what its attributes would need to be.  ",
+            "subtitle": "Products & Attributes",
+            "text": "While creating the User Flow, I utilized all the information I learned about the process of manufacturing products at this company: from the moment the customer places an order to the moment it leaves the facility. That helped me visualize the overall structure of a Product object in the software, and what its attributes would need to be.  ",
             "path": "solflow.jpg",
             "caption": ""
           },
           {
             "subtitle": "Product to Work Order",
-            "text": "In this software, a Product would inherently have two main attributes: Bill of material (items required to make the product) and Procedures (all steps involved in making a product). Once the Product was added to a Project, its specific assigned Procedures would then create Work orders, which would assign employees to specific jobs and keep track of progress.",
+            "text": "In this software, a Product has two main attributes: Bill of Material (items required to make the product) and Procedures (all steps involved in making a product). Once a specific Product is added to a Project, its assigned Procedures will then generate Work Orders.",
             "path": "sol6.jpg",
-            "caption": ""
+            "caption": "Work Orders assign work to employees as well as visualize progress. "
           },
           {
             "subtitle": "Project Plan",
-            "text": "Connected to manufacturing a Product was a Project Page, which would house the records of the product manufacturing life cycle. Projects would also include information about the Project Quote provided to the client, the Sales order, and shipping information.",
-
-
+            "text": "Connected to manufacturing a Product is a Project Page, which houses the records of the product manufacturing life cycle. Project Pages include steps before and after manufacturing, such as the Project Quote provided to the client, the Sales Order, and shipping information.",
             "path": "sol7.jpg",
-            "caption": "The Project Page provides a visual overview of the progress; managers move the progress along, verifying what needs to be verified and then assigning accordingly."
+            "caption": "The Project Page provides additional visual overview of the progress; managers move the progress along, verifying what needs to be verified and then assigning accordingly."
           }
-         
+        ]
+      },
+      {
+        "title": "Stock + Inventory",
+        "text": "Module 2",
+        "content": [
+          {
+            "subtitle": "Item movement",
+            "text": "One of the most important aspects of a manufacturing business is being able to track where items are at any given moment. Through creating the Information Architecture, I created an overall Item object that records current amounts in possession and corresponding storage location. They separate into two functional categories: Raw Material or Finished Product. Items as an object can then be added to specific Procedures assigned for manufacturing specific Products. ",
+            "path": "sol4.jpg",
+            "caption": "A demonstration of how an Item can be selected from the Item List, and all the attributes that display about that Item. "
+          },
+          {
+            "subtitle": "Warehouse",
+            "text": "From there I moved onto Warehouse records. Warehouse would be a visual representation of the numerical records, generated by calculating where an Item was and the quantity. ",
+            "path": "sol5.jpg",
+            "caption": "Warehouse and Items were connected: one will affect the other."
+          }
         ]
       },
       {
@@ -121,13 +117,13 @@
         "content": [
           {
             "subtitle": "Maintaining Quality",
-            "text": "Through discussions with the company, I learned that another essential aspect of the manufacturing process was Quality Management. At this company, there were many established processes in place for checking and maintaining product quality, and they were keen on keeping it that way. I designed this module as a sort of template gallery, that would create documents based on the parameters provided. ",
+            "text": "Through discussions with the company, I learned that Quality Management is hugely essential to the process of manufacturing chips. At this company, there were many established processes in place for checking and maintaining product quality, and they were keen on keeping it that way. With that information, I designed this module as a sort of template gallery, that would generate documents based on the parameters provided. ",
             "path": "sol8.jpg",
-            "caption": "Procedures could be created from a basic template, and then assigned to a specific product. That way when a Product is added to a work order, the specific Procedures belonging to it would be loaded as well. "
+            "caption": "Procedures could be created from a basic template, and then assigned to a specific Product. That way when a Product is added to a Work Order, the specific Procedures belonging to it would be loaded as well. "
           },
           {
             "subtitle": "Digital + Document",
-            "text": "Printed forms were necessary in this aspect of the business, so we decided that the main function of this module would be to store the forms in a digital and print format. ",
+            "text": "Many of their clients required hard evidence that Quality Management was adequately completed. Printed forms are necessary in this aspect of the business, so we concluded that the main function of this module would be to store and edit the forms in a digital and print format. ",
             "path": "sol9.jpg",
             "caption": ""
           },
@@ -135,26 +131,23 @@
             "subtitle": "",
             "text": "",
             "path": "sol10.jpg",
-            "caption": "I maintained the basic structure of the example form I was given, slightly modified for user interaction. "
+            "caption": "To create this, I maintained the basic structure of the example form I was given, slightly modified for user interaction. "
           }
         ]
       }
     ],
-    "mockups": [
-     
-    ],
+    "mockups": [],
     "learned": {
-      "ch": "The project immersed me in manufacturing, an industry I was not used to. It did seem a bit tedious at first, due to the fact that I would have to learn how specific manufacturing processes worked. ",
-      "sol": "I resolved this by making sure I understood all aspects of the many specific processes at this company before starting any design. Refining project goals helped a lot as well, to keep the design process on track.",
-      "res": "The stakeholders were extremely satisfied with the results provided, and felt really confident about their trajectory moving forward. ",
-      "next": "Development is in progress. Metrics will be updated once available."
+      "ch": "The project immersed me in manufacturing, an industry I did not have experience in. Another challenge was figuring out balancing out different functionalities and integrations of different modules. ",
+      "sol": "I resolved these issues first by streamlining communication, making sure I understood all aspects of the many specific processes at this company before starting any design. Refining project goals helped a lot as well, to keep the design process on track. Creating the Information Architecture map helped map out all the modules and their functions. ",
+      "res": "The stakeholders were extremely satisfied with the results provided, and felt really confident about their improvement of manufacturing efficiency. ",
+      "next": "Development of this software is in progress. Metrics will be updated once available."
     }
   },
   "led": {
     "slug": "led",
     "name": "LED Lighting Provider",
     "titlefirst": "Elevating Design Strategy",
-
     "title": "Updating Content and Crafting a Functional Design System",
     "imagePrefix": "/public/images/led/",
     "chips": [
@@ -266,7 +259,6 @@
     "slug": "bpg",
     "name": "Blake Pro Gear",
     "titlefirst": "Reshaping Design Approach",
-
     "title": "Brand and Website Design Overhaul for an Outdoor Gear Retailer",
     "imagePrefix": "/public/images/bpg/",
     "chips": [
@@ -325,7 +317,6 @@
             "text": "The logo served as the backbone for the rest of the visual elements on the webpage. First I took the logo and redesigned it to a form that would work for both print and web. The colors from the logo helped me create a color palette that would guide the design of the webpages.",
             "path": "sol2.jpg",
             "caption": ""
-
           }
         ]
       },
@@ -391,6 +382,4 @@
       "next": "Unfortunately, web development has been put on pause due to supply chain issues within the company. Metrics will be updated once website is launched."
     }
   }
-
-
 }
