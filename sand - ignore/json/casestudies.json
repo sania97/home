@@ -146,9 +146,9 @@
   },
   "led": {
     "slug": "led",
-    "name": "LED Lighting Provider",
+    "name": "LED Lighting Manufacturer",
     "titlefirst": "Elevating Design Strategy",
-    "title": "Updating Content and Crafting a Functional Design System",
+    "title": "Crafting a Functional Design System and Content Management",
     "imagePrefix": "/public/images/led/",
     "chips": [
       "Content Writing",
@@ -161,13 +161,13 @@
     "background": {
       "duration": "8 months",
       "role": "User Research, Web Design, Content Design, Copywriting",
-      "text": "Client Z, an LED lighting solutions provider, needed to finalize some of their website content before the launch of their website. Thus the initial project scope involved generating copywriting content for their website that would showcase the specific benefits of their LED products, as well as communicate the company’s unique technological innovation to the field. Eventually the scope of the project expanded to visual design as well, where I transformed existing designs into a functional design system significantly improving design efficiency within the development process at the company. "
+      "text": "Client Z, an LED lighting solutions provider, needed to finalize some of their website content before the launch of their website. Thus the initial project scope was to generate proper copywriting content for their website that would showcase the specific benefits of their LED products, as well as communicate the company’s unique technological innovation to the field. Eventually the scope expanded to visual design as well, where I transformed existing designs into a functional design system, significantly improving design efficiency within the development process at the company. "
     },
     "discovery": {
       "d1": "I began the project by conducting meetings with the client to determine the project scope and timeline.",
       "d2": "The direction of the brand was already mostly defined, but I directed some exercises to determine that mission of the company and how the stakeholders wanted that to be communicated. I also gathered details about how the typical customer would interact with the website, concluding that product features would need to be highlighted the most, as they were the biggest contributing factor in sales.",
-      "r1": "In order to better understand the potential needs of the new website, I conducted a Competitive analysis of similar LED manufacturers, as well as other sustainably minded products.",
-      "r2": "This analysis revealed that clear and concise information about the specific product features, along with a straightforward way to compare products were of the utmost importance. I noted that many websites prominently featured their company values as a selling point; usually these were commitment to efficiency and reliability.",
+      "r1": "In order to better understand the potential needs of the new website, I conducted a Competitive Analysis of similar LED Product Providers. I also looked into companies that showcased sustainability in their philosophies. ",
+      "r2": "This analysis revealed that clear and concise information about the specific product features, along with a straightforward way to compare products were of the utmost importance. I noted that many websites prominently featured their company values as a selling point; usually these were a commitment to efficiency and reliability.",
       "persona-creation": ""
     },
     "personas": {
@@ -225,7 +225,7 @@
           },
           {
             "subtitle": "Atomic Design System",
-            "text": "Building upon the wireframes, I developed a responsive design system that included standardized aspects of the design: a consistent color palette inspired by energy-efficient lighting, typography choices that conveyed professionalism and modernity, and imagery that showcased the aspirational benefits of the product. Creating the design system and documentation made development very seamless and opened up opportunities for efficient content creation in the future.",
+            "text": "Building upon the wireframes, I developed a responsive design system that included standardized aspects of the design: a consistent color palette inspired by energy-efficient lighting, typography choices that conveyed professionalism and modernity, and imagery that showcased the aspirational benefits of the product. Creating the design system and documentation made development very seamless and provided substantial opportunities for efficient content creation in the future.",
             "path": "sol5.jpg",
             "caption": "Atoms phase of the design system"
           },
@@ -250,8 +250,8 @@
     ],
     "learned": {
       "ch": "The text content I was given was very verbose and had no personality. In addition, communicating with stakeholders about changing problems with their existing designs was a challenge. ",
-      "sol": "I resolved text content issues by involving stakeholders early, asking them what personality they wanted the brand to embody. As for the design, truth be told I did want to change more aspects, but then I understood that the stakeholders had spect a lot of time finalizing the previous design, so I resigned myself to just making the design system match the prototypes.",
-      "res": "The collaboration between stakeholders, user research, and iterative design processes resulted in a successful result that aligns with the company’s vision, enhances their online presence, and increases the potential of future content creation. The design system has allowed web development to progress a lot faster.",
+      "sol": "I resolved text content issues by involving stakeholders early, asking them what personality they wanted the brand to embody. As for the design, I did want to change more aspects, but then I understood that the stakeholders had spent a lot of time finalizing the previous design, so I resigned myself to just making the design system match the prototypes.",
+      "res": "The collaboration between stakeholders, user research, and iterative design processes provided successful solutions that aligned with the company’s vision, enhanced their online presence, and increased the efficiency of future content creation. The design system has allowed web development to progress a lot faster.",
       "next": "Web development of the website is currently in progress. Metrics will be updated once website is launched."
     }
   },
@@ -272,14 +272,14 @@
     "background": {
       "duration": "2 months",
       "role": "Strategy, User Research, Brand Design, Web Design",
-      "text": "BlakeProGear, a company specializing in outdoor gear equipment made with superior material, had experienced moderate success and was looking to reach a new stage as a specialty gear supplier. I assessed their needs and determined a proper design-based solution — a brand guideline to establish specific design principles, and a responsive and organized design system that would allow them to generate future content while still staying within a common design language. "
+      "text": "BlakeProGear, a company specializing in outdoor gear equipment made with superior material, had experienced moderate success and was looking to reach a new stage as a specialty gear supplier. I assessed their needs and determined a proper design-based solution that would facilitate their growth — a brand guideline to establish specific design principles, and a responsive and organized design system that would allow them to generate future content while still staying within a common design language. "
     },
     "discovery": {
       "d1": "I began the project by conducting meetings with the client to determine the project scope and timeline.",
-      "d2": "The direction of the brand was not defined at all, so I directed some exercises with the stakeholders to determine that mission of the company, the desired brand personality, and how they wanted that to be communicated.",
-      "r1": "In order to better understand the potential needs of the new website, I conducted a Competitive analysis of typical outdoor gear company websites.",
-      "r2": "The analysis of the competitor websites showed that the basic standard in the field seemed to be a focus on showcasing products with high-quality photos and detailed descriptions, as well as providing information on the company's values and commitment to sustainability. Additionally, many prioritize user reviews and ratings, as well as offering a seamless shopping experience with easy navigation and checkout processes.",
-      "persona": "I asked BPG to provide any customer insights they had noticed through their experiences providing customer service, and they determined that their customers differentiated themselves into two groups: skilled people and unskilled people. I used this to create two User Personas with unique goals, which would help anchor my design process moving forward."
+      "d2": "The direction of the brand was not defined at all, so I led some exercises with the stakeholders to determine that mission of the company, the desired brand personality, and how they wanted that to be communicated.",
+      "r1": "In order to better understand the potential needs of the new website, I conducted a Competitive Analysis of typical outdoor gear company websites.",
+      "r2": "The analysis of the competitor websites showed that the basic standards in the field were a focus on showcasing products through high-quality photos and detailed descriptions, as well as providing information on the company's values and commitment to sustainability. As a design choice, many relied on aspirational imagery to frame their product offerings. Additionally, many prioritize user reviews and ratings, as well as offering a seamless shopping experience with easy navigation and checkout processes.",
+      "persona": "I asked BPG to provide any customer insights they had noticed through their experiences providing customer service, and they determined that their customers differentiated themselves into two groups: skilled outdoor enthusiasts and unskilled beginners. I used this to create two User Personas with unique goals, which would help anchor my design process moving forward."
     },
     "personas": {
       "p1": [
@@ -378,8 +378,8 @@
     "learned": {
       "ch": "Communicating with stakeholders about changing their existing designs was a challenge. ",
       "sol": "I resolved this by allowing the stakeholders to make design decisions and keeping them informed during every step of the process. I tried not to stray too far from their choices, just adding functionality and complexity where it was needed. ",
-      "res": "I was able to deliver a completely revitalized brand direction for BlakeProGear, through a completed brand guideline and organized design system. The stakeholders were extremely satisfied with the results provided, and felt really confident about their trajectory moving forward. ",
-      "next": "Unfortunately, web development has been put on pause due to supply chain issues within the company. Metrics will be updated once website is launched."
+      "res": "I was able to deliver a completely revitalized brand direction for BlakeProGear, through a completed brand guideline and organized design system. The stakeholders were extremely satisfied with the results provided, and felt more confident about their trajectory moving forward. ",
+      "next": "Web development has been put on pause due to supply chain issues within the company. Metrics will be updated once website is launched."
     }
   }
 }
