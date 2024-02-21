@@ -1995,8 +1995,8 @@ COLORS - END
     z-index: 1000;
     overflow: visible;
     width: 100vw;
-    -webkit-filter: blur(6vw);
-            filter: blur(6vw);
+    -webkit-filter: blur(4vw);
+            filter: blur(4vw);
     opacity: 0.9; }
     .gradient-container .color-row2 .majordiv {
       margin: 0vh -40vh;
